@@ -1,0 +1,320 @@
+.contentResult {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.size {
+    &-17 {
+        font-size: 17px;
+    }
+
+    &-20 {
+        font-size: 20px;
+    }
+
+    &-21 {
+        font-size: 21px;
+    }
+}
+
+.aclaration-message {
+    font-size: 21.6px;
+}
+
+.contentResult,
+.contentLocked {
+    & span.icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25px' height='19px' viewBox='0 0 25 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3etick%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='20-AclaracionesWebView-Respuesta-AbonoTemporal-CargoDuplicado' transform='translate(-175.000000, -145.000000)' fill='%23ABC111' fill-rule='nonzero'%3e%3cg id='icoCTAExitosa' transform='translate(160.000000, 127.000000)'%3e%3cg id='tick' transform='translate(15.000000, 18.000000)'%3e%3cpolygon id='Shape' points='7.3276973 14.0845156 2.59967722 9.65165211 0 12.0890654 6.23923556 17.9388188 6.24639481 17.9320585 7.38543154 19 25 2.48478356 22.3499012 0'%3e%3c/polygon%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+        background-size: 30px;
+        background-position: center center;
+        border: 3px solid #abc111;
+        border-radius: 100px;
+        margin-bottom: 20px;
+    }
+
+    // Requirements
+    & .requirementsResult {
+        width: 90%;
+        max-width: 290px;
+        margin: 0 auto;
+        display: block;
+        padding: 13px 8px;
+        -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0 0 transparent;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0 0 transparent;
+        -o-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0 0 transparent;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0 0 transparent;
+
+        & ul {
+            & li {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17px' height='14px' viewBox='0 0 17 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eShape%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='24-AclaracionesWebView-Respuesta_Visa-Copy-6' transform='translate(-41.000000, -532.000000)' fill='%231BB3BC' fill-rule='nonzero'%3e%3cg id='Group-Copy' transform='translate(32.000000, 514.000000)'%3e%3cpath d='M9.19620883,25.6835281 C9.06540294,25.5599892 9,25.3746809 9,25.251142 C9,25.1276031 9.06540294,24.9422947 9.19620883,24.8187558 L10.1118501,23.9539836 C10.3734618,23.7069058 10.7658795,23.7069058 11.0274913,23.9539836 L11.0928942,24.015753 L14.6900562,27.6601504 C14.820862,27.7836893 15.0170709,27.7836893 15.1478768,27.6601504 L23.9118713,19.0741972 L23.9772742,19.0741972 C24.238886,18.8271194 24.6313037,18.8271194 24.8929155,19.0741972 L25.8085567,19.9389695 C26.0701685,20.1860473 26.0701685,20.556664 25.8085567,20.8037418 L15.3440856,31.05747 C15.2132797,31.1810089 15.0824738,31.2427784 14.886265,31.2427784 C14.6900562,31.2427784 14.5592503,31.1810089 14.4284444,31.05747 L9.32701472,25.8688364 L9.19620883,25.6835281 Z' id='Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: 0px 4px;
+                background-size: 17px 14px;
+                padding-left: 25px;
+                min-height: 20px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 18px;
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    // Card Result
+    & .cardResult {
+        padding: 20px 0px 20px 0px;
+
+        &.wLine {
+            border-top: 1px solid $Gray;
+        }
+
+        &.lastCR {
+            border-bottom: 1px solid $Gray;
+        }
+
+        &.cardLocked {
+            background-repeat: no-repeat !important;
+            background-position: center 12px !important;
+            background-size: 40px !important;
+            padding-top: 70px !important;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34px' height='28px' viewBox='0 0 34 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eFill 36 + Fill 37 + Fill 38 Copy%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='10_AclaracionesWebView-RespuestaBloqueoTarjeta' transform='translate(-171.000000, -395.000000)' fill='%23CCCCCC'%3e%3cg id='Fill-36-+-Fill-37-+-Fill-38-Copy' transform='translate(171.000000, 395.000000)'%3e%3cpath d='M26.5995593,11 L3.65535967,11 L1.3993389,11 C0.626947899,11 0,11.6079258 0,12.3586098 L0,26.6408555 C0,27.3915396 0.626947899,28 1.3993389,28 L26.5995593,28 C27.3730521,28 28,27.3915396 28,26.6408555 L28,17.4075484 L28,12.3586098 C28,11.6079258 27.3730521,11 26.5995593,11 L26.5995593,11 Z M6.36038092,20.3659066 C6.36038092,20.7412486 6.04745789,21.0454788 5.66071147,21.0454788 L2.89013065,21.0454788 C2.50503699,21.0454788 2.19101212,20.7412486 2.19101212,20.3659066 L2.19101212,17.7711275 C2.19101212,17.3963202 2.50503699,17.09209 2.89013065,17.09209 L5.66071147,17.09209 C6.04745789,17.09209 6.36038092,17.3963202 6.36038092,17.7711275 L6.36038092,20.3659066 Z' id='Fill-36'%3e%3c/path%3e%3cpath d='M27,1.93521457 L26.3282643,0.744050449 C25.9364668,0.0493459123 25.0398532,-0.204249484 24.3281263,0.178120412 L6,10 L11.7656832,10 L27,1.93521457 Z' id='Fill-37'%3e%3c/path%3e%3cpath d='M33.8271167,12.8440083 L29.2460819,5 L21,9.21849174 L27.8380939,9.21849174 C29.3755269,9.21849174 30.6255482,10.3966942 30.6255482,11.8440083 L30.6255482,16 L33.2780726,14.6265496 C33.9516252,14.277376 34.1984481,13.4798554 33.8271167,12.8440083' id='Fill-38'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+        }
+    }
+
+
+
+    & button {
+        width: 100%;
+        line-height: 32px;
+        font-size: 16.8px;
+        text-align: center;
+        color: $White;
+        border: none;
+        height: 54px;
+        border-radius: 60px;
+        background-color: $mainRed;
+
+        &.walletChannel {
+            border-radius: 4px;
+        }
+    }
+
+    .cents {
+        font-style: normal;
+        font-size: 0.6em;
+        vertical-align: super;
+    }
+
+    .description {
+        color: #333333;
+    }
+
+    .ammount {
+        color: #4a4a4a;
+    }
+
+    .receive {
+        color: #5b5a5b;
+    }
+
+    .foliosLabel {
+        font-size: 32px;
+    }
+
+}
+
+.r-tdd {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.result {
+    &__alert {
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    &__data {
+        ul {
+            padding: 0;
+
+            li {
+                padding: 13.5px 24px;
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+
+                span {
+                    flex: 1 1;
+
+                    &:last-child {
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+
+    &__letter {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding: 8px 24px;
+        text-align: center;
+        margin-top: 4px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__detail-list {
+        padding: 0 1rem;
+
+        >.title {
+            color: #4C4C4C;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            box-shadow: 0px 2px 4px 0px rgba(153, 153, 153, 0.50);
+            border-radius: 16px;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                padding: 19px 0;
+                border-bottom: 1px solid #F2F2F2;
+
+                span {
+
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    margin: 0 1rem;
+                    word-break: break-all;
+                }
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+    }
+
+    &__footer {
+        height: 105px;
+        background: #63B468;
+        width: 100%;
+        position: relative;
+        bottom: -80px;
+
+        &--space {
+            height: 105px;
+            width: 100%;
+        }
+
+        &--warn {
+            background: #FC3;
+        }
+    }
+
+    &__amount {
+        color: #5B5A5B;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        span {
+            color: #5B5A5B;
+            font-weight: 700;
+        }
+    }
+}
+
+.line-divider {
+    height: 28px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: -4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #D9D9D9;
+        top: calc(50% - 4px);
+        border: unset;
+    }
+
+    &::after {
+        left: unset;
+        right: -4px;
+    }
+}
+
+.folios-tab {
+    padding: 16px 24px 8px 24px;
+
+    ul {
+        border-radius: 12px;
+        background: #E5E5E5;
+        display: flex;
+        padding: 4px;
+        height: 40px;
+
+        li {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            color: #191919;
+            background: transparent;
+            border-radius: 8px;
+            display: flex;
+            padding: 0px 8px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 0;
+            align-self: stretch;
+
+            &.active-folio {
+                background: #FFF;
+                box-shadow: 0px 6px 14px 0px rgba(153, 153, 153, 0.30);
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}

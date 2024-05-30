@@ -1,0 +1,53 @@
+<h1 class="cancel" (click)="closeBottomSheet(true)">{{close}}</h1>
+<em class="bottom-sheet-rectangle"></em>
+<div [ngClass]="_class">
+
+    <app-messages *ngIf="data.type === 'info'" [messageType]="messageType"
+        [additional]="data.additional"></app-messages>
+
+    <ul class="optionsList" *ngIf="data.type === 'interactive'">
+        <li *ngFor="let option of data.options; let i = index" (click)="handlerOptions(option, i)"
+            [ngClass]="{'line': i+1 < data.options.length}">
+            <label>{{option.label}}</label>
+            <img class="checkSheet"
+                [src]="option.checked ? './assets/svg/checkSheet.svg' : './assets/svg/uncheckSheet.svg'" alt="" />
+        </li>
+    </ul>
+
+    <p *ngIf="data?.message" class="bottom-sheet-message">
+        {{data.message}}
+    </p>
+
+    <ul class="optionsBottons">
+        <ng-container *ngIf="data.callButton">
+            <li>
+                <a class="g-btn flat" [href]="data.callButton.phone"> {{data.callButton.text}} </a>
+            </li>
+        </ng-container>
+        <ng-container *ngIf="data.secondButton !== '' && data.secondButton !== 'Cancelar'; else cancelar">
+            <li>
+                <button *ngIf="data.secondButton === 'Seleccionar más movimientos'" class="secondButton" [disabled]="!moreMoves" (click)="selectMoreMoves()"> {{data.secondButton}}
+                </button>
+                <button *ngIf="data.secondButton === 'Levantar aclaración'" class="secondButton" (click)="goToClarifications()"> {{data.secondButton}}
+                </button>
+            </li>
+        </ng-container>
+        <ng-template #cancelar>
+            <li *ngIf="data.secondButton === 'Cancelar'">
+                <button class="secondButton quit" (click)="closeBottomSheet(false)"> {{data.secondButton}} </button>
+            </li>
+        </ng-template>
+
+        <li>
+          <ng-container *ngIf="data.mainButton === 'Regresar'; else normalFlow">
+            <button class="g-btn rounded" (click)="closeBottomSheet(true)">
+              {{data.mainButton}} </button>
+          </ng-container>
+          <ng-template #normalFlow>
+            <button class="g-btn rounded" [disabled]="selectedOption === '' || data.disableMain" (click)="action()">
+              {{data.mainButton}} </button>
+          </ng-template>
+        </li>
+    </ul>
+
+</div>

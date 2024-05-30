@@ -1,0 +1,49 @@
+/* -- FONTS -- */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+
+/* -- C O L O R S -- */
+$White: #FFFFFF;
+$Black: #4a4a4a ;
+$Dark: #505050  ;
+$mainRed: #f00700;
+$Red: #f00700;
+$darkRed: #be0006;
+$Aqua: #5fcad0;
+$lightYellow: #fff5e4;
+$Yellow: #e59d27;
+$Ivory: #e0dcd3;
+$lightGray: #f0f0f0;
+$mediumGray: #ddddde;
+$Gray: #cccccc;
+$MediumGray: #505050;
+$darkGray: #4a4a4a;
+$Green: #abc111;
+$Ndark:#333333;
+
+
+/* -- M I X I N S -- */
+@mixin trans{
+    -webkit-transition: 0.3s; /* Safari */
+   transition: 0.3s;
+}
+
+@mixin trans-large{
+    -webkit-transition: 0.7s; /* Safari */
+   transition: 0.7s;
+}
+
+/* -- A N I M A C I O N E S -- */
+@keyframes showToggle {
+    from {display: none; top:100%; }
+    to {display: block; top:0px;}
+}
+
+@keyframes hideToggle {
+    from {top: 0px;}
+    to {top: 100%;}
+}
+
+/* -- M E D I A   Q U E R Y E S -- */
+$mq_desktop: "screen and (min-width:992px)";
+$mq_tablet: "screen and (min-width:768px)";
+$mq_phone: "screen and (max-width: 576px)";

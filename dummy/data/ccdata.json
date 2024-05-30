@@ -1,0 +1,149 @@
+{
+  "cardRec": {
+    "cardStatus": {
+      "issueStatusCode": "5",
+      "blockCode": {
+        "blockReason": "TARJETA OPERATIVA",
+        "blockOperInd": false,
+        "blockDt": "0001-01-01",
+        "blockRevInd": true
+      }
+    },
+    "cardInfo": {
+      "expDt": "2026-11-30",
+      "cardEmbossCode": "641",
+      "cardNum": "5532530008096091",
+      "cardCategoryCode": "41",
+      "cardTrnLimit": [
+        {
+          "trnType": {
+            "trnTypeValue": "Credit"
+          },
+          "curAmt": {
+            "amt": "50100.0"
+          },
+          "limitType": "Max",
+          "balType": {
+            "balTypeValues": "AvailCredit"
+          }
+        },
+        {
+          "trnType": {
+            "trnTypeValue": "Credit"
+          },
+          "curAmt": {
+            "amt": "40080.0"
+          },
+          "limitType": "MonthlyMax"
+        },
+        {
+          "trnType": {
+            "trnTypeValue": "Credit"
+          },
+          "curAmt": {
+            "amt": "40080.0"
+          },
+          "limitType": "DailyMax"
+        }
+      ],
+      "acctRef": {
+        "acctId": "750079151580",
+        "acctInfo": {
+          "creditAcctData": {
+            "dueDt": "2022-06-01"
+          },
+          "openDt": "2021-12-03",
+          "productIdent": "75",
+          "fiData": {
+            "fiIdent": "0014",
+            "branchIdent": "2233"
+          },
+          "curCode": {
+            "curCodeValue": "MXN",
+            "curCodeType": "ISO4217-Alpha"
+          },
+          "subProductIdent": "2905",
+          "acctBal": [
+            {
+              "curAmt": {
+                "amt": "12013.78"
+              }
+            },
+            {
+              "curAmt": {
+                "amt": "99.0"
+              },
+              "balType": {
+                "balTypeValues": "TotalHeld"
+              }
+            },
+            {
+              "curAmt": {
+                "amt": "38086.22"
+              },
+              "balType": {
+                "balTypeValues": "Outstanding"
+              }
+            },
+            {
+              "curAmt": {
+                "amt": "0.0"
+              },
+              "balType": {
+                "balTypeValues": "ClosingBalance"
+              }
+            },
+            {
+              "curAmt": {
+                "amt": "0.0"
+              },
+              "balType": {
+                "balTypeValues": "MinPayment"
+              }
+            },
+            {
+              "curAmt": {
+                "amt": "0.0"
+              },
+              "balType": {
+                "balTypeValues": "PayoffAmt"
+              }
+            }
+          ],
+          "desc": "SANTANDER LIKEU"
+        }
+      },
+      "closeStmtDt": "2022-05-12",
+      "brand": "MasterCard",
+      "partyCardRelType": "Primary",
+      "seqNum": 1,
+      "cardSubType": "Hybrid",
+      "cardType": "Debit",
+      "cardPeriodData": [
+        {
+          "lastOccuranceDt": "2022-05-05T00:00:00.000+00:00",
+          "cardAmtType": "BalMod",
+          "lastOccurInd": true
+        }
+      ],
+      "cardEmbossName": "JUANITO/ PEREZ",
+      "cardSubTypeCode": "05",
+      "partyKeys": {
+        "partyId": "47963072"
+      }
+    }
+  },
+  "rqUID": "196c55656274a9b1051c7d6d",
+  "status": {
+    "severity": "INFO",
+    "statusDesc": "SUCCESS",
+    "additionalStatus": [
+      {
+        "addStatusCode": "LMA0070",
+        "addSeverity": "INFO",
+        "addStatusDesc": "CONSULTA EFECTUADA."
+      }
+    ],
+    "statusCode": "0"
+  }
+}

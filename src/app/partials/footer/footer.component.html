@@ -1,0 +1,16 @@
+<footer *ngIf="active">
+  <div class="bottom-buttons">
+    <div class="row content selected-items">
+      <div class="col-xs-12 a-center">
+        <button type="button"
+          id="page-{{ getCurrentPage() }}"
+          (debounceClick)="handleNavigation($event)" 
+          [disabled]="!validateContinueButton()"
+          appDebounceClick
+          [ngClass]="{'g-btn rounded': dataProxyService.getChannel()=='default', 'wallet-button': dataProxyService.getChannel()=='wallet'}">
+          {{ buttonText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

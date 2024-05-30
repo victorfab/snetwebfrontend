@@ -1,0 +1,159 @@
+<app-steper-tdd *ngIf="chanelType === 'wallet'"></app-steper-tdd>
+<app-alerts-tdd></app-alerts-tdd>
+
+<div
+  class="summaryContent"
+  [style.padding-top.px]="chanelType === 'wallet' ? 55 : 0"
+>
+  <!-- Card Component -->
+  <app-card-detail
+    *ngIf="chanelType === 'default'"
+    [detail]="this.storage.getFromLocal('userdata')"
+  >
+  </app-card-detail>
+
+  <!--Selected Moves Section-->
+  <div>
+    <!--info of the moves-->
+    <div class="row" class="movementsSelectedLabel p-5">
+      <div class="col-12">
+        <p
+          class="movements-selected-label"
+          id="movements-selected-label"
+        >
+          {{
+            this.isCashbackFlow === "true"
+              ? "Esta es la información para la aclaración, favor de revisar que sea correcta:"
+              : "Por favor, verifique que la información sobre la aclaración sea correcta:"
+          }}
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="isCashbackFlow === 'true'">
+      <div class="col-12 noPaddingTop descriptionQuestion">
+        <div class="row moveInfo align middle">
+          <div class="col-7 noPaddingSides value">
+            <p>Monto de cashback que usted recibió</p>
+          </div>
+          <div class="col-5 amount">
+            <span
+              class="amountPadding"
+              [innerHtml]="totalCashback | customCurrency"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 noPaddingTop descriptionQuestion">
+        <div class="row moveInfo align middle">
+          <div class="col-7 noPaddingSides value">
+            <p>movimientos que usted seleccionó para revisión</p>
+          </div>
+          <div class="col-5 noPaddingSides description">
+            {{ selectedMoves }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngIf="isCashbackFlow === 'false'">
+      <div
+        class="row p-5"
+        *ngFor="let move of storage.getFromLocal('multifolio')"
+      >
+        <div class="col-12 noPaddingTop descriptionMove">
+          <div class="row moveInfo">
+            <div class="col-8 noPaddingSides value">
+              <p
+                class="move-label"
+                id="title-move-{{ move.id }}"
+                [innerHtml]="move.txrComercio"
+              ></p>
+            </div>
+            <div
+              class="col-4 noPaddingSides move-value"
+              id="description-move-{{ move.id }}"
+            >
+              <span *ngIf="chanelType === 'default'">-</span>
+              <span
+                class="sBold"
+                [innerHtml]="removeSign(move.amount) | customCurrency"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!--Selected Moves Section-->
+  <div>
+    <!--info of the moves-->
+    <div class="row" class="movementsSelectedLabel p-5">
+      <div class="col-12">
+        <p
+          id="questions-aswered-label"
+          class="movements-selected-label"
+        >
+          Estas son las respuestas que usted capturó en el cuestionario, favor
+          de verificar:
+        </p>
+      </div>
+    </div>
+    <ng-container *ngIf="isCashbackFlow === 'true'; else isNotCashback">
+      <div class="col-12 noPaddingTop descriptionQuestion">
+        <div class="row moveInfo">
+          <div class="col-5 noPaddingSides value">
+            <p>Detalles</p>
+          </div>
+          <div class="col-7 noPaddingSides description">
+            {{ data.description }}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 noPaddingTop descriptionQuestion">
+        <div class="row moveInfo marginList">
+          <div class="col-5 noPaddingSides value">
+            <p>Ubicación actual</p>
+          </div>
+          <div class="col-7 noPaddingSides description">{{ location }}</div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #isNotCashback>
+      <div
+        *ngFor="let item of viewQuestions; let index = index"
+        class="row p-5"
+      >
+        <div class="col-12 noPaddingTop descriptionQuestion">
+          <div class="row moveInfo">
+            <div class="col-5 noPaddingSides value">
+              <p
+                class="move-label"
+                id="label-{{ item.id }}"
+                [innerHtml]="item.key"
+              >
+                {{ item }}
+              </p>
+            </div>
+            <div
+              class="col-7 noPaddingSides move-value"
+              id="value-{{ item.id }}"
+              [innerHtml]="item.value"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<app-footer-tdd
+  [idElement]="'page-summary-tdd'"
+  [enable]="true"
+  [buttonText]="'Confirmar'"
+  (continueClarification)="executeContinue()"
+  [showEditButton]="isCashbackFlow"
+  (continueEdit)="returnPage()"
+>
+</app-footer-tdd>

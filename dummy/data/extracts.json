@@ -1,0 +1,14 @@
+{
+    "acctStmtRec": [
+        {
+            "acctStmtId": "1",
+            "acctStmtInfo": {
+                "stmtDt": "010101"
+            }
+        }
+    ],
+    "status": {
+        "statusCode": 0,
+        "statusDesc": "SUCCESS"
+    }
+}

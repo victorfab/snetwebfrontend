@@ -1,0 +1,152 @@
+.summary {
+  p {
+    font-size: 1.063em;
+    color: $heavy-grey;
+    font-weight: 200;
+  }
+
+  .response {
+    display: block;
+    clear: both;
+    border-bottom: 1px solid #000000;
+    margin-top: 19px;
+    font-size: 0.875em;
+    text-transform: uppercase;
+
+    .response-left {
+      float: left;
+      text-align: left;
+      width: 42%;
+      max-width: 208px;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #424242;
+    }
+
+    .response-left-long {
+      float: left;
+      text-align: left;
+      width: 90%;
+
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      color: #424242;
+
+    }
+
+    .response-left-middle {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      float: left;
+      text-align: left;
+      width: 65%;
+      color: #424242;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .response-right {
+      float: right;
+      text-align: right;
+      width: 56%;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      color: #424242;
+
+      &#additionalComments {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+    }
+
+    .response-right-short {
+      float: right;
+      width: 10%;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: right;
+      text-transform: uppercase;
+      color: #424242;
+    }
+
+    .response-right-middle {
+      float: right;
+      width: 35%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: right;
+      text-transform: uppercase;
+      color: #424242;
+    }
+
+    .separator {
+      display: block;
+      clear: both;
+      height: 19px;
+      width: 100%;
+    }
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #424242;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    display: flex;
+    padding: 12px 0px;
+    border-bottom: 1px solid #000000;
+    margin: 0 1rem;
+    column-gap: 1rem;
+  }
+
+  &__question {
+    @extend .text;
+    font-weight: 300;
+    width: 50%;
+  }
+
+  &__answer {
+    @extend .text;
+    font-weight: 600;
+    width: 50%;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    word-break: break-all;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #191919;
+    padding: 0 1rem;
+    display: flex;
+    margin-top: 1rem;
+  }
+}
+
+.tex-justify {
+  text-align: justify !important;
+}

@@ -1,0 +1,30 @@
+/* Creates an empty space */
+.spacer {
+  width: 100%;
+  height: 20px;
+  display: block;
+  clear: both;
+}
+
+.small-spacer {
+  @extend .spacer;
+  height: 5px;
+}
+
+
+// /*Fuentes Santander*/
+// @font-face {
+//   font-family: 'Santander Text';
+//   src: url('../assets/fonts/SantanderText-Regular.otf') format('otf');
+// }
+
+// @font-face {
+//   font-family: 'Santander Micro';
+//   src: url('../assets/fonts/SantanderMicroText.otf') format('otf');
+// }
+
+// @font-face {
+//   font-family: 'Santander Headline';
+//   src: url('../assets/fonts/SantanderHeadline-Regular.otf') format('otf');
+// }    
+  

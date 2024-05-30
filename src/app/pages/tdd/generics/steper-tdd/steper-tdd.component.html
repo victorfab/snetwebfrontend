@@ -1,0 +1,48 @@
+<!-- Content Steper -->
+<div class="contentSteper">
+
+  <!-- Info -->
+  <div class="infoSteper vAlign" >
+    <!-- Number -->
+    <ng-container *ngIf="!isCashbackFlow"> 
+      <div class="numberStep" *ngIf="router.url!=='/questionnaireTDD' && router.url!=='/summaryTDD'">1</div>
+      <div class="numberStep" *ngIf="router.url==='/questionnaireTDD'"> 2 </div>
+      <div class="numberStep" *ngIf="router.url==='/summaryTDD'">3</div>
+    </ng-container>
+    <div class="numberStep" *ngIf="router.url==='/cashback-movements'">2</div>
+    <div class="numberStep" *ngIf="router.url==='/questionnaireTDD'&& isCashbackFlow"> 3 </div>
+    <div class="numberStep" *ngIf="router.url==='/summaryTDD'&& isCashbackFlow"> 4 </div>
+
+    <!-- Type -->
+    <div class="typeStep" *ngIf="router.url!=='/questionnaireTDD' && router.url!=='/summaryTDD' && !isCashbackFlow">Seleccione el movimiento a aclarar</div>
+    <div class="typeStep" *ngIf="router.url==='/cashback-movements'">Seleccione sus compras participantes</div>
+    <div class="typeStep" *ngIf="router.url==='/questionnaireTDD'">Responda el cuestionario</div>
+    <div class="typeStep" *ngIf="router.url==='/summaryTDD'">Verifique su información</div>
+    <!-- Counter -->
+    <ng-container *ngIf="!isCashbackFlow">
+      <div class="counterStep" *ngIf="router.url!=='/questionnaireTDD' && router.url!=='/summaryTDD' && !tabCashback">1 de 3</div>
+      <div class="counterStep" *ngIf="router.url==='/questionnaireTDD'">2 de 3</div>
+      <div class="counterStep" *ngIf="router.url==='/summaryTDD'">3 de 3</div>
+    </ng-container>
+    <div class="counterStep" *ngIf="router.url==='/welcomeTDD' && tabCashback">1 de 4</div>
+    <div class="counterStep" *ngIf="router.url==='/cashback-movements'">2 de 4</div>
+    <div class="counterStep" *ngIf="router.url==='/questionnaireTDD' && isCashbackFlow">3 de 4</div>
+    <div class="counterStep" *ngIf="router.url==='/summaryTDD' && isCashbackFlow">4 de 4</div>
+
+  </div>
+  
+  <!-- Bar -->
+  <div class="steperBar">
+    <!-- Progress -->
+    <div class="progressSteper step1" *ngIf="router.url!=='/questionnaireTDD' && router.url!=='/summaryTDD' && !tabCashback"></div>
+    <div class="progressSteper step2" *ngIf="router.url==='/questionnaireTDD' && !isCashbackFlow"></div>
+    <div class="progressSteper step3" *ngIf="router.url==='/summaryTDD' && !isCashbackFlow"></div>
+
+    <div class="progressSteperCashback step1" *ngIf="router.url!=='/questionnaireTDD' && router.url!=='/summaryTDD' && tabCashback"></div>
+    <div class="progressSteperCashback step2" *ngIf="router.url==='/cashback-movements'"></div>    
+    <div class="progressSteperCashback step3" *ngIf="router.url==='/questionnaireTDD' && isCashbackFlow"></div>
+    <div class="progressSteperCashback step4" *ngIf="router.url==='/summaryTDD' && isCashbackFlow"></div>
+  </div>
+
+</div>
+<!-- Termina Content Steper -->

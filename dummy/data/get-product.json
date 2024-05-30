@@ -1,0 +1,72 @@
+{
+  "rqUID": "4013ce79648a005d056f3420",
+  "cardRec": [
+    {
+      "cardStatus": {
+        "issueStatusCode": "5",
+        "blockCode": {
+          "blockReasonCode": "00",
+          "blockOperInd": false,
+          "blockRevInd": true
+        },
+        "enrollBlockStatusCode": "NotEnrolled"
+      },
+      "cardInfo": {
+        "expDt": "2028-09-30",
+        "cardEmbossCode": "641",
+        "cardNum": "5532530000657298",
+        "cardCategoryCode": "41",
+        "cardTrnLimit": [
+          {
+            "trnType": { "trnTypeValue": "Credit" },
+            "curAmt": { "amt": "120000.0" },
+            "limitType": "Max"
+          }
+        ],
+        "acctRef": {
+          "acctId": "750000640120",
+          "acctInfo": {
+            "openDt": "2023-05-11",
+            "productIdent": "75",
+            "fiData": { "fiIdent": "0014", "branchIdent": "0309" },
+            "subProductIdent": "2905",
+            "acctBal": [
+              {
+                "curAmt": { "amt": "18769.0" },
+                "balType": { "balTypeValues": "Outstanding" }
+              },
+              {
+                "curAmt": { "amt": "0.0" },
+                "balType": { "balTypeValues": "TotalHeld" }
+              }
+            ]
+          }
+        },
+        "curCode": { "curCodeValue": "MXN", "curCodeType": "ISO4217-Alpha" },
+        "brand": "MasterCard",
+        "partyCardRelType": "Primary",
+        "seqNum": 1,
+        "cardSubType": "Hybrid",
+        "cardType": "Credit",
+        "cardCategoryDesc": "LIKEU",
+        "cardEmbossName": "PORRAS CORDOVA MARTHA",
+        "cardSubTypeCode": "05",
+        "partyKeys": { "partyId": "53183908" },
+        "desc": "SANTANDER LIKEU"
+      }
+    }
+  ],
+  "status": {
+    "severity": "INFO",
+    "statusDesc": "SUCCESS",
+    "additionalStatus": [
+      {
+        "addStatusCode": "LMA0007",
+        "addSeverity": "INFO",
+        "addStatusDesc": "FIN DATOS"
+      }
+    ],
+    "statusCode": "0"
+  },
+  "recCtrlOut": { "subseqRec": false }
+}

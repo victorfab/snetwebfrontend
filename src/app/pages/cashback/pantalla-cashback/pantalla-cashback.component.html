@@ -1,0 +1,65 @@
+<!-- <app-header [getProduct]="product" [movesIndicator]="moveService.selectedCount$ | async">
+
+
+  
+</app-header> -->
+<!-- Selected Moves -->
+<app-selected-moves [open]="showMoves" (closed)="showMoves = false">
+</app-selected-moves>
+<app-card-detail [detail]="getData">
+</app-card-detail>
+
+<div card-detail class="card-holder" *ngIf="getData">
+  <div class="card">
+    <div class="row">
+      <div class="col-xs-2 logo"></div>
+      <div class="col-xs-10 p-0">
+        <div class="card-name">{{ getData?.cardName }}</div>
+        <div class="main-balance" [innerHTML]="((getData.balance || getData?.saldo) * 1) | customCurrency"></div>
+        <div class="row subamounts">
+          <div class="col-xs-12">
+            <span class="info-left dInline">Saldo actual</span>
+            <hr class="lineSD dInline" />
+            <span [innerHTML]="getData.cardNumber | maskingPan" class="info-left dInline"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="cashback-message">Seleccione las compras participantes:</p>
+<app-filter 
+  (text)="getText($event)" 
+  (bandFilter)="getBandFilter($event)" 
+  [isCashback]="true" 
+  [showIcon]="false"
+  [faceLift]="true"
+  [filterApply]="text.length > 0" 
+  [filterText]="text">
+</app-filter>
+
+<!-- MOVEMENT LIST -->
+<div class="movements">
+  <app-movement *ngFor="let item of movements" (selectedMove)="select($event)" [listenUnselection]="true"
+    [multiple]="true" [data]="item" [date]="item.key" [searchFilter]="text" [preselect]="selectedM">
+  </app-movement>
+
+  <p class="light align center" *ngIf="movements?.length === 0 && !bandFilter && text === ''">
+    No tiene movimientos para aclarar.
+  </p>
+
+  <div class="centered-text" *ngIf="movements?.length === 0 && text !== ''">
+    No tiene movimientos que coincidan con su búsqueda.
+  </div>
+</div>
+
+<!-- Add Footer -->
+<app-footer-tdd 
+  (showMoves)="showMoves = true"
+  [counter]="moveService.selectedCount$ | async"
+  [idElement]="'page-welcome-tdd'" 
+  [enable]="enableContinue" 
+  [buttonText]="'Continuar'"
+  (continueClarification)="next()">
+</app-footer-tdd>

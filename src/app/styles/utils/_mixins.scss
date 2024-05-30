@@ -1,0 +1,216 @@
+$break-extra-small: 20em; // >= 320px @ 16px
+$break-big-small:22.5em; // >= 360px @ 16px
+$break-small: 35.5em; // >= 568px @ 16px
+$break-medium: 48em; // >= 768px @ 16px
+$break-large: 64em; // >= 1024px @ 16px
+$break-extra-large: 80em; // >= 1280px @ 16px
+
+// @include respond-to( );
+@mixin respond-to( $condition ) {
+//
+// sizes
+//
+  @if $condition == 'initialize' {@media only screen and ( min-width: 1px ){ @content; } }
+  @if $condition == 'extra-small' { @media only screen and ( min-width: $break-extra-small ) { @content; } }
+  @if $condition == 'big-small' { @media only screen and ( min-width: $break-big-small ) { @content; } }
+  @if $condition == 'small' { @media only screen and ( min-width: $break-small ) { @content; } }
+  @if $condition == 'medium' { @media only screen and ( min-width: $break-medium ) { @content; } }
+  @if $condition == 'large' { @media only screen and ( min-width: $break-large ) { @content; } }
+  @if $condition == 'extra-large' { @media only screen and ( min-width: $break-extra-large ) { @content; } }
+
+}
+
+// Border radius
+@mixin radius($radius: 5px) {
+  border-radius: $radius;
+}
+
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin bottom-border-radius($radius: 5px) {
+  -webkit-border-bottom-left-radius: $radius;
+     -moz-border-bottom-left-radius: $radius;
+      -ms-border-bottom-left-radius: $radius;
+          border-bottom-left-radius: $radius;
+
+  -webkit-border-bottom-right-radius: $radius;
+     -moz-border-bottom-right-radius: $radius;
+      -ms-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+}
+
+// Text shadow
+@mixin ts($tsval: 0px 1px 0px #fff) {
+  text-shadow: $tsval;
+}
+
+// Box shadow
+@mixin bs($bsval: 0px 0px 0.83em #333, $due: 0 0 0 transparent) {
+  -moz-box-shadow: $bsval, $due;
+  -webkit-box-shadow: $bsval, $due;
+  -o-box-shadow: $bsval, $due;
+  box-shadow: $bsval, $due;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  -moz-opacity: $opacity;
+}
+
+// Transitions
+@mixin transition($transition: all linear .2s) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+// Transforms
+ @mixin transform($transform: translate3d(0, 0, 0)) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+ }
+
+// Animation
+@mixin animation($animation: none) {
+  -webkit-animation-name: $animation;
+  -moz-animation-name: $animation;
+  -ms-animation-name: $animation;
+  -o-animation-name: $animation;
+  animation-name: $animation;
+}
+
+// Delay
+@mixin delay($delay: 0s) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin circular-image($proportion) {
+  background-size: cover;
+  border-top-left-radius: $proportion;
+  border-top-right-radius: $proportion;
+  border-bottom-right-radius: $proportion;
+  border-bottom-left-radius: $proportion;
+  -webkit-border-top-left-radius: $proportion;
+  -moz-border-top-left-radius: $proportion;
+  -webkit-border-bottom-right-radius: $proportion;
+  -moz-border-bottom-right-radius: $proportion;
+
+  border: 2px solid $black;
+}
+
+// retina.scss
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+// Submitted by Nathan Crank
+// nathancrank.com
+
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2) {
+           background-image: url("#{$at2x_path}");
+           background-size: $w $h;
+  }
+}
+
+@mixin center-absolute($width, $height) {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: $width;
+  height:$height;
+  margin-top: $height/2;
+  margin-left: $width/2;
+}
+
+// Utilities
+// -------------------------
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+@mixin clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome, sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  transform: translate(0, 0);
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border: 2px solid $color;
+  -webkit-border-radius: calc($width/2);
+     -moz-border-radius: calc($width/2);
+          border-radius: calc($width/2);
+}
+@mixin circlesolid($width, $color) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: calc($width/2);
+     -moz-border-radius: calc($width/2);
+          border-radius: calc($width/2);
+}
+
+// Mixin to set an icon as Background
+@mixin set-icon($url: '', $width: 22px, $height: 22px, $diplay: inline-block) {
+  width: $width;
+  height: $height;
+  display: $diplay;
+  background-size:cover;
+  background-image: url($url);
+  vertical-align: middle;
+}

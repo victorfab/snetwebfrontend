@@ -1,0 +1,266 @@
+<app-steper-tdd *ngIf="chanelType === 'wallet'"></app-steper-tdd>
+<app-card-detail [detail]="storage.getFromLocal('userdata')" *ngIf="chanelType === 'default'">
+</app-card-detail>
+<app-alerts-tdd></app-alerts-tdd>
+
+<p class="questionnarie__title" *ngIf="!isCashbackFlow">
+  Responda el cuestionario
+</p>
+
+<form [style.padding-top.px]="chanelType === 'wallet' ? 55 : 0" (ngSubmit)="validateForm()" novalidate
+  class="contentQuestions font-primary-color">
+
+  <ng-container *ngIf="!isCashbackFlow">
+    <!--First and required question-->
+    <div class="row vAlign">
+      <div class="col-2">
+        <span class="numeric-box">1</span>
+      </div>
+      <div class="col-10" id="has-card">¿Tiene la <strong>tarjeta en su poder</strong>?</div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <input [(ngModel)]="hasCard" (click)="resetQuestionary(1);scrollBottom(); tagginService('9','yes')" type="radio"
+          id="YesHasCard" name="HasCard" value="SI" />
+        <label for="YesHasCard">SÍ</label>
+        <div class="divider"></div>
+        <input [(ngModel)]="hasCard"
+          (click)="resetQuestionary(1); scrollBottom();  tagginService('9','no'); hasCard='NO'" type="radio"
+          id="NoHasCard" name="HasCard" value="NO" />
+        <label for="NoHasCard">NO</label>
+      </div>
+    </div>
+    <!--End of First and required question-->
+    <!--If the client has the card-->
+    <div *ngIf="hasCard==='SI'">
+      <div class="row vAlign">
+        <div class="col-2">
+          <span class="numeric-box">2</span>
+        </div>
+        <div class="col-10" id="commerce-interact">¿<strong>Interactuó con el comercio</strong> durante la compra?</div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <input [(ngModel)]="commerceInteraction"
+            (click)="resetQuestionary(2); scrollBottom(); tagginService('10','yes')" type="radio" id="YesInteraction"
+            name="HasInteraction" value="SÍ" />
+          <label for="YesInteraction">SÍ</label>
+          <div class="divider"></div>
+          <!--input [(ngModel)]="hasCard" type="radio" id="NoHasCard" name="HasCard" value=" "/>
+        <label (click)="resetQuestionary(1);scrollBottom(); showAlert();tagginService('9','no'); hasCard=''">NO</label>
+        <label for="NoHasCard"></label-->
+          <input [(ngModel)]="commerceInteraction"
+            (click)="resetQuestionary(2); scrollBottom(); tagginService('10','no')" type="radio" id="NoInteraction"
+            name="HasInteraction" value="NO" />
+          <label for="NoInteraction">NO</label>
+          <label for="NoInteraction"></label>
+        </div>
+      </div>
+    </div>
+    <!--End of If the client has the card-->
+    <!--If the client has not the card-->
+    <div *ngIf="hasCard==='NO'">
+      <div class="row vAlign">
+        <div class="col-2">
+          <span class="numeric-box">2</span>
+        </div>
+        <div class="col-10" id="card-happen">¿Qué sucedió con su <strong>tarjeta</strong>?</div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div class="row">
+            <input [(ngModel)]="motiveSelectedId" type="radio" id="stolen" name="motiveNoCard" value="8"
+              (click)="changeMotive('8');resetQuestionary(3);scrollBottom();" />
+            <label for="stolen">La reporté como robada o extraviada.</label>
+          </div>
+          <!--div class="spacer"></div>
+        <div class="row">
+          <input [(ngModel)]="motiveSelectedId" type="radio" id="noWithMe" name="motiveNoCard" value="9" (click)="changeMotive('9');resetQuestionary(3);scrollBottom();"/>
+          <label for="noWithMe">Nunca la tuve conmigo.</label>
+        </div-->
+          <div class="spacer"></div>
+          <div class="row">
+            <input [(ngModel)]="motiveSelectedId" type="radio" id="stolenNoreport" name="motiveNoCard" value="10"
+              (click)="changeMotive('10');resetQuestionary(3);scrollBottom();" />
+            <label for="stolenNoreport">Me la robaron o la extravié y no la he reportado.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of If the client has not the card-->
+    <!--Motive of clarification-->
+    <div *ngIf="commerceInteraction==='SÍ'">
+      <div class="row vAlign">
+        <div class="col-2">
+          <span class="numeric-box">3</span>
+        </div>
+        <div class="col-10" id="claims-motive"><label for="motive">¿Cuál es el <strong>motivo de la<br />
+              aclaración</strong>? <span class="tooltipButton" id="tooltipMotive"
+              [ngClass]="{'inactive':motiveSelected.id==0}" (click)="showTooltip($event)"></span></label></div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <select [(ngModel)]="motiveSelectedId" name="motive" id="motive" class="custom"
+            (ngModelChange)="changeMotive(motiveSelectedId);resetQuestionary(3);scrollBottom();">
+            <option selected disabled [ngValue]="'0'">Seleccione un motivo</option>
+            <ng-container *ngFor="let item of motives; let i = index">
+              <option *ngIf="item?.visible !== 'N'" [ngValue]="item.id" [innerHTML]="item.description"
+                value="{{ i + 1 }}"></option>
+            </ng-container>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!--End of Motive of clarification-->
+    <!--Client description of clarification-->
+    <div
+      *ngIf="motiveSelected.id!=='0' && motiveSelected.id!=='8' && motiveSelected.id!=='9' && motiveSelected.id!=='10' ">
+      <div class="row vAlign">
+        <div class="col-2">
+          <span class="numeric-box">4</span>
+        </div>
+        <div class="col-10"><label for="clientDesc" id="comments" [innerHtml]="motiveSelected.label"></label></div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div class="text-counter">{{ motiveClientDescription.length }} de 240 caracteres</div>
+          <textarea
+            (keypress)="validateMaxLength($event?.target?.value)"
+            (focus)="isHideNav=true;" name="clientDesc" id="clientDesc" class="form-control"
+            placeholder="{{ motiveSelected.hover }}" rows="6" maxlength="240" [(ngModel)]="motiveClientDescription"
+            (ngModelChange)="resetQuestionary(4);resetQuestionary(6);" (ngModelChange)="reset($event)"
+            (blur)="scrollBottom();validateMotiveDescription();" (input)="inputValidator($event)"></textarea>
+        </div>
+      </div>
+    </div>
+    <!--End of Client description of clarification-->
+    <!--Select Date Lost Card -->
+    <div *ngIf="motiveSelected.id==='8'">
+      <div class="row vAlign">
+        <div class="col-2">
+          <span class="numeric-box">3</span>
+        </div>
+        <div class="col-10" id="slteal-card">¿Cuándo <strong>le robaron o extravió su tarjeta</strong>?</div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div class="row">
+            <div class="col-4 noPadding">
+              <!-- Label hidden to avoid Sonar issues -->
+              <label for="day" hidden></label>
+              <select [(ngModel)]="lostDateDay" name="day" id="day" class="custom"
+                (ngModelChange)="validateDate();resetQuestionary(4);scrollBottom();">
+                <option selected disabled [ngValue]="''">Día</option>
+                <option *ngFor="let item of days" [ngValue]="item" [innerHTML]="item" value="{{item}}"></option>
+              </select>
+            </div>
+            <div class="col-4 noPadding">
+              <!-- Label hidden to avoid Sonar issues -->
+              <label for="month" hidden></label>
+              <select [(ngModel)]="lostDateMonth" name="month" id="month" class="custom"
+                (ngModelChange)="validateDate();resetQuestionary(4);scrollBottom();">
+                <option selected disabled [ngValue]="''">Mes</option>
+                <option *ngFor="let item of months" [ngValue]="item" [innerHTML]="item" value="{{item}}"></option>
+              </select>
+            </div>
+            <div class="col-4 noPadding">
+              <!-- Label hidden to avoid Sonar issues -->
+              <label for="year" hidden></label>
+              <select [(ngModel)]="lostDateYear" name="year" id="year" class="custom"
+                (ngModelChange)="validateDate();resetQuestionary(4);scrollBottom();">
+                <option selected disabled [ngValue]="''">Año</option>
+                <option *ngFor="let item of years" [ngValue]="item" [innerHTML]="item" value="{{item}}"></option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+
+  <!--End of Select Date Lost Card -->
+
+  <p class="questionnaireTitle" *ngIf="isCashbackFlow">Por favor, responda estas preguntas:</p>
+  <div class = "row vAlign">
+    <div class="col-2" >
+      <span class="numeric-box" *ngIf="isCashbackFlow">1</span>
+    </div>
+    <div class="col-10"><label for="clientDesc" id="comments" *ngIf="isCashbackFlow">Cuéntenos los detalles del Cashback por aclarar:</label></div>
+  </div>
+  <div class="row" *ngIf="isCashbackFlow">
+    <div class="col-2"></div>
+    <div class ="col-10 paddingQuestionnaire">
+        <div class="text-counter">{{ motiveClientDescription.length }} de 240 caracteres</div>
+        <textarea (focus)="isHideNav=true;" name="clientDesc" id="clientDesc" class="form-control" placeholder="{{ motiveSelected.hover }}" rows="6" maxlength="240"
+        [(ngModel)]="motiveClientDescription" (ngModelChange)="reset($event)" (blur)="scrollBottom();validateMotiveDescription();" (input)="inputValidator($event)"></textarea>
+    </div>
+  </div>
+
+  <!--validate  Location in the country-->
+  <div
+    *ngIf="( lostDate.length > 0  &&  lostDateIsValid() )|| (motiveClientDescription.length > 1 && validMotiveClientDescription) || motiveSelected.id==='9' || motiveSelected.id==='10' || commerceInteraction==='NO' || (isCashbackFlow && (motiveClientDescription.length > 1 && validMotiveClientDescription))">
+    <div class="row vAlign">
+      <div class="col-2">
+        <span class="numeric-box" *ngIf="motiveClientDescription.length > 1 && !isCashbackFlow">5</span>
+        <span class="numeric-box"
+          *ngIf="commerceInteraction==='NO' || motiveSelected.id==='9' || motiveSelected.id==='10'">3</span>
+        <span class="numeric-box" *ngIf="lostDate.length > 0">4</span>
+        <span class="numeric-box" *ngIf="isCashbackFlow">2</span>
+      </div>
+      <div class="col-10" id="mexico-abroad"> <label>¿Dónde se encuentra usted <strong>en este momento</strong>?</label></div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <input [(ngModel)]="location" (click)="resetQuestionary(5);scrollBottom(); tagginService('12','En México')"
+          type="radio" id="InMexico" name="Location" value="Mexico" />
+        <label for="InMexico">En México</label>
+        <div class="divider"></div>
+        <input [(ngModel)]="location"
+          (click)="resetQuestionary(5);scrollBottom(); tagginService('12', 'En el extranjero')" type="radio"
+          id="Foreign" name="Location" value="Foreign" />
+        <label for="Foreign">En el extranjero</label>
+      </div>
+    </div>
+  </div>
+  <!-- End of validate  Location in the country-->
+  <!--States if is in Mexico-->
+  <div *ngIf="location==='Mexico'">
+    <div class="row vAlign">
+      <div class="col-2">
+        <span class="numeric-box" *ngIf="motiveClientDescription.length > 1 && !isCashbackFlow">6</span>
+        <span class="numeric-box"
+          *ngIf="commerceInteraction==='NO' || motiveSelected.id==='9' || motiveSelected.id==='10'">4</span>
+        <span class="numeric-box" *ngIf="lostDate.length > 0">5</span>
+        <span class="numeric-box" *ngIf="isCashbackFlow">3</span>
+      </div>
+      <div class="col-10"><label for="state" id="states">Seleccione la <strong>entidad federativa</strong> donde se
+          encuentra:</label></div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <select [(ngModel)]="state" name="state" id="state" class="custom" (ngModelChange)="tagginService('13', state)">
+          <option selected disabled [ngValue]="''">Elija una entidad</option>
+          <ng-container *ngFor="let state of states">
+            <option *ngIf="state.clave !== 33" [ngValue]="state.clave" value="{{state.clave}}"> {{state.nombre}}
+            </option>
+          </ng-container>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!--End of States if is in Mexico-->
+
+</form>
+<app-footer-tdd [idElement]="'page-questionnaire-tdd'" [enable]="location==='Foreign' || (state >0 && state<33)"
+  [buttonText]="'Enviar'" (continueClarification)="validateForm()">
+</app-footer-tdd>
+<app-tooltip-tdd></app-tooltip-tdd>

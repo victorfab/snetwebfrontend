@@ -1,0 +1,282 @@
+<app-header-ticketv2
+  [addBorderToBottom]="false"
+  [toastMessage]="toastMessage"
+  ticketTitle="Comprobante"
+  (close)="finishApp()"
+>
+  <app-ticket-user-data
+    [clientName]="config.userFullName"
+    [date]="config.dateTime"
+  >
+  </app-ticket-user-data>
+</app-header-ticketv2>
+
+
+<!-- ALERTA DE BLOQUEO -->
+
+<!-- <app-fl-alert
+  *ngIf="blockAlert"
+  [title]="blockAlert.title"
+  [paragraph]="blockAlert.body"
+  alertType="success"
+  icon="icon-block-card"
+>
+</app-fl-alert> -->
+
+<!-- ALERTA ABONO TEMPORAL -->
+<app-fl-alert
+  *ngIf="config?.temporary"
+  title="Hicimos un abono temporal a tu tarjeta"
+  paragraph="Llevaremos a cabo la investigación y en caso de que la aclaración no proceda, retiraremos el dinero automáticamente."
+  alertType="info"
+  icon="face-icon"
+>
+</app-fl-alert>
+
+<!-- ALERTA ABONO DEFINITIVO -->
+<app-fl-alert
+  *ngIf="config?.definitive"
+  title="Abonamos {{
+    config.paymentAmount | customCurrency : true : true
+  }} a tu tarjeta"
+  alertType="info"
+  icon="face-icon"
+>
+</app-fl-alert>
+
+<!-- ESPACIOS -->
+<ng-container
+  *ngIf="
+    !config.requirementsResult && (config?.definitive || config?.temporary)
+  "
+>
+  <br /><br />
+</ng-container>
+
+<div class="contentResult r-tdd">
+  <!-- Content Info Result -->
+  <div class="infoResult">
+    <p
+      class="description bold center xBig LHMedium"
+      id="claim-type"
+      *ngIf="block.operationCancellation && questionId.id === '9'"
+    >
+      Por seguridad hemos bloqueado la tarjeta
+    </p>
+
+<!-- Revertir cambios para los toast de bloqueo, abonos y documentacion extra -->
+    <!-- Instructions Text -->
+    <p
+      id="requirements-instructions"
+      class="description light center pTBMedium medium LHSmall"
+      *ngIf="config.requirementsResult && config.requirementsResult.length > 0"
+    >
+      Para continuar con el proceso, envíe al correo<br />
+      <span class="small bold">aclaracionescomprastc@santander.com.mx</span
+      ><br />
+      la siguiente información:
+    </p>
+
+    <!-- Instructions Text -->
+    <p
+      class="description light center pTBMedium medium LHSmall"
+      id="situation-investigation"
+      *ngIf="!config.requirementsResult && isCashbackFlow === 'false'"
+    >
+      Llevaremos a cabo una investigación para<br />
+      darle una pronta respuesta.
+    </p>
+
+    <!-- Requirements -->
+    <div
+      class="description requirementsResult"
+      id="required-docs-principal"
+      *ngIf="config.requirementsResult"
+    >
+      <ul>
+        <li
+          *ngFor="let item of config.requirementsResult; let index = index"
+          id="docs-required-{{ index }}"
+        >
+          {{ item.value }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Warning -->
+    <p
+      class="Red medium pTBMedium center LHSmall"
+      id="warning"
+      *ngIf="config.warning"
+    >
+      Esta información deberá enviarla en máximo 5 días naturales, colocando en
+      el asunto del correo el número de folio que le proporcionamos a
+      continuación.
+    </p>
+
+    <div
+      class="cardResult wLine lastCR"
+      id="repositionNumber"
+      *ngIf="
+        block.operationReposition && isCashbackFlow === 'false';
+      "
+    >
+      <h3
+        class="description medium light center toUC"
+        id="tile-card-reposition"
+      >
+        NUEVO NÚMERO DE TARJETA
+      </h3>
+      <h3
+        class="description big center toUC pTMedium"
+        id="description-card-resposition"
+      >
+        **** **** **** {{ block.panReposition | slice : -4 }}
+      </h3>
+    </div>
+
+<!-- Revertir cambios para los toast de bloqueo, abonos y documentacion extra -->
+
+    <!-- MOVIMETO SELECCIONADO DE CASHBACK -->
+
+    <ng-container *ngIf="isCashbackFlow === 'true'">
+      <div class="cardResult wLine lastCR p-lr">
+        <p class="description medium light center toUC">
+          DETALLE DE SU ACLARACIÓN
+        </p>
+        <br />
+        <ng-container *ngIf="selectedCashback">
+          <div
+            class="movements movements__cashback"
+            [style.padding]="cashbackFlow ? '0px' : ''"
+          >
+            <app-movement
+              [pointerEvents]="'none'"
+              [data]="{ value: [selectedCashback] }"
+              [type]="arrowType"
+              [cashbackFlow]="'true'"
+            >
+            </app-movement>
+          </div>
+        </ng-container>
+        <br />
+        <p class="movement-count" [style.padding]="!date ? '0px' : ''">
+          Seleccionó
+          <strong
+            >{{ totalMoves.length }} {{ singularPlural }} de su
+            {{ cardType }}</strong
+          >
+        </p>
+      </div>
+    </ng-container>
+
+    <!-- MONTO DE ACLARACION -->
+    <div
+      id="transactionAmountTitle"
+      class="cardResult wLine lastCR p-lr"
+      *ngIf="config.amount && isCashbackFlow === 'false'"
+    >
+      <h3
+        class="ammount medium light center toUC"
+        id="amoun-label"
+        [innerHtml]="config.amount.label"
+      ></h3>
+      <h3
+        class="ammount xBig center toUC pTSmall result__amount"
+        id="amount-value"
+        [innerHtml]="config.amount.value | customCurrency : true : true"
+      ></h3>
+    </div>
+
+    <!-- Instructions Text -->
+    <p
+      class="receive light center pTBMedium LHSmall size-17 p-lr"
+      id="receive-letter"
+      *ngIf="config.sentEmailLetter"
+    >
+      Enviamos la carta de acuse al correo registrado en
+      <span
+        [ngClass]="{ semiBold: isCashbackFlow === 'true' }"
+        class="regular"
+        [innerHtml]="config.channel"
+      ></span
+      >.
+    </p>
+
+    <!-- FOLIOS NACIONALES -->
+    <div class="cardResult p-lr" *ngIf="config.folios.national">
+      <h3
+        class="ammount medium light center toUC"
+        id="national-folio-label"
+        [innerHtml]="config.folios.national.label"
+      ></h3>
+      <h3
+        class="ammount big bold center toUC pTSmall foliosLabel"
+        id="national-folio-value"
+        *ngFor="let item of config.folios.national.values"
+      >
+        {{ item }}
+      </h3>
+    </div>
+
+    <!-- FOLIOS INTERNACIONALES -->
+    <div class="cardResult p-lr" *ngIf="config.folios.international">
+      <h3
+        class="ammount medium light center toUC"
+        id="international-folio-label"
+        [innerHtml]="config.folios.international.label"
+      ></h3>
+      <h3
+        class="ammount big bold center toUC pTMedium foliosLabel"
+        id="international-folio-value"
+        *ngFor="let item of config.folios.international.values"
+      >
+        {{ item }}
+      </h3>
+    </div>
+
+    <!-- FECHA COMPROMISO -->
+    <p
+      class="description light center pTBMedium LHSmall p-lr"
+      *ngIf="config.opinionDate"
+    >
+      <span class="size-17" id="commitment-date-title">
+        La fecha compromiso para el dictamen final de esta solicitud, es: </span
+      ><br /><br /><br />
+      <span class="size-20 bold center" id="commitment-date-value">{{
+        config.opinionDate
+      }}</span>
+    </p>
+
+    <!-- Black Warning -->
+    <p
+      class="dark bold medium pTBMedium center LHSmall p-lr"
+      id="special-note"
+      *ngIf="config.importantNote"
+    >
+      Nota: Es importante señalar que si la aclaración es improcedente se
+      realizará el cargo nuevamente a su tarjeta.
+    </p>
+  </div>
+  <!-- Termina Conten Info  Result -->
+</div>
+<!-- Termina Content Result -->
+
+<!-- Content Footer -->
+<div
+  class="interna finalizar contentFooterWallet"
+  id="btn.end-button"
+  (click)="finishApp($event)"
+  *ngIf="channel === 'wallet'"
+>
+  <button>Finalizar</button>
+</div>
+
+<!-- ALERTA DE DOCUMENACION REQUERIDA -->
+<ng-template #requeriments>
+  <app-requirement-list
+    [folios]="config.folios.national.values"
+    [requirements]="config.requirementsResult"
+  >
+  </app-requirement-list>
+</ng-template>

@@ -1,0 +1,26 @@
+{
+  "date": "2023-07-12 21:26:15",
+  "amounts": [
+    {
+      "descripcion": "3 meses de $2462.42 MXN",
+      "total": "Total: $7387.232 MXN",
+      "respuesta": "3|2462.42"
+    },
+    {
+      "descripcion": "6 meses de $1231.21 MXN",
+      "total": "Total: $7387.232 MXN",
+      "respuesta": "6|1231.21"
+    },
+    {
+      "descripcion": "9 meses de $820.81 MXN",
+      "total": "Total: $7387.232 MXN",
+      "respuesta": "9|820.81"
+    },
+    {
+      "descripcion": "12 meses de $615.61 MXN",
+      "total": "Total: $7387.232 MXN",
+      "respuesta": "12|615.61"
+    }
+  ],
+  "message": "Cálculo realizado correctamente"
+}

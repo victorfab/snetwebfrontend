@@ -1,0 +1,66 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+@import 'utils/misc';
+@import 'utils/mixins';
+@import 'utils/variables';
+
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/colors';
+@import 'base/app';
+@import 'base/forms';
+@import 'base/buttons';
+
+@import 'layout/shared';
+@import 'layout/card';
+@import 'layout/header';
+@import 'layout/history';
+@import 'layout/footer';
+@import 'layout/welcome';
+@import 'layout/moves';
+@import 'layout/filterbar';
+@import 'layout/overlay';
+@import 'layout/questionnaire';
+@import 'layout/loader';
+@import 'layout/blocker';
+@import 'layout/summary';
+@import 'layout/result';
+@import 'layout/quality-rating';
+@import 'layout/ticket';
+@import 'layout/linex';
+@import 'layout/defer';
+@import 'layout/requirement-list';
+
+@import 'vendor/bootstrap';
+@import 'vendor/bar-rating';
+
+/*TDD*/
+@import 'layout/tdd/variables';
+@import 'layout/tdd/generales';
+@import 'layout/tdd/generics';
+@import 'layout/tdd/welcome-tdd';
+@import 'layout/tdd/alertas';
+@import 'layout/tdd/questions';
+@import 'layout/tdd/summary';
+@import 'layout/tdd/result';
+@import 'layout/tdd/locked';
+@import 'layout/message';
+@import 'layout/selected-moves';
+
+
+/*Fuentes Santander*/
+@font-face {
+    font-family: 'Santander Text';
+    src: url('../assets/fonts/SantanderText-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Santander Micro';
+    src: url('../assets/fonts/SantanderMicroText.otf');
+}
+
+@font-face {
+    font-family: 'Santander Headline';
+    src: url('../assets/fonts/SantanderHeadline-Regular.otf');
+}    
+    

@@ -1,0 +1,36 @@
+<app-card-detail [detail]="proxy.creditCardFullData"></app-card-detail>
+
+<div class="defer-container text-center">
+    <span>
+        <strong class="message__labelMonto">Monto total a diferir</strong>
+    </span>
+    <strong class="message__monto">${{screenConfig.total}}</strong>
+    <span>
+        <strong class="message__labelMonto">Selecciona el plazo:</strong>
+    </span>
+    <ul class="message__paddingUl">
+        <li class="message__paddingLi" (click)="handlerOption(option)" *ngFor="let option of screenConfig.options; trackBy: userTrackBy">
+            <img 
+                class="message__checkbox" 
+                [src]="option.checked ? './assets/svg/checkSheet.svg' : './assets/svg/Border.svg'" 
+                alt="icon"/>
+            <div>
+                <label class="message__msiOption">{{option.label}}</label>
+                <label class="message__msiDescription">{{option.total}}</label>
+            </div>
+        </li>
+
+    </ul>
+    <p class="message__paragraphInfo">
+        La aplicación de esta promoción dependerá de la validación con el comercio. En algunos casos se puede aplicar
+        una promoción a menos meses de los seleccionados.
+    </p>
+
+    <div class="buttons paddingTop">
+        <button 
+        class="g-btn rounded"
+        [disabled]="!enableButton"
+        (click)="action()"> Aceptar </button>
+    </div>
+
+</div>

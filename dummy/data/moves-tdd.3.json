@@ -1,0 +1,1679 @@
+{
+  "acctTrnRecComercios": [
+    {
+      "acctTrnId": "1",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051688",
+        "accountingDt": "2022-12-21",
+        "origDt": "2023-08-01",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -264.19 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "2",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-22",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -60700.03 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "3",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-29",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "4",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-29",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "5",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-29",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "6",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-29",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "7",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-29",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "8",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2022-12-08",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "9",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2023-01-23",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "8",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2023-01-24",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "7",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2023-01-23",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "6",
+      "acctTrnInfo": {
+        "salesSlipRefNum": "051689",
+        "accountingDt": "2022-12-21",
+        "origDt": "2023-01-22",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "trnType": { "desc": "TDD COMPRA LOCAL AJENO", "trnTypeCode": "3956" },
+        "networkTrnData": {
+          "merchNum": "000000007450555",
+          "merchName": "CASINOS LA FAMI"
+        },
+        "totalCurAmt": { "amt": -19.0 },
+        "athRef": { "athKeys": { "athId": "051688" } },
+        "acctKeys": {
+          "cardKeys": { "cardNum": "5579100182591618" },
+          "bban": "00148871770000000680"
+        },
+        "refEmisor": "000000000025",
+        "clacon": ""
+      }
+    }
+  ],
+  "acctTrnRecCajeros": [
+    {
+      "acctTrnId": "787",
+      "acctTrnInfo": {
+        "statusReverso": "REV01",
+        "salesSlipRefNum": "051707",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965",
+          "cancelledInd": true
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "784",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "014181",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965",
+          "cancelledInd": true
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "769",
+      "acctTrnInfo": {
+        "statusReverso": "REV02",
+        "salesSlipRefNum": "025250",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965",
+          "cancelledInd": true
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "743",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "004148",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "742",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "023231",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "741",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "053896",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "732",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "015639",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "730",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "022083",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "729",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "011380",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "724",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "024456",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "723",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "053921",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "722",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "003510",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "719",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "035394",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "716",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "025170",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "715",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "063156",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "712",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "064514",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "711",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "041007",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "710",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "013601",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "709",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "034084",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "702",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "064886",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "701",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "064565",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "698",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "043739",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "697",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "020032",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "696",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "035836",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "685",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "003173",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "675",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "011601",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "671",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "005270",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "670",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "091065",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "669",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "053658",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "668",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "013249",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "667",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "052313",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "666",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "093700",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "661",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "032664",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "660",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "082553",
+        "accountingDt": "2022-03-04",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "657",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "093146",
+        "accountingDt": "2022-03-02",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "656",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "082843",
+        "accountingDt": "2022-03-02",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    },
+    {
+      "acctTrnId": "655",
+      "acctTrnInfo": {
+        "statusReverso": "REV03",
+        "salesSlipRefNum": "072440",
+        "accountingDt": "2022-03-02",
+        "origDt": "2023-01-10",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "trnType": {
+          "desc": "TDD RETIRO LOCAL ATM PROPIO",
+          "trnTypeCode": "3965"
+        },
+        "networkTrnData": {
+          "merchNum": "X20017",
+          "merchName": "DISP ATM PROPIO TARJ DEB X20017"
+        },
+        "totalCurAmt": {
+          "amt": 5000.0
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053715"
+          }
+        },
+        "acctKeys": {
+          "cardKeys": {
+            "cardNum": "5579083147425223"
+          },
+          "bban": "00142218770000637380"
+        },
+        "refEmisor": "370794",
+        "clacon": ""
+      }
+    }
+  ]
+}

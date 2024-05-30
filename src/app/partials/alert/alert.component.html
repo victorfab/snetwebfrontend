@@ -1,0 +1,113 @@
+<!--
+  cancelExecuteBlock  : no es posible realizar peticion
+  blockCancel         : pantalla de bloqueo -> cancelar
+  block               : pantalla de bloqueo
+  servicesError       : error 500 de servicios
+  timeoutError        : tiempo de espera demasiado largo
+  cant-block          : tarjeta ya bloqueada- no es posible bloquear de nuevo. no la he reportado.
+  no-locked           : tarjeta no bloqueada o extraviada
+  locked-card         : tarjeta bloqueada- la reporte como robada
+-->
+<div class="vertical-alignment-helper vertical-align-center">
+  <div class="modal-body blocker ">
+    <div class="row">
+      <div class="col-xs-12">
+
+          <div class="i-icon"></div>
+
+          <p class="text-center lock-text" style="padding-top:40px;" *ngIf="type=='servicesError'">
+            Por el momento no es posible realizar su petición. <br>Por favor inténtelo más tarde.
+          </p>
+          <p class="text-center lock-text" style="padding-top:40px;" *ngIf="type =='servicesErrorClarification'">
+            Por el momento no es posible realizar su petición. Por favor inténtelo más tarde o comuníquese a la
+            <span class="bold">Super<span class="bold mRed">Línea</span></span><br>
+            Desde CDMX y del interior de la República<br><span class="bold">55 5169 4300</span><br> para levantar su aclaración.
+          </p>
+          <p class="text-center lock-text" style="padding-top:40px;" *ngIf="type=='timeoutError'">
+              Su aclaración se ha dado de alta. Favor de ir a la sección
+              <strong>“Consulta de Aclaraciones”</strong> para revisar el folio de su aclaración.
+          </p>
+          <p class="text-center lock-text" style="padding-top:40px;" *ngIf="type =='cancelExecuteBlock'">
+            Por el momento no es posible realizar su petición. Por favor inténtelo más tarde o comuníquese a la
+            <span class="bold">Super<span class="bold mRed">Línea</span></span><br>
+            Desde CDMX y del interior de la República<br><span class="bold">55 5169 4300</span><br> para levantar su aclaración.
+          </p>
+          <p class="text-center lock-text" style="padding-top:40px;" *ngIf="type=='blockCancel'">
+            Al no realizar el bloqueo de la tarjeta de crédito, queda bajo su responsabilidad seguir recibiendo cargos.
+          </p>
+          <div *ngIf="type == 'block-one' || type == 'block-two'">
+            <p class="text-center lock-title">Bloqueo de Tarjeta<br/></p>
+            <p class="text-center lock-text">
+              Para evitar que le sigan haciendo cargos y continuar con la aclaración es necesario llevar a cabo un <span class="bold">Bloqueo Total</span> de su tarjeta.
+            </p>
+            <br>
+            <br>
+            <p *ngIf="type == 'block-one'" class="text-center lock-text bold">Esta acción NO puede revertirse.</p>
+            <p *ngIf="type == 'block-two'" class="text-center lock-text bold">Esta acción NO puede revertirse.<br><br>Tendrá un costo<br>establecido en su contrato.</p>
+          </div>
+
+
+          <div *ngIf="type == 'cant-block'">
+            <p class="text-center lock-title">¡Atención!<br/></p>
+            <p class="text-center lock-text">
+              Su tarjeta ya fue bloqueada, para evitar que le sigan haciendo cargos favor de  volver a contestar el cuestionario con la opción ” La reporté como robada o extraviada” o comuníquese a la
+              <span class="bold">Super<span class="bold mRed">Línea</span></span><br>
+              Desde CDMX y del interior de la República<br><span class="bold">55 5169 4300</span><br> para levantar su aclaración.
+            </p>
+            <br>
+          </div>
+
+
+          <div *ngIf="type == 'locked-card'">
+            <p class="text-center lock-title">La tarjeta ya ha sido bloqueada<br/></p>
+            <p class="text-center lock-text">
+              Para continuar con su aclaración le pedimos se comunique por favor a la
+              <span class="bold">Super<span class="bold mRed">Línea</span></span><br>
+              Desde CDMX y del interior de la República<br><span class="bold">55 5169 4300</span><br> para levantar su aclaración.
+            </p>
+            <br>
+          </div>
+
+          <div *ngIf="type == 'no-locked'">
+            <p class="text-center lock-title">¡Atención!<br/></p>
+            <p class="text-center lock-text">
+              Lo sentimos, el sistema no reconoce que su tarjeta ha sido reportada como robada o extraviada,
+              para evitar que le sigan haciendo cargos favor de volver a contestar el cuestionario con la opción
+              "Me la robaron o la extravié y no la he reportado" o comuníquese a la
+              <span class="bold">Super<span class="bold mRed">Línea</span></span><br>
+              Desde CDMX y del interior de la República<br><span class="bold">55 5169 4300</span><br> para levantar su aclaración.
+            </p>
+            <br>
+          </div>
+
+
+          <br>
+          <div class="row" style="border-top: 2px solid #cccccc;">
+            <div class="col-xs-12" [ngClass]="{'centered-btn': type !== 'block-one' && type !== 'block-two' && type !=='cant-block' && type !=='no-locked'}">
+              <p class="text-center cancel" (click)="accept(false)"
+                  *ngIf="type =='cancelExecuteBlock' || type =='servicesError' || type =='servicesErrorClarification' || type =='timeoutError' || type =='locked-card'">
+                  Aceptar
+              </p>
+              <p class="text-center cancel" (click)="cancelExecuteBlock()" *ngIf="type=='blockCancel'">Aceptar</p>
+              <div *ngIf="type == 'block-one' || type == 'block-two'">
+                <div class="col-xs-6 centered-btn">
+                  <p class="text-center cancel" (click)="cancelBlocker()">Cancelar</p>
+                </div>
+                <div class="col-xs-6 centered-btn" style="border-left: 2px solid #cccccc">
+                  <p class="text-center cancel" appDebounceClick (click)="executeBlocker();clickContinue=true">Confirmar</p>
+                </div>
+              </div>
+              <div *ngIf="type =='cant-block' || type =='no-locked'">
+                <div class="col-xs-6 centered-btn" style="padding-left: 0;padding-right: 0;">
+                  <p class="text-center cancel" (click)="goToQuestions()">Ir a cuestionario</p>
+                </div>
+                <div class="col-xs-6 centered-btn" style="border-left: 2px solid #cccccc">
+                  <p class="text-center cancel" (click)="accept(true)">Finalizar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>k

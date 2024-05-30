@@ -1,0 +1,33 @@
+<div class="vertical-alignment-helper vertical-align-center">
+    <div class="modal-body quality-rating">
+        <div class="floating-logo-wrapper">
+            <div class="logo">
+                <img src="assets/img/logos/quality-rating.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>¡Hola, <strong>{{ responseModel.name }}</strong>!</h3>
+                <p>Para Santander es importante conocer su opinión, apóyenos a responder la siguiente encuesta:</p>
+                <h4>Por favor, valore su experiencia</h4>
+
+                <form #qualityRatingForm="ngForm" (ngSubmit)="onSubmit($event)">
+                    <bar-rating name="rating" 
+                        [(ngModel)]="formRating" 
+                        [max]="5" 
+                        [theme]="'bootstrap'"
+                        required></bar-rating>
+                    <div class="star-notice">
+                        <small>La calificación se representa<br>con estrellas, siendo 5 para valorar<br>la mejor experiencia.</small>
+                    </div>
+                    <label for="quality-rating-comments" class="display_none">Comentarios</label>
+                    <textarea 
+                        [(ngModel)]="comments" 
+                        name="quality-rating-comments" id="quality-rating-comments"
+                        placeholder="Escribe un comentario..."></textarea>
+                    <button type="submit" class="btn" [disabled]="!qualityRatingForm.form.valid">Calificar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

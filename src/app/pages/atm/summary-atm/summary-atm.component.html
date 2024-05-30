@@ -1,0 +1,94 @@
+<app-steper-tdd></app-steper-tdd>
+<app-alerts-tdd></app-alerts-tdd>
+<!-- Start step indication -->
+<nav *ngIf="router.url==='/summary-atm'" class="navbar navbar-fixed-top" style="max-width:100%;">
+  <!-- Sticky Header -->
+  <div class="stickyHeader">
+    <!-- Header Steps -->
+    <div class="row headerSteps">
+      <div class="step-bar">
+        <div class="col-xs-2 noPadding" style="padding:0px;">
+          <div class="step pull-left">3</div>
+        </div>
+        <div class="col-xs-8 noPadding" style="padding:0px;">
+          <div class="title">Verifique su información</div>
+        </div>
+        <div class="col-xs-2 noPadding" style="padding:0px;">
+          <div class="step-number pull-right">3 de 3</div>
+        </div>
+        <div class="col-xs-12 noPadding" style="padding:0px;">
+          <div class="progress">
+            <div class="progress-bar highlight-blue" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                 aria-valuemax="100" style="width:100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End step indicator -->
+<div class="summaryContent" style="padding-top:0px; padding-bottom:0px;">
+  <!-- Start card information -->
+  <div class="moduleCard" style="padding-top:69px;">
+    <div class="card-holder">
+      <div class="card">
+        <div class="row">
+          <div class="col-xs-2 logo"></div>
+          <div class="col-xs-10 p-0">
+            <div class="card-name">{{ userInfo.cardName }}</div>
+            <div class="main-balance" [innerHTML]="userInfo.balance | customCurrency"></div>
+            <div class="row subamounts">
+              <div class="col-xs-12">
+                <span class="info-left dInline">Saldo actual</span>
+                <hr class="lineSD dInline"/>
+                <span [innerHTML]="userInfo.cardNumber | maskingPan" class="info-left dInline"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End card information -->
+  <div class="row" class="movementsSelectedLabel" style="padding: 5px;">
+    <div class="col-12">
+      <p id="atm-questions-aswered-label">Estas son
+        las respuestas que usted capturó en el cuestionario, favor de verificar:</p>
+    </div>
+    <div class="separator"></div>
+  </div>
+  <!-- Start questions answered -->
+  <div class="row" *ngFor="let question of questionsAnswered" style="padding: 5px;">
+    <div class="col-12 noPaddingTop descriptionQuestion">
+      <div class="row moveInfo">
+        <div class="col-5 noPaddingSides value">
+          <p>{{question.question}}</p>
+        </div>
+        <div class="col-7 noPaddingSides description" [innerHTML]="question.answer">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End questions answered -->
+
+
+</div>
+<div class="contentFooter">
+  <div class="row">
+    <div class="col-6">
+      <p [ngClass]="{'wallet-button': dataProxyService.getChannel()=='wallet', 'editar': dataProxyService.getChannel()=='default'}" (click)="returnPage()"> Editar </p>
+    </div>
+    <div class="col-6">
+      <p [ngClass]="{'wallet-button': dataProxyService.getChannel()=='wallet', 'continuar': dataProxyService.getChannel()=='default'}" (click)="executeContinue()"> Confirmar </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+

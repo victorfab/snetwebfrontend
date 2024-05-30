@@ -1,0 +1,27 @@
+<!-- Header de las pantallas de aclaraciones cashback -->
+<div>
+  <app-steper-tdd></app-steper-tdd>
+</div>
+
+<div>
+  <div class="plecaSuperior">
+    <!-- Tilte -->
+    <span>TARJETA</span>
+    <!-- Selected Moves -->
+    <div
+      class="selectedMoves"
+      (click)="toggleId = 'selectedMovComp'; tagAction(); toggle()"
+    >
+      <span>{{ movesIndicator }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="contentDashboard">
+  <ng-content select="[card-detail]"></ng-content>
+</div>
+
+<!-- Selected Moves -->
+<app-selected-moves [open]="showMoves" (closed)="showMoves = false">
+</app-selected-moves>
+<!-- Termina Selected Moves -->

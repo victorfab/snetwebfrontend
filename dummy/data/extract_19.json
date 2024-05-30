@@ -1,0 +1,294 @@
+{
+  "acctTrnRecComercios": [
+    {
+      "acctTrnId": "600",
+      "acctTrnInfo": {
+        "type": "SEGURO",
+        "stmtDt": "2023-06-02",
+        "trnTime": "02:08:34",
+        "trnType": {
+          "desc": "Seguro",
+          "trnTypeCode": "600",
+          "trnSubTypeCode": "600",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 2046.14 },
+        "networkTrnData": {
+          "merchNum": "008704594",
+          "merchName": "Seguro",
+          "posEntryCapability": "048101000000"
+        },
+        "salesSlipRefNum": "75445503153086287045944",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "045335" } }
+      }
+    },
+    {
+      "acctTrnId": "2140",
+      "acctTrnInfo": {
+        "type": "CORRPROMLINEX_AMOR",
+        "stmtDt": "2023-06-02",
+        "trnTime": "02:08:34",
+        "trnType": {
+          "desc": "Amort. Total o Parcial LINEX",
+          "trnTypeCode": "214",
+          "trnSubTypeCode": "214",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 2046.14 },
+        "networkTrnData": {
+          "merchNum": "008704594",
+          "merchName": "Linea Express",
+          "posEntryCapability": "048101000000"
+        },
+        "salesSlipRefNum": "75445503153086287045944",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "045335" } }
+      }
+    },
+    {
+      "acctTrnId": "213",
+      "acctTrnInfo": {
+        "type": "CORRPROMLINEX_PMEN",
+        "stmtDt": "2023-06-02",
+        "trnTime": "02:08:34",
+        "trnType": {
+          "desc": "Pago Mens LINEX",
+          "trnTypeCode": "210",
+          "trnSubTypeCode": "210",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 2046.14 },
+        "networkTrnData": {
+          "merchNum": "008704594",
+          "merchName": "Linea Express",
+          "posEntryCapability": "048101000000"
+        },
+        "salesSlipRefNum": "75445503153086287045944",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "045335" } }
+      }
+    },
+    {
+      "acctTrnId": "13",
+      "acctTrnInfo": {
+        "type": "CORRPROM",
+        "stmtDt": "2023-04-24",
+        "trnType": {
+          "desc": "PAGO MENSUAL COMPRA PROMOCION",
+          "trnTypeCode": "205",
+          "trnSubTypeCode": "205",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 475.63 },
+        "networkTrnData": {
+          "merchNum": "008135911",
+          "merchName": "12110 MVISION EL DORA"
+        },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "9",
+      "acctTrnInfo": {
+        "type": "COMISION",
+        "stmtDt": "2023-04-24",
+        "trnType": {
+          "desc": "ADMINISTRACION TARJ TIT",
+          "trnTypeCode": "70",
+          "trnSubTypeCode": "102",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 174.0 },
+        "networkTrnData": {
+          "merchNum": "",
+          "merchName": "MANTENIMIENTO Y ADMINISTR"
+        },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "5",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-04-06",
+        "trnTime": "16:50:07",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 115.0 },
+        "networkTrnData": {
+          "merchNum": "004320527",
+          "merchName": "WM EXPRESS CAM STARITA",
+          "posEntryCapability": "040501000000"
+        },
+        "salesSlipRefNum": "75412913097943205275574",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000799" } }
+      }
+    },
+    {
+      "acctTrnId": "20",
+      "acctTrnInfo": {
+        "type": "COMISION",
+        "stmtDt": "2023-04-25",
+        "trnType": {
+          "desc": "PENALIZACION PAGO TARDIO",
+          "trnTypeCode": "4065",
+          "trnSubTypeCode": "6039",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 406.0 },
+        "networkTrnData": {
+          "merchNum": "",
+          "merchName": "PENALIZACION PAGO TARDIO"
+        },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "61",
+      "acctTrnInfo": {
+        "type": "COMISION",
+        "stmtDt": "2023-06-05",
+        "trnType": {
+          "desc": "COMISION POR FALTA DE PAGO",
+          "trnTypeCode": "72",
+          "trnSubTypeCode": "203",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 382.8 },
+        "networkTrnData": {
+          "merchNum": "",
+          "merchName": "COMISION POR FALTA DE PAGO"
+        },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "60",
+      "acctTrnInfo": {
+        "type": "COMISION",
+        "stmtDt": "2023-06-05",
+        "trnType": {
+          "desc": "INTERES GRAVABLE",
+          "trnTypeCode": "104",
+          "trnSubTypeCode": "4000",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 701.8 },
+        "networkTrnData": { "merchNum": "", "merchName": "INTERES GRAVABLE" },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "59",
+      "acctTrnInfo": {
+        "type": "COMISION",
+        "stmtDt": "2023-06-05",
+        "trnType": {
+          "desc": "INTERES EXENTO",
+          "trnTypeCode": "104",
+          "trnSubTypeCode": "4001",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 15.63 },
+        "networkTrnData": { "merchNum": "", "merchName": "INTERES EXENTO" },
+        "origCurAmt": { "curCode": {} },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "000000" } }
+      }
+    },
+    {
+      "acctTrnId": "56",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-06-19",
+        "trnTime": "10:09:05",
+        "trnType": {
+          "desc": "PAGO EN CAJERO AUTOMATICO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "567",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 1200.0 },
+        "networkTrnData": {
+          "merchNum": "X99986",
+          "merchName": "ATM SANTANDER",
+          "posEntryCapability": "040101000000"
+        },
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "090566" } }
+      }
+    },
+    {
+      "acctTrnId": "16",
+      "acctTrnInfo": {
+        "type": "SEGURO",
+        "stmtDt": "2023-06-13",
+        "trnTime": "06:05:17",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 189.17 },
+        "networkTrnData": {
+          "merchNum": "007853102",
+          "merchName": "ZURICH SANTANDER SEGUR",
+          "posEntryCapability": "040100000000"
+        },
+        "salesSlipRefNum": "75445503013115578531021",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "051783" } }
+      }
+    }
+  ],
+  "acctTrnRecCajeros": [
+    {
+      "acctTrnId": "2007",
+      "acctTrnInfo": {
+        "statusReverso": "",
+        "type": "ATM",
+        "stmtDt": "2023-06-02",
+        "trnTime": "02:08:34",
+        "trnType": {
+          "desc": "RETIRO",
+          "trnTypeCode": "2007",
+          "trnSubTypeCode": "2007",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": { "amt": 2046.14 },
+        "networkTrnData": {
+          "merchNum": "X99974",
+          "merchName": "ATM SANTANDER",
+          "posEntryCapability": "048101000000"
+        },
+        "salesSlipRefNum": "75445503153086287045944",
+        "origCurAmt": { "curCode": { "curCodeValue": "MXN" } },
+        "cardRef": { "cardInfo": { "cardNum": "0000000000" } },
+        "athRef": { "athKeys": { "athId": "045335" } }
+      }
+    }
+  ]
+}

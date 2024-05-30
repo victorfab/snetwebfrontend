@@ -1,0 +1,340 @@
+{
+    "acctTrnRecComerciosUnposted": [
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007232",
+                    "merchName": "CLUB SAN JAVIER",
+                    "merchNum": "000000000234336",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "2.59",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "2.59",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "075232",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        },
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007230",
+                    "merchName": "FRESKO VALLARTA",
+                    "merchNum": "000008900000003",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "7.98",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "7.98",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "075030",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        },
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007228",
+                    "merchName": "WAL MART PLATER",
+                    "merchNum": "000000000294983",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "12.51",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "12.51",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "074828",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        },
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007226",
+                    "merchName": "SORIANA MONCLOV",
+                    "merchNum": "000000000475053",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "7.33",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "7.33",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "074626",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        },
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007224",
+                    "merchName": "COMERCIAL MAHAK",
+                    "merchNum": "000000000443754",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "0.76",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "0.76",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "074424",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        },
+        {
+            "athInfo": {
+                "type": "PREFOLIO",
+                "trnType": {
+                    "debitInd": "true",
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnCategory": "Debit",
+                    "trnTypeCode": "1002",
+                    "correctActionInd": "false",
+                    "cancelledInd": "false"
+                },
+                "acctKeys": {
+                    "cardKeys": {
+                        "cardNum": "5532530000770661"
+                    },
+                    "fiIdent": "0014"
+                },
+                "networkTrnData": {
+                    "networkRefIdent": "0001800000007222",
+                    "merchName": "RESTAURANTES",
+                    "merchNum": "000000000233171",
+                    "originatorType": "9",
+                    "postAddr": {
+                        "countryCode": {
+                            "countryCodeValue": "484"
+                        },
+                        "city": "MEXICO DF"
+                    }
+                },
+                "totalCurAmt": {
+                    "amt": "2.59",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "origCurAmt": {
+                    "amt": "2.59",
+                    "curCode": {
+                        "curCodeType": "ISO4217-Alpha",
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "accountingDt": "2023-10-17",
+                "origDt": "2023-10-17",
+                "trnTime": "00:00:00",
+                "trnSubType": "Charge",
+                "athMsgType": "1100",
+                "athProcCode": "100"
+            },
+            "athId": "074222",
+            "athStatus": {
+                "athResponseCode": "000",
+                "statusDesc": "OPERACION ACEPTADA"
+            }
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+  "Messages": [
+      [
+          "Registro de wvrinbox añadido.",
+          "Prefolio internacional, ID: undefined",
+          "Prefolio nacional, ID: P23-0000002",
+          "entre wvrvals.264",
+          "record: [C++ object Datum] - wvrinbox={[\"WVRI00009456\", , , , \"5532530001477480\", {\"dev no app\"}, \"FABIAN KEIME ESTRADA\", \"FABIAN KEIME ESTRADA\", \"051\", \"33\", , \"3597\", , \"PRINCESSSSS0017@GMAIL.COM\", \"3379605320\", \"AT&T\", , \"TARJETA DE CREDITO TARJETAHABIENTES\", \"DEVOLUCION NO APLICADA\", \"true\", \"Sin problemas\", \"MasterCard\", \"LIKEU\", \"false\", \"41015352\", , \"750078931020\", {{[, ]}}, {{['14/07/2023 01:00:00', \"SAMS CLUB INDEP\", , \"730.4\", \"MXN\", , \"00:00:00\", \"1002\", \"000000004014718\", , \"061405\", \"2233\", , , , \"5532530001477480\", , , , , , , , , , , , \"-1\"]}}, {{['14/07/2023 01:00:00', \"SAMS CLUB INDEP\", , \"730.4\", \"MXN\", , \"00:00:00\", \"1002\", \"000000004014718\", , \"061405\", \"2233\", , , , , \"5532530001477480\", , , , , , , , , , , , , , , , ]}}, {{[, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ]}}, \"false\", , {{[, , , , , , , , , , , , , , , , , , , , , ]}}, {{[, , , , , , , , , , , , , , , , , , , , , ]}}, {{[, , , , , , , , , , , , , , , , , , , , , ]}}, {{[, , , , , , , , , , , , , , , , , , , , , ]}}, , , {{[\"false\", \"false\", \"false\"]}}, \"mxgestaclar\", , , '22/11/2021 00:00:00', \"CREDITO\", , {{['14/07/2023 01:00:00', \"SAMS CLUB INDEP\", , \"730.4\", \"MXN\", , \"00:00:00\", \"1002\", \"000000004014718\", , \"061405\", \"2233\", , , , , \"5532530001477480\", , , , , , , , , ]}}, {{[, , , , , , , , , , , , , , , , , , , , , , , , , ]}}, \"SWAL\", , , , , {{[, , , , , , ]}}, {{[, , , , , , ]}}]}",
+          "entre wvrvals.260"
+      ]
+  ],
+  "ReturnCode": "0",
+  "wvrinboxrn": {
+      "monto": "+730.4",
+      "ApellidosNomEmp": "FABIAN KEIME ESTRADA",
+      "FaperturaContrato": "2021-11-22T06:00:00+00:00",
+      "Apto": "true",
+      "AptoDefinitivo": "false",
+      "BUC": "41015352",
+      "Categoria": "TARJETA DE CREDITO TARJETAHABIENTES",
+      "Cuenta": "750078931020",
+      "Descripcion": [
+          "dev no app"
+      ],
+      "Email": "PRINCESSSSS0017@GMAIL.COM",
+      "EntidadFed": "33",
+      "ID": "WVRI00009456",
+      "Marca": "MasterCard",
+      "Nombre": "FABIAN KEIME ESTRADA",
+      "PAN": "5532530001477480",
+      "Producto": "LIKEU",
+      "Razon": "Sin problemas",
+      "Segmento": "051",
+      "Subcategoria": "DEVOLUCION NO APLICADA",
+      "SucursalAltair": "3597",
+      "VisaCarta": "false",
+      "multifolio": [
+          {
+              "TxrCodigoCom": "000000004014718",
+              "TxrComercio": "SAMS CLUB INDEP",
+              "TxrDivisa": "MXN",
+              "TxrFecha": "2023-07-14T06:00:00+00:00",
+              "TxrHrTxr": "00:00:00",
+              "TxrMonto": "730.4",
+              "TxrMovExtracto": "061405",
+              "TxrNumExtracto": "-1",
+              "TxrSucursalAp": "2233",
+              "TxrTipoFactura": "1002"
+          }
+      ],
+      "multifolioNac": [
+          {
+              "TxrFechaN": "2023-07-14T06:00:00+00:00",
+              "TxrMontoN": "730.4"
+          }
+      ]
+  }
+}

@@ -1,0 +1,187 @@
+<!-- Content Result -->
+<div class="contentResult">
+        <!-- Icon -->
+        <span class="icon"></span>
+        <h1 class="green big center">Su solicitud fue recibida</h1>
+        <h2 class="green medium light center pSmall"> {{ responseModel.currentDate }} </h2>
+      
+        <!-- Content Info Result -->
+        <div class="infoResult">
+         
+          <!-- Thanks Text -->
+          <p class="black xBig light center pTBMedium LHBig">&iexcl;Gracias por la espera,
+            <span class="light toUC" [innerHtml] = "responseModel.name"></span>!
+          </p>
+      
+          <!-- SOLO ABONO DEFINITIVO -->
+          <div *ngIf="validateScreen">
+
+          
+            <!-- Movenment Text -->
+            <p class="dark regular center xBig LHMedium"> Hemos realizado un abono definitivo a su tarjeta</p>
+      
+            <!-- Instructions Text -->
+            <p class="dark light center pTBMedium medium LHSmall">
+                  Realizamos un reembolso definitivo <br />
+                  a su cuenta por la cantidad reclamada,  <br />
+                  por lo tanto, su folio será cerrado. <br />
+            </p>
+
+
+            <!-- Card Result -->
+            <div class="cardResult wLine lastCR" style="border-bottom: none !important;"  *ngIf="blocker.operationReposition || (cardRepositionResponse && repositionType === '2')">
+              <h3 class="dark medium light center toUC">NUEVO NÚMERO DE TARJETA</h3>
+              <h3 class="dark xBig center toUC pTSmall" *ngIf="responseModel.newCard">**** **** **** {{ responseModel.newCard }}</h3>
+              <h3 class="dark xBig center toUC pTSmall" *ngIf="cardRepositionResponse">**** **** **** {{ cardRepositionResponse.panReposition | slice:-4 }}</h3>
+            </div>
+            <p class="description light center pTBMedium medium LHSmall" id="card-reposition-send"*ngIf ="repositionType === '1'">Su nueva tarjeta será envíada en un lapso de  <span class="regular">10 días hábiles</span> a su sucursal titular.</p>
+        
+        
+            <!-- Card Result -->
+            <div class="cardResult wLine lastCR numberfolio">
+              <h3 class="dark medium light center toUC">MONTO ABONADO</h3>
+              <h3 class="dark xBig center toUC pTSmall" [innerHtml] = "amount | smallCents"></h3>
+            </div>
+        
+            <!-- Instructions Text -->
+            <p class="dark light center pTBMedium medium LHSmall">
+                Le enviamos la carta acuse a la cuenta de correo que tiene registrada en <span class="regular">{{ nameChanel }}</span>.
+            </p>
+        
+
+              <!-- Card Result -->
+              <div class="cardResult"  *ngIf="foliosH.length === 1">
+                <h3 class="dark medium light center toUC pTSmall">NÚMERO DE FOLIO</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel">{{ foliosH[0] }}</h3>
+              </div>
+          
+              <!-- Card Result -->
+              <div class="cardResult" *ngIf="foliosH.length >= 2">
+                <h3 class="dark medium light center toUC pTSmall">FOLIO NACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosH[0] }} </span></h3>
+              </div>
+  
+              <!-- Card Result -->
+              <div class="cardResult" *ngIf="foliosH.length >= 2">
+                <h3 class="dark medium light center toUC pTSmall">FOLIO INTERNACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosH[1] }} </span></h3>
+              </div>
+  
+
+          </div>
+          <!-- TERMINA SOLO ABONO DEFINITIVO -->
+
+
+          <!-- ABONO DEFINITIVO Y ALTA DE ACLARACIÓN -->
+          <div *ngIf="!validateScreen">
+
+          
+              <!-- Movenment Text -->
+              <p class="dark regular center xBig LHMedium pBMedium">Realizamos un abono definitivo a su tarjeta</p>
+          
+              <!-- Card Result -->
+              <div class="cardResult wLine lastCR amountReal">
+                  <h3 class="dark medium light center toUC">MONTO ABONADO</h3>
+                  <h3 class="dark xBig center toUC pTSmall" [innerHtml] = "amount | smallCents"></h3>
+              </div>
+  
+              <!-- Card Result -->
+              <div class="cardResult numberfolioclarification"  *ngIf="foliosH.length === 1">
+                <h3 class="dark medium light center toUC pTSmall">NÚMERO DE FOLIO</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel">{{ foliosH[0] }}</h3>
+              </div>
+          
+              <!-- Card Result -->
+              <div class="cardResult numberfolionational" *ngIf="foliosH.length >= 2">
+                <h3 class="dark medium light center toUC pTSmall">FOLIO NACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosH[0] }} </span></h3>
+              </div>
+  
+              <!-- Card Result -->
+              <div class="cardResult numberfoliointernational" *ngIf="foliosH.length >= 2">
+                <h3 class="dark medium light center toUC pTSmall">FOLIO INTERNACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosH[1] }} </span></h3>
+              </div>
+        
+              <!-- Instructions Text -->
+              <p class="dark light center pBMedium medium LHSmall pTSmall labeltexpayment">
+                  Se realizó un <span class="sBold">reembolso definitivo</span>
+                  a su cuenta, por ello su(s) <span class="sBold">folio(s) H</span>
+                  será(n) cerrado(s).
+              </p>
+  
+  
+              <!-- Card Result -->
+              <div class="cardResult wLine lastCR" *ngIf = "blocker.operationReposition">
+                <h3 class="dark medium light center toUC">NUEVO NÚMERO DE TARJETA</h3>
+                <h3 class="dark xBig center toUC pTSmall" *ngIf="responseModel.newCard">**** **** **** {{ responseModel.newCard }}</h3>
+              <h3 class="dark xBig center toUC pTSmall" *ngIf="cardRepositionResponse">**** **** **** {{ cardRepositionResponse.panReposition | slice:-4 }}</h3>
+              </div>
+
+              <p class="dark light center pTBMedium medium LHSmall" *ngIf="blocker.operationReposition">Su nueva tarjeta será envíada en un lapso de  <span class="regular">10 días hábiles</span> a su sucursal titular.</p>
+
+              <!-- Movenment Text -->
+              <p class="dark regular center xBig LHMedium pBMedium pTMedium" [ngClass]="{'borderTop': !blocker.operationReposition}">Y hemos dado de alta su aclaración</p>
+
+              <!-- Card Result -->
+              <div class="cardResult"  *ngIf="foliosI.length === 1">
+                <h3 class="dark medium light center toUC">NÚMERO DE FOLIO</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel">{{ foliosI[0] }}</h3>
+              </div>
+          
+              <!-- Card Result -->
+              <div class="cardResult nationalf" *ngIf="foliosI.length >= 2">
+                <h3 class="dark medium light center toUC">FOLIO NACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosI[0] }} </span></h3>
+              </div>
+  
+              <!-- Card Result -->
+              <div class="cardResult internationalf" *ngIf="foliosI.length >= 2">
+                <h3 class="dark medium light center toUC">FOLIO INTERNACIONAL</h3>
+                <h3 class="dark big sBold center toUC pTSmall foliosLabel"> <span>{{ foliosI[1] }} </span></h3>
+              </div>
+
+              <!-- Instructions Text -->
+              <p class="dark light center pBMedium medium LHSmall pTSmall labelfollow">
+                Llevaremos a cabo una <span class="sBold">investigación</span>
+                de su(s) <span class="sBold">folio(s) I</span>, 
+                para darle una pronta respuesta. <br /><br />
+                La fecha compromiso para el dictamen final
+                de su solicitud será a más tardar el: 
+              </p>
+
+
+              <!-- Movenment Text -->
+              <p class="dark bold center big LHMedium" *ngIf="viewValues.greater != null && viewValues.greater != 'Invalid date'">{{ viewValues.greater }}</p>
+        
+          
+              <!-- Instructions Text -->
+              <p class="dark light center pTBMedium medium LHSmall">
+                  Le enviamos las cartas acuse a la cuenta de correo que tiene registrada en <span class="regular">{{ nameChanel }}</span>.
+              </p>
+          
+              <!-- Card Result -->
+              <div class="cardResult dNone" >
+                <h3 class="dark medium light center toUC">NÚMERO DE FOLIO</h3>
+                <h3 class="dark big bold center toUC pTSmall foliosLabel">H17-1236234</h3>
+              </div>
+  
+            </div>
+            <!-- TERMINA ABONO DEFINITIVO Y ALTA DE ACLARACIÓN -->
+
+        </div>
+        <!-- Termina Conten Info  Result -->
+      </div>
+      <!-- Termina Content Result -->
+      
+      
+        <!-- Content Footer -->
+        <div class="interna finalizar contentFooter" (click) = "finishApp($event)">
+            <button> Finalizar </button>
+        </div>
+        <!-- Termina Footer Conten-->
+      
+      
+      
+      
+      

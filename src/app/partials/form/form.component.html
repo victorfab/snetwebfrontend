@@ -1,0 +1,99 @@
+<form class="form contentQuestions" [formGroup]="formGroup" *ngIf="formGroup">
+
+  <ng-container *ngFor="let control of controls | filterControl; trackBy: trackByFn; let position = index">
+    <ng-container *ngIf="control.show">
+      <div class="row vAlign">
+        <div class="col-2 align pt-0">
+          <span class="numeric-box">{{ position + 1 }}</span>
+        </div>
+        <div class="col-10 pt-0">
+          <label [for]="control.name" [innerHTML]="control.label"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 pt-0"></div>
+        <div class="col-10 pt-0 pr-0 relative">
+          <!-- CONTROLS -->
+          <ng-container [ngSwitch]="control.tag">
+            <!-- INPUT -->
+            <ng-container *ngSwitchCase="'input'">
+              <ng-container *ngIf="control.type === 'formated'; else elseTemplate">
+                <input (blur)="blur(control)" [options]="{
+                    prefix: '$ ',
+                    suffix: ' MXN',
+                    thousands: ',',
+                    decimal: '.',
+                    align: 'left',
+                    autoUnmask: true,
+                    digitsOptional: false
+                  }" class="control__input" currencyMask [formControlName]="control.name" />
+              </ng-container>
+              <ng-template #elseTemplate>
+                <input [appProps]="control.props" [formControlName]="control.name" />
+              </ng-template>
+            </ng-container>
+
+            <!-- TEXTAREA -->
+            <ng-container *ngSwitchCase="'textarea'">
+              <span class="control__message">{{ proxyForm.get(control.name).value.length }} de 240 caracteres</span>
+              <label for="text_description" hidden></label>
+              <textarea
+                (keypress)="validateMaxLength($event?.target?.value)"
+                maxlength="240"
+                id="text_description"
+                #description
+                [style.margin-top.px]="control.message ? 3: 0"
+                (blur)="blur(control)" 
+                [appProps]="control.props" 
+                [formControlName]="control.name">
+              </textarea>
+            </ng-container>
+
+            <!-- SELECT -->
+            <ng-container *ngSwitchCase="'select'">
+              <label for="select_options" hidden></label>
+              <select 
+                id="select_options"
+                class="custom" 
+                [appProps]="control.props"
+                [formControlName]="control.name">
+                <option value="" default selected hidden>
+                  {{ control.placeholder }}
+                </option>
+                <option [value]="option.id" *ngFor="let option of control.options">
+                  {{ option.value }}
+                </option>
+              </select>
+            </ng-container>
+
+            <!-- RADIO -->
+            <ng-container *ngSwitchCase="'radio'">
+              <ng-container *ngFor="let item of control?.controlGroup">
+                <input 
+                  [formControlName]="control.name" 
+                  id="{{item.id}}" 
+                  type="radio" 
+                  [name]="control.name"
+                  [value]="item.value" />
+                <label for="{{item.id}}">
+                  {{ item.label }}
+                  <span *ngIf="item.message">
+                    {{ item.message }}
+                  </span>
+                </label>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</form>
+
+<footer>
+  <div class="buttons">
+    <button class="g-btn rounded" [disabled]="invalidForm" (click)="submit()">
+      Enviar
+    </button>
+  </div>
+</footer>

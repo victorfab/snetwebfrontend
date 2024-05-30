@@ -1,0 +1,12 @@
+export enum MessageType {
+    TDD_MESSAGE = 1,
+    TDC_LIKEU,
+    TDC_OTHER,
+    COMPRA_SEGURO_TDD, //Flujo COMPRA_SEGURO (Pendiente)
+    CONTRATACION_ERROR, //Flujo CORRECCION_MONTO_LINEX
+    LIQUIDAR_CORRECCION, //Flujo CORRECCION_PROMOCION
+    LIQUIDAR, // Flujo PAGO_LINEX
+    OTRO_MONTO, // Flujo PAGO_LINEX
+    ERROR,
+    PREFOLIO // FLujo para prefolio
+}

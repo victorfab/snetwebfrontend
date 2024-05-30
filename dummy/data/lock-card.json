@@ -1,0 +1,9 @@
+{
+    "operationReposition":false,
+    "panReposition":"6829",
+    "operationCancellationMsg":"NO SE PUEDE BLQ/DBLQ LA TJT, YA QUE ESTABA BLOQUEADA IRREVERSIBLEMENTE",
+    "operationCancellation":true,
+    "operationRepositionMsg":"",
+    "status":"Ok",
+    "operationExpressReposition": true
+}

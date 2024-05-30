@@ -1,0 +1,9 @@
+{
+	"operationReposition": true,
+	"operationExpressReposition": true,
+	"operationCancellation": false,
+	"operationRepositionMsg": " OK. OPERACION EFECTUADA",
+	"operationCancellationMsg": "",
+	"status": "Ok",
+	"panReposition": "5549006000554687"
+}

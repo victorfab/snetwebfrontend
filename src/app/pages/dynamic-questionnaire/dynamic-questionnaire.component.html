@@ -1,0 +1,8 @@
+<app-card-detail [detail]="proxy.creditCardFullData"></app-card-detail>
+<p class="form-title">
+    Por favor, responde estas preguntas:
+</p>
+<div class="form-container">
+    <app-form [controlList]="controls" (valueChanges)="getQuestionnarie($event)">
+    </app-form>
+</div>

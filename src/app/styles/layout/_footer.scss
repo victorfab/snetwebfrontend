@@ -1,0 +1,151 @@
+footer {
+  width: 100%;
+  display: block;
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 20px;
+  font-size: 1em;
+  background-color: white;
+  /**box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.21);**/
+  z-index: 4;
+
+  .selected-items {
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    .link-text {
+      display: inline-block;
+      font-size: 0.6em;
+
+      @include respond-to('small'){
+        font-size: 0.8em;
+      }
+    }
+
+    span {
+      @include circle($icon-height, $main-color);
+      color: $light-main-color;
+      display: inline-block;
+      margin-right: 5px;
+      background-color: $main-color;
+      line-height: 26px;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    // .next {
+    //   line-height: $icon-height;
+    //   font-size: 16.8px;
+    //   text-align: center;
+    //   color: $white;
+    //   border: none;
+    //   height: 54px;
+    //   border-radius: 60px;
+    //   background-color: $active-button-color;
+
+    //   &:focus {
+    //     outline: none;
+    //   }
+
+    //   &:disabled {
+    //     opacity: 0.7;
+    //     background-color: $disabled-button-color;
+    //   }
+
+    //   @include respond-to('small'){
+    //     font-size: 1em;
+    //   }
+
+    //   i {
+    //     margin-left: 5px;
+    //   }
+    // }
+
+    .nextWallet {
+      line-height: $icon-height;
+      font-size: 16.8px;
+      text-align: center;
+      color: $white;
+      border: none;
+      height: 54px;
+      border-radius: 4px;
+      background-color: $active-button-color;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        background-color: $disabled-button-color;
+      }
+
+      @include respond-to('small'){
+        font-size: 1em;
+      }
+
+      i {
+        margin-left: 5px;
+      }
+    }
+
+    .prev {
+      @extend .next;
+      color: $black;
+    }
+  }
+}
+
+.footer-block {
+  background-color: $gradient-grey-final;
+  padding: 10px 0;
+
+  p {
+    text-align: center;
+    font-size: 1.063em;
+    color: $light-grey;
+
+    span.superlinea {
+      display: inline-block;
+      font-weight: 600;
+      color: $heavy-grey;
+      text-transform: none;
+      font-size: 1em;
+
+      strong {
+        display: inline;
+        color: $main-color;
+        font-weight: 600;
+        font-size: 1.063em;
+      }
+    }
+
+    span {
+      font-size: 0.875em;
+      text-transform: uppercase;
+      display: block;
+    }
+    strong {
+      font-size: 1.563em;
+      font-weight: 600;
+      color: $font-primary-color;
+
+      a {
+        font-size: 1em;
+        font-weight: 600;
+        color: $font-primary-color;
+      }
+      a:hover,
+      a:focus,
+      a:active {
+        text-decoration: none;
+      }
+    }
+  }
+}

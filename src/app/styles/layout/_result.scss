@@ -1,0 +1,495 @@
+$mq_small: "screen and (min-width: 361px)";
+
+
+.result {
+
+
+
+  .success {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 59px;
+    height: 59px;
+    border: 3px solid #abc111;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25px' height='19px' viewBox='0 0 25 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3etick%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='20-AclaracionesWebView-Respuesta-AbonoTemporal-CargoDuplicado' transform='translate(-175.000000, -145.000000)' fill='%23ABC111' fill-rule='nonzero'%3e%3cg id='icoCTAExitosa' transform='translate(160.000000, 127.000000)'%3e%3cg id='tick' transform='translate(15.000000, 18.000000)'%3e%3cpolygon id='Shape' points='7.3276973 14.0845156 2.59967722 9.65165211 0 12.0890654 6.23923556 17.9388188 6.24639481 17.9320585 7.38543154 19 25 2.48478356 22.3499012 0'%3e%3c/polygon%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-size: 30px;
+    background-position: center center;
+  }
+
+  .highlight {
+    font-size: 1.3125em;
+    line-height: 1em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .highlight-tiny {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1em;
+  }
+
+  .congrats {
+    font-size: 1.4375em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 200;
+    color: $font-primary-color;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 27.24px;
+  }
+
+  .money {
+    width: 100%;
+    height: 62px;
+    clear: both;
+    display: block;
+    margin: 5px 0;
+    background-image: url(#{$img-url}general/icon-money.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .restrictions {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 1.0625em;
+    color: $title-grey;
+    font-weight: 200;
+
+    a {
+      color: inherit;
+      font-size: 12px;
+      font-weight: 600;
+
+      @media #{$mq_small} {
+        font-size: 15px;
+      }
+
+
+
+      strong {
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+    }
+
+    strong {
+      color: inherit;
+      font-size: 12px;
+      font-weight: 600;
+
+      @media #{$mq_small} {
+        font-size: 15px;
+      }
+
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .warning {
+      color: $main-color;
+      font-size: 1em;
+      // letter-spacing: -0.4px;
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    .info-box {
+      width: 90%;
+      max-width: 320px;
+      margin: 0 auto;
+      display: block;
+      padding: 13px 8px;
+      margin-top: 40px;
+
+      @include bs(0 2px 4px 0 rgba(0, 0, 0, 0.5));
+
+      em {
+        display: table-cell;
+
+        width: 17px;
+        height: 14px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17px' height='14px' viewBox='0 0 17 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eShape%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='24-AclaracionesWebView-Respuesta_Visa-Copy-6' transform='translate(-41.000000, -532.000000)' fill='%231BB3BC' fill-rule='nonzero'%3e%3cg id='Group-Copy' transform='translate(32.000000, 514.000000)'%3e%3cpath d='M9.19620883,25.6835281 C9.06540294,25.5599892 9,25.3746809 9,25.251142 C9,25.1276031 9.06540294,24.9422947 9.19620883,24.8187558 L10.1118501,23.9539836 C10.3734618,23.7069058 10.7658795,23.7069058 11.0274913,23.9539836 L11.0928942,24.015753 L14.6900562,27.6601504 C14.820862,27.7836893 15.0170709,27.7836893 15.1478768,27.6601504 L23.9118713,19.0741972 L23.9772742,19.0741972 C24.238886,18.8271194 24.6313037,18.8271194 24.8929155,19.0741972 L25.8085567,19.9389695 C26.0701685,20.1860473 26.0701685,20.556664 25.8085567,20.8037418 L15.3440856,31.05747 C15.2132797,31.1810089 15.0824738,31.2427784 14.886265,31.2427784 C14.6900562,31.2427784 14.5592503,31.1810089 14.4284444,31.05747 L9.32701472,25.8688364 L9.19620883,25.6835281 Z' id='Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position-y: 6px;
+      }
+
+      p {
+        padding-left: 10px;
+        display: table-cell;
+        font-size: 0.9375em;
+        text-align: left;
+      }
+    }
+  }
+
+  .card {
+    border-top: 1px solid $disabled-color;
+    border-bottom: 1px solid $disabled-color;
+    border-left: none;
+    border-right: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: -1px !important;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center 12px;
+    padding-top: 50px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34px' height='28px' viewBox='0 0 34 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eFill 36 + Fill 37 + Fill 38 Copy%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='10_AclaracionesWebView-RespuestaBloqueoTarjeta' transform='translate(-171.000000, -395.000000)' fill='%23CCCCCC'%3e%3cg id='Fill-36-+-Fill-37-+-Fill-38-Copy' transform='translate(171.000000, 395.000000)'%3e%3cpath d='M26.5995593,11 L3.65535967,11 L1.3993389,11 C0.626947899,11 0,11.6079258 0,12.3586098 L0,26.6408555 C0,27.3915396 0.626947899,28 1.3993389,28 L26.5995593,28 C27.3730521,28 28,27.3915396 28,26.6408555 L28,17.4075484 L28,12.3586098 C28,11.6079258 27.3730521,11 26.5995593,11 L26.5995593,11 Z M6.36038092,20.3659066 C6.36038092,20.7412486 6.04745789,21.0454788 5.66071147,21.0454788 L2.89013065,21.0454788 C2.50503699,21.0454788 2.19101212,20.7412486 2.19101212,20.3659066 L2.19101212,17.7711275 C2.19101212,17.3963202 2.50503699,17.09209 2.89013065,17.09209 L5.66071147,17.09209 C6.04745789,17.09209 6.36038092,17.3963202 6.36038092,17.7711275 L6.36038092,20.3659066 Z' id='Fill-36'%3e%3c/path%3e%3cpath d='M27,1.93521457 L26.3282643,0.744050449 C25.9364668,0.0493459123 25.0398532,-0.204249484 24.3281263,0.178120412 L6,10 L11.7656832,10 L27,1.93521457 Z' id='Fill-37'%3e%3c/path%3e%3cpath d='M33.8271167,12.8440083 L29.2460819,5 L21,9.21849174 L27.8380939,9.21849174 C29.3755269,9.21849174 30.6255482,10.3966942 30.6255482,11.8440083 L30.6255482,16 L33.2780726,14.6265496 C33.9516252,14.277376 34.1984481,13.4798554 33.8271167,12.8440083' id='Fill-38'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+
+
+    &.cardResult {
+      padding-top: 0px !important;
+      background-image: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      min-height: auto !important;
+      padding-bottom: 0px !important;
+      position: unset;
+
+      &::after {
+        content: '';
+        width: 100vw;
+        height: 1px;
+        background-color: $disabled-color;
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        content: '';
+        width: 100vw;
+        height: 1px;
+        background-color: $disabled-color;
+        position: absolute;
+        left: 0;
+      }
+
+    }
+
+    &.cardResultLock {
+      border: none !important;
+      border-top: 1px solid $disabled-color !important;
+      border-bottom: 1px solid $disabled-color !important;
+      border-radius: 0 !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      min-height: auto !important;
+      padding-bottom: 0px !important;
+    }
+
+
+
+    .icon-holder {
+      display: block;
+      margin: 14px auto 18px auto;
+      color: $disabled-color;
+    }
+
+    .icon-blocker {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -1.5em;
+      font-size: 2.5em;
+      @include opacity(0.5);
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 200;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .card-number {
+      font-size: 1.35em;
+      color: $title-grey;
+      margin-bottom: 14px;
+      margin-top: -1px;
+    }
+
+    &.disabled {
+      @include opacity(0.7);
+    }
+  }
+
+  .SMS {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 17px;
+    color: #333333;
+    font-weight: 300;
+    line-height: 23.15px;
+
+    b {
+      font-weight: 400;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+
+
+    span {
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+  .folio {
+    display: block;
+    text-align: center;
+    font-weight: 200;
+    color: #4a4a4a;
+    font-size: 1em;
+    margin-top: 70px;
+    margin-bottom: 46px;
+
+    span {
+      display: block;
+      margin-top: 6px;
+      font-size: 1.5em;
+      color: #4a4a4a;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .folios {
+    color: #020202;
+
+    &>h3 {
+      padding: 40px 0px 0px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      // letter-spacing: 0.56px;
+      text-transform: uppercase;
+    }
+
+    div {
+      &>h3 {
+        padding-top: 5px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #4A4A4A;
+      }
+    }
+  }
+
+  .endbutton {
+    background-color: $main-color;
+    color: $white;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    font-size: 1.0625em;
+    font-weight: 600;
+    padding: 14px 0;
+    @include radius(25px);
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .endbuttonWallet {
+    background-color: $main-color;
+    color: $white;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    font-size: 1.0625em;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 4px;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .amount {
+    font-size: 2em;
+    color: $grey;
+    text-align: center;
+    line-height: 1em;
+
+    .cents {
+      font-style: normal;
+      font-size: 0.6em;
+      vertical-align: super;
+    }
+
+    &:before {
+      padding-right: 10px;
+    }
+  }
+
+  .special-note {
+    font-size: 1.063em;
+    font-weight: 600;
+    color: $grey;
+    text-align: center;
+  }
+
+
+
+
+  &__message {
+    color: #020202;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    // letter-spacing: 0.56px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  span.result__message:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__requested-amount {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__msi {
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    justify-content: center;
+  }
+
+  &__total {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #595959;
+    display: block;
+  }
+
+  &__bolder {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    align-items: center;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    text-align: center;
+    display: block;
+  }
+}
+
+.new-card {
+  &-title {
+    color: #020202;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    // letter-spacing: 0.56px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  &-value {
+    color: #5B5A5B;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.card-locked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='82px' height='82px' viewBox='0 0 82 82' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3edo-not-disturb-rounded-sign%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.10082654'%3e%3cg id='13_AclaracionesWebView-RespuestaAbonoTemporal-ContactoEstablecimiento-NO' transform='translate(-151.000000, -632.000000)' fill='%23000000' fill-rule='nonzero'%3e%3cg id='do-not-disturb-rounded-sign' transform='translate(151.000000, 632.000000)'%3e%3cpath d='M41,0 C18.45,0 0,18.45 0,41 C0,63.55 18.45,82 41,82 C63.55,82 82,63.55 82,41 C82,18.45 63.55,0 41,0 Z M8.2,41 C8.2,22.96 22.96,8.2 41,8.2 C48.38,8.2 55.35,10.66 61.09,15.17 L15.17,61.09 C10.66,55.35 8.2,48.38 8.2,41 Z M41,73.8 C33.62,73.8 26.65,71.34 20.91,66.83 L66.83,20.91 C71.34,26.65 73.8,33.62 73.8,41 C73.8,59.04 59.04,73.8 41,73.8 Z' id='Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  background-position: center;
+  background-size: 82px;
+  background-repeat: no-repeat;
+}
+
+.movement-count {
+  font-size: 17px;
+  color: #5B5A5B;
+  line-height: 23.15px;
+  text-align: center;
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.amountPadding {
+  display: flex;
+  justify-content: flex-end;
+}
+
+app-move-item {
+  display: block;
+}
+
+.alert-config {
+  margin-top: 1rem !important;
+  display: block !important;
+}

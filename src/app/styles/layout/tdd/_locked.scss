@@ -1,0 +1,90 @@
+.contentLocked{
+    padding: 130px 20px 20px 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='60px' height='54px' viewBox='0 0 60 54' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eicoTarjetaBloqueda Copy%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='10_AclaracionesWebView-RespuestaBloqueoTarjeta' transform='translate(-158.000000, -128.000000)' fill='%23C80000'%3e%3cg id='icoTarjetaBloqueda-Copy' transform='translate(158.000000, 128.000000)'%3e%3cpath d='M41.8867925,23.625 C33.7719645,23.625 27.1698113,30.4382316 27.1698113,38.8125 C27.1698113,47.1867684 33.7719645,54 41.8867925,54 C50.0016204,54 56.6037736,47.1867684 56.6037736,38.8125 C56.6037736,30.4382316 50.0016204,23.625 41.8867925,23.625 Z M41.8867925,52.2132353 C34.7266926,52.2132353 28.9012209,46.2015165 28.9012209,38.8125 C28.9012209,31.4234835 34.7266926,25.4117647 41.8867925,25.4117647 C49.0474695,25.4117647 54.872364,31.4234835 54.872364,38.8125 C54.872364,46.2015165 49.0474695,52.2132353 41.8867925,52.2132353 Z M48.962919,31.5101415 C48.624717,31.1611268 48.0770144,31.1611268 47.7388124,31.5101415 L41.8867925,37.5492574 L36.0349168,31.5101415 C35.6972919,31.1611268 35.1488679,31.1611268 34.8106659,31.5101415 C34.4724639,31.8591563 34.4724639,32.425114 34.8106659,32.7733842 L40.6626859,38.8125 L34.8106659,44.8516158 C34.4724639,45.2004816 34.4724639,45.7658438 34.8106659,46.1148585 C34.9797669,46.2893658 35.2012431,46.3766195 35.4227192,46.3766195 C35.6443396,46.3766195 35.8663929,46.2893658 36.0349168,46.1148585 L41.8867925,40.0757426 L47.7388124,46.1148585 C47.9079134,46.2893658 48.1293896,46.3766195 48.3508657,46.3766195 C48.5723418,46.3766195 48.793818,46.2893658 48.962919,46.1148585 C49.301121,45.7658438 49.301121,45.199886 48.962919,44.8516158 L43.1110433,38.8125 L48.962919,32.7733842 C49.301121,32.425114 49.301121,31.8591563 48.962919,31.5101415 Z' id='Combined-Shape'%3e%3c/path%3e%3cpath d='M58.2387519,10.1375933 L1.76124814,10.1375933 L1.76124814,13.6637127 L58.2387519,13.6637127 L58.2387519,10.1375933 Z M58.2387519,8.0806903 L58.2387519,4.64301772 C58.2387519,3.0549417 56.9481973,1.7630597 55.361753,1.7630597 L4.63824697,1.7630597 C3.05180271,1.7630597 1.76124814,3.0549417 1.76124814,4.64301772 L1.76124814,8.0806903 L58.2387519,8.0806903 Z M58.2387519,15.7206157 L1.76124814,15.7206157 L1.76124814,34.7319823 C1.76124814,36.3200583 3.05180271,37.6119403 4.63824697,37.6119403 L23.4248938,37.6119403 C23.9109983,37.6119403 24.3055178,38.0068657 24.3055178,38.4934701 C24.3055178,38.9800746 23.9109983,39.375 23.4248938,39.375 L4.63824697,39.375 C2.08062113,39.375 0,37.2922388 0,34.7319823 L0,4.64301772 C0,2.08276119 2.08062113,0 4.63824697,0 L55.361753,0 C57.9193789,0 60,2.08276119 60,4.64301772 L60,34.7319823 C60,35.2193214 59.6054804,35.6135121 59.1193759,35.6135121 C58.6331247,35.6135121 58.2387519,35.2193214 58.2387519,34.7319823 L58.2387519,15.7206157 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 72px;
+    background-position: center 40px;
+    margin-bottom: -60px;
+
+    .Ndark{
+        color: #333333;
+    }
+
+    .card {
+        border-top: 1px solid $disabled-color;
+        border-bottom: 1px solid $disabled-color;
+        border-left: none;
+        border-right: none;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: -1px !important;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center 12px;
+        padding-top: 50px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34px' height='28px' viewBox='0 0 34 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eFill 36 + Fill 37 + Fill 38 Copy%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='10_AclaracionesWebView-RespuestaBloqueoTarjeta' transform='translate(-171.000000, -395.000000)' fill='%23CCCCCC'%3e%3cg id='Fill-36-+-Fill-37-+-Fill-38-Copy' transform='translate(171.000000, 395.000000)'%3e%3cpath d='M26.5995593,11 L3.65535967,11 L1.3993389,11 C0.626947899,11 0,11.6079258 0,12.3586098 L0,26.6408555 C0,27.3915396 0.626947899,28 1.3993389,28 L26.5995593,28 C27.3730521,28 28,27.3915396 28,26.6408555 L28,17.4075484 L28,12.3586098 C28,11.6079258 27.3730521,11 26.5995593,11 L26.5995593,11 Z M6.36038092,20.3659066 C6.36038092,20.7412486 6.04745789,21.0454788 5.66071147,21.0454788 L2.89013065,21.0454788 C2.50503699,21.0454788 2.19101212,20.7412486 2.19101212,20.3659066 L2.19101212,17.7711275 C2.19101212,17.3963202 2.50503699,17.09209 2.89013065,17.09209 L5.66071147,17.09209 C6.04745789,17.09209 6.36038092,17.3963202 6.36038092,17.7711275 L6.36038092,20.3659066 Z' id='Fill-36'%3e%3c/path%3e%3cpath d='M27,1.93521457 L26.3282643,0.744050449 C25.9364668,0.0493459123 25.0398532,-0.204249484 24.3281263,0.178120412 L6,10 L11.7656832,10 L27,1.93521457 Z' id='Fill-37'%3e%3c/path%3e%3cpath d='M33.8271167,12.8440083 L29.2460819,5 L21,9.21849174 L27.8380939,9.21849174 C29.3755269,9.21849174 30.6255482,10.3966942 30.6255482,11.8440083 L30.6255482,16 L33.2780726,14.6265496 C33.9516252,14.277376 34.1984481,13.4798554 33.8271167,12.8440083' id='Fill-38'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    
+    
+        &.cardResult{
+          padding-top:0px !important;
+          background-image: none !important;
+          border:none !important;
+          border-top: 1px solid $disabled-color !important;
+          border-bottom: 1px solid $disabled-color !important;
+          border-radius: 0 !important;
+          -webkit-box-shadow:none !important;
+          -moz-box-shadow:none !important;
+          box-shadow:none !important;
+          min-height: auto !important;
+          padding-bottom: 0px !important;
+        }
+        &.cardResultLock{
+          border:none !important;
+          border-top: 1px solid $disabled-color !important;
+          border-bottom: 1px solid $disabled-color !important;
+          border-radius: 0 !important;
+          -webkit-box-shadow:none !important;
+          -moz-box-shadow:none !important;
+          box-shadow:none !important;
+          min-height: auto !important;
+          padding-bottom: 0px !important;
+        }
+        
+        
+        
+        .icon-holder {
+          display: block;
+          margin: 14px auto 18px auto;
+          color: $disabled-color;
+        }
+    
+        .icon-blocker {
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          margin-left: -1.5em;
+          font-size: 2.5em;
+          @include opacity(0.5);
+        }
+    
+        .title {
+          text-transform: uppercase;
+          font-size: 1em;
+          font-weight: 200;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+    
+        .card-number {
+          font-size: 1.35em;
+          color: $title-grey;
+          margin-bottom: 14px;
+          margin-top: -1px;
+          text-align: center;
+        }
+    
+        &.disabled {
+          @include opacity(0.7);
+        }
+      }
+}

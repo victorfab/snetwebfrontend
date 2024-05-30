@@ -1,0 +1,119 @@
+<div class="container-fluid">
+  <div class="row" *ngIf="isLoading">
+    <div class="spinner-container">
+      <img src="assets/img/general/loader.gif" alt="Cargando ..." />
+    </div>
+  </div>
+  <div class="row no-results" *ngIf="!isLoading && fullList.length == 0">
+    <p class="text-center">
+      No hay aclaraciones que mostrar.
+    </p>
+  </div>
+  <div class="row" *ngIf="fullList.length > 0">
+      <div class="title" style="padding: 15px;font-weight: 300;font-size: 15px;">
+          <div class="textFilter">Revise el estatus de sus aclaraciones:</div>
+          <div class="tooltipButton"  (click)="tooltipOpener($event)"></div>
+      </div>
+
+    <div class="moves-container">
+      <ul class="moves-list">
+        <ng-container *ngFor="let item of fullList">
+          <li class="move-box date">
+            <div class="icon"><span></span></div>
+            <div class="content history">
+              {{ formatTitle(item.date) }}
+            </div>
+          </li>
+          <li class="history-box" *ngFor="let move of item.list" [ngClass]="move.codeClass">
+            <div class="content">
+              <div class="half-circle" [ngClass]="{'half-circle-black': move.hFolio}"><span></span></div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-5 p-0">
+                    <div class="title">No. Folio</div>
+                    <div class="highlight">{{ move.IncidentID }}</div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="title">Estatus</div>
+                    <div class="special" [ngClass]="{'text-gray':move.hFolio}">{{ move.status }}</div>
+                  </div>
+                  <div class="col-xs-2 right">
+                      <span id="arrow{{ move.IncidentID }}" class="arrowDownSelect" (click)="toggleItem(move.IncidentID, move.IncidentID)"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-content" [ngClass]="{'active': checkIfSelected(move.IncidentID)}">
+              <div class="box" *ngIf="move.status !== 'DECLINADO'">
+                <div class="box__section">
+                  <div class="text-block" *ngIf="move.Category">
+                    <div class="title">Categoría</div>
+                    <p>{{ move.Category }}</p>
+                  </div>
+                  <div class="text-block" *ngIf="move.Subcategory">
+                    <div class="title">Sub-categoría</div>
+                    <p>{{ move.Subcategory }}</p>
+                  </div>
+                  <div class="text-block" *ngIf="move.CauseCode">
+                    <div class="title">Resolución final</div>
+                    <span class="heavy">{{ move.CauseCode }}</span>
+                  </div>
+                  <div class="text-block" *ngIf="move.hFolio">
+                    <div class="title">CÓDIGO DE CIERRE</div>
+                    <span class="heavy close-code-description">ABONO DEFINITIVO APLICADO</span>
+                  </div>
+                </div>
+                <div class="box__separator"></div>
+                <div class="box__section">
+                  <div class="text-block" *ngIf="move.OpenTime != ''">
+                    <div class="title">Fecha de alta</div>
+                    <p>{{ move.OpenTime }}</p>
+                  </div>
+                  <div class="text-block" *ngIf="move.FechaCompromiso && move.CoseTime == '' && !move.hFolio">
+                    <div class="title">Fecha compromiso</div>
+                    <p>{{ move.FechaCompromiso }}</p>
+                  </div>
+                  <div class="text-block" *ngIf="move.CoseTime != ''">
+                    <div class="title">Fecha de cierre</div>
+                    <p>{{ move.CoseTime }}</p>
+                  </div>
+                  <div class="text-block" *ngIf="((move.Numero3 && !move.hFolio) && move.Numero3 > 0 )">
+                    <div class="title">Importe</div>
+                    <span class="amount">{{ (move.Numero3 * 1) | customCurrencyPlain }}</span>
+                  </div>
+                  <!-- PREFOLIO -->
+                  <div class="text-block" *ngIf="move.folioP">
+                    <div class="title">prefolio aclaración</div>
+                    <span class="prefolio">{{move.folioP}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row" *ngIf="move.status === 'DECLINADO'">
+                <div class="col-xs-12 declined-container">
+                  <span class="declined-title">Este folio fue declinado</span>
+                  <p class="declined-description">
+                    Favor de comunicarse a SuperLínea
+                    <br><strong>55 5169 4300</strong> en la <strong>opción 3</strong> para dar
+                    seguimiento a la aclaración
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+  <div class="row footer-block" *ngIf="!isLoading && fullList.length > 0">
+    <div class="col-sm-12">
+      <p>
+        Si tiene alguna duda con su aclaración puede comunicarse a <span class="superlinea">Super<strong>Línea</strong></span>
+      </p>
+      <div class="spacer"></div>
+      <p style="padding-top: 20px !important;">
+        <span>CDMX y del Interior de la República</span>
+        <strong>55 5169 4300</strong>
+      </p>
+    </div>
+  </div>
+</div>

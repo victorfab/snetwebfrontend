@@ -1,0 +1,113 @@
+//PADDING TOP FOR THE FIXED STEPER
+.summaryContent {
+    position: relative;
+    z-index: 1;
+    padding-top: 55px;
+    font-weight: lighter;
+    font-size: 18px;
+    padding-bottom: 130px;
+    line-height: 1.5;
+
+    .noPaddingTop {
+        padding: 0 13px;
+    }
+
+    .movementsSelectedLabel {
+        color: #191919;
+
+        p {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            /* 27px */
+        }
+    }
+
+    .descriptionMove {
+        color: #424242;
+    }
+
+    .descriptionQuestion {
+        color: #4a4a4a;
+    }
+
+    .marginList{
+      margin-bottom: 5rem!important;
+    }
+    .moveInfo {
+        font-size: 0.8em;
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+
+        .description {
+            font-weight: 600;
+            text-align: right;
+            font-size: 0.9em;
+            overflow-wrap: break-word;
+
+            .cents {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.move-label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #424242;
+    font-family: Santander Micro, sans-serif;
+}
+
+.move-value {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #424242;
+    text-align: right;
+    font-family: Santander Micro, sans-serif;
+
+    .sBold {
+        .cents {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            /* 18px */
+        }
+    }
+}
+
+.moveInfo>.value,
+.moveInfo>.description {
+    color: #424242;
+    font-family: Santander Micro, sans-serif;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.moveInfo>.amount {
+    color: #424242;
+    text-align: right;
+    font-family: Santander Micro, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 18px */
+}
+
+.movements-selected-label {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.p-5 {
+    padding: 5px;
+}

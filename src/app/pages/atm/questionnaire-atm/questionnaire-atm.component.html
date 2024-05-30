@@ -1,0 +1,296 @@
+<section *ngIf="!opNoPermitida">
+
+  <nav class="navbar navbar-fixed-top" style="max-width:100%;">
+    <!-- Sticky Header -->
+    <div class="stickyHeader d-unset">
+      <!-- Header Steps -->
+      <div class="row headerSteps">
+        <div class="step-bar">
+          <div class="col-xs-2 noPadding" style="padding:0px;">
+            <div class="step pull-left">2</div>
+          </div>
+          <div class="col-xs-8 noPadding" style="padding:0px;">
+            <div class="title">Responda el cuestionario</div>
+          </div>
+          <div class="col-xs-2 noPadding" style="padding:0px;">
+            <div class="step-number pull-right">2 de 3</div>
+          </div>
+          <div class="col-xs-12 noPadding" style="padding:0px;">
+            <div class="progress">
+              <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" class="progress-bar highlight-blue atm-w"
+                   role="progressbar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <form [formGroup]="questionnaire" class="container-fluid">
+    <div class="row question" style="padding-top: 61px;">
+      <div class="spacer"></div>
+      <div *ngIf="!ordenPago" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <div class="numeric-box">1</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>¿Tiene la <strong>tarjeta en su poder</strong>?</p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="input-group">
+              <input
+                [checked]="hasCard.value === 'si'"
+                formControlName="hasCard"
+                id="haveContact"
+                name="hasCard"
+                type="radio">
+              <label (click)="setValueCard('si')" for="haveContact">SÍ</label>
+              <div class="divider"></div>
+              <input
+                [checked]="hasCard.value === 'no'"
+                formControlName="hasCard"
+                id="haveContactNo"
+                name="hasCard"
+                type="radio">
+              <label (click)="setValueCard('no') " for="haveContactNo">NO</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <div *ngIf="hasCard.value === 'si'" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="!ordenPago" class="numeric-box">2</div>
+            <div *ngIf="ordenPago" class="numeric-box">1</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p *ngIf="!ordenPago">¿Qué fue lo que pasó con el ATM? <br>(Cajero automático)</p>
+            <p *ngIf="ordenPago"><strong> Ese movimiento corresponde a un retiro sin tarjeta.</strong> ¿qué fue lo que
+              pasó con el ATM (Cajero automático) </p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="input-group">
+              <label for="motive" hidden></label>
+              <select (change)="validateMotive(motive.value)" [formControl]="motive" class=" form-control custom"
+                      id="motive" name="motive">
+                <option disabled selected></option>
+                <option *ngFor="let motive of motives" [ngValue]="motive">{{motive.value}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="hasCard.value === 'no' && motive.value!=''" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="!ordenPago" class="numeric-box">2</div>
+            <div *ngIf="ordenPago" class="numeric-box">1</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p *ngIf="!ordenPago">Motivo de la aclaración</p>
+            <p *ngIf="ordenPago"> Motivo de la aclaración </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="input-group">
+              <p><strong>{{motive.value.value}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spacer"></div>
+      <div *ngIf="motive.value.key === 1 || motive.value.key === 2" class="container-fluid">
+        <div class="row question">
+          <div class="col-xs-2 col-sm-1">
+            <div class="numeric-box">3</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>Describa lo que <strong> sucedió </strong></p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="text-counter">{{ description.value.length }} de 240 caracteres</div>
+            <div class="form-group">
+              <label class="display_none" for="comentario">Comentario</label>
+              <textarea id="comentario" [formControl]="description" class="form-control" maxlength="240" placeholder="Descripcion"
+                        rows="6"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <div
+        *ngIf="(motive.value.key === 1 && wasDescriptionValid)"
+        class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="hasCard.value" class="numeric-box">4</div>
+            <div *ngIf="!hasCard.value" class="numeric-box">3</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>¿Cuánto solicitó?</p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="amount-input">
+              <label for="amount" hidden></label>
+              <input
+                id="amount"
+                [options]="{ prefix: '$ ', suffix: ' MXN', thousands: ',', decimal: '.',align:'left' ,autoUnmask:true ,digitsOptional:false}"
+                class="amount"
+                currencyMask
+                disabled
+                formControlName="amoutnOrigin"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <div *ngIf="(motive.value.key === 1 && wasDescriptionValid)" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="hasCard.value" class="numeric-box">5</div>
+            <div *ngIf="!hasCard.value" class="numeric-box">4</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>¿Cuantó le dio el ATM (Cajero automático)? <br>
+              <strong>*Si el ATM no le dio nada, deje el campo en cero</strong>
+            </p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div [ngClass]="{'amount-error-input' : amount.errors?.max || amount.errors?.amount }" class="amount-input">
+              <label for="amount" hidden></label>
+              <input
+                id="amount"
+                [options]="{ prefix: '$ ', suffix: ' MXN', thousands: ',', decimal: '.','precision': '2', align:'left','digits': '2', max: 'trxAmoutn' }"
+                class="amount"
+                currencyMask
+                formControlName="amount"
+                type="tel"/>
+            </div>
+            <div *ngIf="amount.errors?.max" class="amount-error">
+              <p>La cantidad debe ser menor a lo solicitado</p>
+            </div>
+            <div *ngIf="amount.errors?.amount" class="amount-error">
+              <p>Ingresa la cantidad sin decmales y en múltiplos de $50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div
+        *ngIf="(motive.value.key === 1 &&  amount.valid && wasDescriptionValid) || (motive.value.key === 2 && wasDescriptionValid)"
+        class="container-fluid">
+        <div class="row question">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="motive.value.key === 2" class="numeric-box">4</div>
+            <div *ngIf="motive.value.key != 2" class="numeric-box">6</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>¿Dónde se encuentra usted <strong>en este momento</strong>?</p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="input-group">
+              <input
+                [checked]="entity.value === true"
+                formControlName="entity"
+                id="isInMexico"
+                name="entity"
+                type="radio"/>
+              <label (click)="setValueEntity(1)" for="isInMexico">
+                En México
+              </label>
+              <div class="divider"></div>
+              <input
+                [checked]="entity.value === false"
+                formControlName="entity"
+                id="isNotInMexico"
+                name="entity"
+                type="radio"/>
+              <label (click)="setValueEntity(2)" for="isNotInMexico">
+                En el extranjero
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spacer"></div>
+      <div *ngIf="entity.value" class="container-fluid">
+        <div class="row question">
+          <div class="col-xs-2 col-sm-1">
+            <div *ngIf="motive.value.key === 2" class="numeric-box">5</div>
+            <div *ngIf="motive.value.key != 2" class="numeric-box">7</div>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <p>Seleccione la <strong>entidad federativa</strong> donde se encuentra:</p>
+          </div>
+        </div>
+        <div class="row vertical-padded">
+          <div class="col-xs-10 col-xs-offset-2">
+            <div class="btn-group">
+              <label class="display_none" for="questions-state">Entidad</label>
+              <select class=" form-control custom" formControlName="entitySelected" id="questions-state"
+                      name="entitySelected">
+                <option disabled selected>Elije una entidad</option>
+                <option *ngFor="let item of statesShow;let index=index"
+                        value="{{item.clave}}"> {{item.nombre}} </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</section>
+<section *ngIf="opNoPermitida">
+  <div style="padding-top: 50%;">
+    <div class="container text-center h-100 p-5 d-flex justify-content-center align-items-center">
+      <div class="col-sm-8 align-self-center text-center warning-icon"></div>
+      <div class="col-sm-8 align-self-center text-center">
+        <p>Por el momento, las aclaraciones por <strong style=" font-weight: bold;">"Retiro no reconocido" </strong> se
+          pueden levantar llamando a Superlinea</p>
+        <br>
+        <p>55 51 69 43 00</p>
+        <br>
+        <div>
+          <div class="phone-icon"></div>
+          <p class="warning-text">Llamar ahora</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<app-footer-tdd
+  (continueClarification)="executeContinue()"
+  [buttonText]="'Continuar'"
+  [enable]="!questionnaire.invalid"
+  [idElement]="'page-welcome-tdd'">
+</app-footer-tdd>

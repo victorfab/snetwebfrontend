@@ -1,0 +1,409 @@
+{
+  "acctTrnRecMovimientos": [
+    {
+      "acctTrnId": "111111",
+      "acctTrnInfo": {
+        "accountingDt": "2023-07-26",
+        "effDt": "2023-03-131327",
+        "postedDt": "2023-07-26",
+        "chkNum": null,
+        "trnTime": "2023-02-2300000055",
+        "name": null,
+        "comments": null,
+        "totalCurAmt": {
+          "amt": "19200.0",
+          "curCode": {
+            "curCodeValue": "MXP",
+            "curCodeDesc": null,
+            "curCodeType": "ISO4217-Aplha"
+          }
+        },
+        "stmtRunningBal": {
+          "amt": "7701.43"
+        },
+        "stmtPreviousBal": {
+          "amt": "5781.43"
+        },
+        "networkTrnData": {
+          "terminalIdent": "OPSC",
+          "sourceSysIdent": "BG",
+          "sourceTrxIdent": null,
+          "channelIdent": null,
+          "networkRefIdent": "7CHONJU7W0"
+        },
+        "exchangeRate": {
+          "exchRate": "0.0"
+        },
+        "intXferData": {
+          "xferTrackIdent": null,
+          "xferRefIdent": null,
+          "revReason": null,
+          "statusReason": null,
+          "toAcctKeys": null,
+          "payeeKeys": {
+            "fullName": null,
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          },
+          "fromAcctKeys": null,
+          "payerKeys": {
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          }
+        },
+        "trnType": {
+          "trnTypeCode": "2060",
+          "trnSubTypeCode": null,
+          "trnTypeDesc": null,
+          "manualInd": "false",
+          "updatedInd": "false",
+          "cancelAllowedInd": "true",
+          "cancelledInd": "false",
+          "debitInd": "false",
+          "trnCategory": "Credit",
+          "bankDraftInd": "false",
+          "parentTrnInd": "true",
+          "trnTypeValue": "Transaction",
+          "desc": "TU PLUS POR LIKEU"
+        },
+        "fIData": null,
+        "acctKeys": null,
+        "stmtGroup": null,
+        "fee": null
+      },
+      "acctTrnKeys": null
+    },
+    {
+      "acctTrnId": "22",
+      "acctTrnInfo": {
+        "accountingDt": "2023-02-03",
+        "effDt": "2023-03-080933",
+        "postedDt": "2023-02-03",
+        "chkNum": null,
+        "trnTime": "2023-02-2200000055",
+        "name": null,
+        "comments": null,
+        "totalCurAmt": {
+          "amt": "1440.0",
+          "curCode": {
+            "curCodeValue": "MXP",
+            "curCodeDesc": null,
+            "curCodeType": "ISO4217-Aplha"
+          }
+        },
+        "stmtRunningBal": {
+          "amt": "5781.43"
+        },
+        "stmtPreviousBal": {
+          "amt": "4341.43"
+        },
+        "networkTrnData": {
+          "terminalIdent": "OPSC",
+          "sourceSysIdent": "BG",
+          "sourceTrxIdent": null,
+          "channelIdent": null,
+          "networkRefIdent": "7CHONJU7W0"
+        },
+        "exchangeRate": {
+          "exchRate": "0.0"
+        },
+        "intXferData": {
+          "xferTrackIdent": null,
+          "xferRefIdent": null,
+          "revReason": null,
+          "statusReason": null,
+          "toAcctKeys": null,
+          "payeeKeys": {
+            "fullName": null,
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          },
+          "fromAcctKeys": null,
+          "payerKeys": {
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          }
+        },
+        "trnType": {
+          "trnTypeCode": "2060",
+          "trnSubTypeCode": null,
+          "trnTypeDesc": null,
+          "manualInd": "false",
+          "updatedInd": "false",
+          "cancelAllowedInd": "true",
+          "cancelledInd": "false",
+          "debitInd": "false",
+          "trnCategory": "Credit",
+          "bankDraftInd": "false",
+          "parentTrnInd": "true",
+          "trnTypeValue": "Transaction",
+          "desc": "TU PLUS POR LIKEU"
+        },
+        "fIData": null,
+        "acctKeys": null,
+        "stmtGroup": null,
+        "fee": null
+      },
+      "acctTrnKeys": null
+    },
+    {
+      "acctTrnId": "18",
+      "acctTrnInfo": {
+        "accountingDt": "2023-01-03",
+        "effDt": "2023-01-030933",
+        "postedDt": "2023-01-03",
+        "chkNum": null,
+        "trnTime": "2023-02-2200000055",
+        "name": null,
+        "comments": null,
+        "totalCurAmt": {
+          "amt": "1440.0",
+          "curCode": {
+            "curCodeValue": "MXP",
+            "curCodeDesc": null,
+            "curCodeType": "ISO4217-Aplha"
+          }
+        },
+        "stmtRunningBal": {
+          "amt": "5781.43"
+        },
+        "stmtPreviousBal": {
+          "amt": "4341.43"
+        },
+        "networkTrnData": {
+          "terminalIdent": "OPSC",
+          "sourceSysIdent": "BG",
+          "sourceTrxIdent": null,
+          "channelIdent": null,
+          "networkRefIdent": "7CHONJU7W0"
+        },
+        "exchangeRate": {
+          "exchRate": "0.0"
+        },
+        "intXferData": {
+          "xferTrackIdent": null,
+          "xferRefIdent": null,
+          "revReason": null,
+          "statusReason": null,
+          "toAcctKeys": null,
+          "payeeKeys": {
+            "fullName": null,
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          },
+          "fromAcctKeys": null,
+          "payerKeys": {
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          }
+        },
+        "trnType": {
+          "trnTypeCode": "2060",
+          "trnSubTypeCode": null,
+          "trnTypeDesc": null,
+          "manualInd": "false",
+          "updatedInd": "false",
+          "cancelAllowedInd": "true",
+          "cancelledInd": "false",
+          "debitInd": "false",
+          "trnCategory": "Credit",
+          "bankDraftInd": "false",
+          "parentTrnInd": "true",
+          "trnTypeValue": "Transaction",
+          "desc": "TU PLUS POR LIKEU"
+        },
+        "fIData": null,
+        "acctKeys": null,
+        "stmtGroup": null,
+        "fee": null
+      },
+      "acctTrnKeys": null
+    },
+    {
+      "acctTrnId": "18",
+      "acctTrnInfo": {
+        "accountingDt": "2022-12-08",
+        "effDt": "2022-12-080933",
+        "postedDt": "2022-12-08",
+        "chkNum": null,
+        "trnTime": "2023-02-2200000055",
+        "name": null,
+        "comments": null,
+        "totalCurAmt": {
+          "amt": "1440.0",
+          "curCode": {
+            "curCodeValue": "MXP",
+            "curCodeDesc": null,
+            "curCodeType": "ISO4217-Aplha"
+          }
+        },
+        "stmtRunningBal": {
+          "amt": "5781.43"
+        },
+        "stmtPreviousBal": {
+          "amt": "4341.43"
+        },
+        "networkTrnData": {
+          "terminalIdent": "OPSC",
+          "sourceSysIdent": "BG",
+          "sourceTrxIdent": null,
+          "channelIdent": null,
+          "networkRefIdent": "7CHONJU7W0"
+        },
+        "exchangeRate": {
+          "exchRate": "0.0"
+        },
+        "intXferData": {
+          "xferTrackIdent": null,
+          "xferRefIdent": null,
+          "revReason": null,
+          "statusReason": null,
+          "toAcctKeys": null,
+          "payeeKeys": {
+            "fullName": null,
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          },
+          "fromAcctKeys": null,
+          "payerKeys": {
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          }
+        },
+        "trnType": {
+          "trnTypeCode": "2060",
+          "trnSubTypeCode": null,
+          "trnTypeDesc": null,
+          "manualInd": "false",
+          "updatedInd": "false",
+          "cancelAllowedInd": "true",
+          "cancelledInd": "false",
+          "debitInd": "false",
+          "trnCategory": "Credit",
+          "bankDraftInd": "false",
+          "parentTrnInd": "true",
+          "trnTypeValue": "Transaction",
+          "desc": "TU PLUS POR LIKEU"
+        },
+        "fIData": null,
+        "acctKeys": null,
+        "stmtGroup": null,
+        "fee": null
+      },
+      "acctTrnKeys": null
+    },
+    {
+      "acctTrnId": "221",
+      "acctTrnInfo": {
+        "accountingDt": "2023-08-01",
+        "effDt": "2023-01-311840",
+        "postedDt": "2023-08-01",
+        "chkNum": null,
+        "trnTime": "2023-02-2118405340",
+        "name": null,
+        "comments": "TU CASHBACK LU",
+        "totalCurAmt": {
+          "amt": "462.09",
+          "curCode": {
+            "curCodeValue": "MXP",
+            "curCodeDesc": null,
+            "curCodeType": "ISO4217-Aplha"
+          }
+        },
+        "stmtRunningBal": {
+          "amt": "4341.43"
+        },
+        "stmtPreviousBal": {
+          "amt": "3879.34"
+        },
+        "networkTrnData": {
+          "terminalIdent": "$437",
+          "sourceSysIdent": "BG",
+          "sourceTrxIdent": "B601",
+          "channelIdent": "01",
+          "networkRefIdent": null
+        },
+        "exchangeRate": {
+          "exchRate": "0.0"
+        },
+        "intXferData": {
+          "xferTrackIdent": null,
+          "xferRefIdent": null,
+          "revReason": null,
+          "statusReason": null,
+          "toAcctKeys": null,
+          "payeeKeys": {
+            "fullName": null,
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          },
+          "fromAcctKeys": null,
+          "payerKeys": {
+            "issuedIdent": [
+              {
+                "issuedIdentValue": null,
+                "issuedIdentType": "TaxIdNb"
+              }
+            ]
+          }
+        },
+        "trnType": {
+          "trnTypeCode": "2060",
+          "trnSubTypeCode": null,
+          "trnTypeDesc": null,
+          "manualInd": "true",
+          "updatedInd": "false",
+          "cancelAllowedInd": "true",
+          "cancelledInd": "false",
+          "debitInd": "false",
+          "trnCategory": "Credit",
+          "bankDraftInd": "false",
+          "parentTrnInd": "true",
+          "trnTypeValue": "Transaction",
+          "desc": "TU PLUS POR CONSUMIR"
+        },
+        "fIData": null,
+        "acctKeys": null,
+        "stmtGroup": null,
+        "fee": null
+      },
+      "acctTrnKeys": null
+    }
+  ]
+}

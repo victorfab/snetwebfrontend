@@ -1,0 +1,1207 @@
+{
+  "acctTrnRecComercios": [
+    {
+      "acctTrnId": "30",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-10",
+        "trnTime": "13:17:44",
+        "trnType": {
+          "desc": "CONSUMO INTNAL. MC",
+          "trnTypeCode": "1004",
+          "trnSubTypeCode": "1004",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 334.11,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "A0000000000C27Z",
+          "merchName": "ONLYFANS.COM"
+        },
+        "salesSlipRefNum": "75125963011000000194041",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "074494"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "29",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-08",
+        "trnTime": "13:35:34",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 622.91,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "AGI4WHVTDUHDAE2",
+          "merchName": "UBER* EATS"
+        },
+        "salesSlipRefNum": "82308963008000000679116",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "053466"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "28",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-07",
+        "trnTime": "23:22:50",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 760.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004146845",
+          "merchName": "OXXOFRESNO I MEX"
+        },
+        "salesSlipRefNum": "75412913009941468458850",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "025027"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "27",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-07",
+        "trnTime": "20:51:22",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 656.3,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004146846",
+          "merchName": "OXXOSABINO II MEX"
+        },
+        "salesSlipRefNum": "75412913008941468463513",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "012220"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "25",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-02",
+        "trnTime": "00:57:54",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 111.44,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308963002000000205595",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "075413"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "24",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-02",
+        "trnTime": "15:49:05",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 109.97,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308963002000000197271",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "090525"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "23",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-01-01",
+        "trnTime": "15:43:45",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 544.5,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004391418",
+          "merchName": "BACANORA TERRAZA"
+        },
+        "salesSlipRefNum": "75412913002943914187361",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "034574"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "22",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-31",
+        "trnTime": "18:04:19",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 365.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007867748",
+          "merchName": "FARM SIMITLA CEDROS"
+        },
+        "salesSlipRefNum": "75264602365001778677487",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "041954"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "21",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-31",
+        "trnTime": "16:34:01",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 119.97,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962365000000335957",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "040184"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "19",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-30",
+        "trnTime": "15:57:13",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 49.94,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962364000000293090",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "071364"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "18",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-29",
+        "trnTime": "17:59:41",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 667.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004198593",
+          "merchName": "LA CASA DE TONO P ROSA"
+        },
+        "salesSlipRefNum": "75412912364941985931893",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "094187"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "17",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-24",
+        "trnTime": "09:49:04",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 441.71,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962358000000562229",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "090465"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "16",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-24",
+        "trnTime": "02:23:56",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 239.95,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962358000000591491",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "035614"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "15",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-23",
+        "trnTime": "22:29:33",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 189.93,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962357000000484136",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "093339"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "14",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-23",
+        "trnTime": "04:16:08",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 163.46,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962357000000405131",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "060814"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "13",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-21",
+        "trnTime": "19:35:13",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 2120.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "001024960",
+          "merchName": "LA VID ARGENTINA POLAN"
+        },
+        "salesSlipRefNum": "75435292356910249607870",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "051326"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "11",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-17",
+        "trnTime": "17:23:44",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 400.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007772074",
+          "merchName": "GASOL ES 12050"
+        },
+        "salesSlipRefNum": "75177132352022777720747",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "034435"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "10",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-16",
+        "trnTime": "16:57:46",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 229.92,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962350000000354807",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "074672"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "9",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-15",
+        "trnTime": "23:54:35",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 180.59,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962350000000305106",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "043550"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "8",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-15",
+        "trnTime": "19:13:22",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 79.94,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962349000000401958",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "032250"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "6",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-14",
+        "trnTime": "20:26:41",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 304.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004279679",
+          "merchName": "CASADETONO TLATELOLCO"
+        },
+        "salesSlipRefNum": "75412912349942796796228",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "064182"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "5",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-13",
+        "trnTime": "08:54:30",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 3596.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004857876",
+          "merchName": "UNITEC CUITLAUAHC CIB"
+        },
+        "salesSlipRefNum": "75435292348748578764461",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "043151"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "4",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-11",
+        "trnTime": "22:15:19",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 411.5,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004146845",
+          "merchName": "OXXOFRESNO I MEX"
+        },
+        "salesSlipRefNum": "75412912346941468451180",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "051905"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "3",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-10",
+        "trnTime": "15:21:15",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 1617.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004423310",
+          "merchName": "FRITUUR"
+        },
+        "salesSlipRefNum": "75412912345944233107567",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "011587"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "2",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-09",
+        "trnTime": "19:00:55",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 710.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007927517",
+          "merchName": "CLIP MX*NAYELI MENDOZA"
+        },
+        "salesSlipRefNum": "75445502343933079275176",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "005567"
+          }
+        }
+      }
+    }
+  ],
+  "acctTrnRecCajeros": [
+    {
+      "acctTrnId": "9",
+      "acctTrnInfo": {
+        "statusReverso": "REV02",
+        "type": "ATM",
+        "stmtDt": "2023-07-11",
+        "trnTime": "13:08:06",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 210.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X00634",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "080645"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "8",
+      "acctTrnInfo": {
+        "statusReverso": "",
+        "type": "ATM",
+        "stmtDt": "2023-07-11",
+        "trnTime": "12:59:41",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 50.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X00634",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "094185"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "7",
+      "acctTrnInfo": {
+        "statusReverso": "",
+        "type": "ATM",
+        "stmtDt": "2023-07-11",
+        "trnTime": "12:46:57",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 30.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X00634",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "065792"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "6",
+      "acctTrnInfo": {
+        "statusReverso": "",
+        "type": "ATM",
+        "stmtDt": "2023-07-11",
+        "trnTime": "12:39:30",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 200.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X00634",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "093032"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "5",
+      "acctTrnInfo": {
+        "statusReverso": "",
+        "type": "ATM",
+        "stmtDt": "2023-07-11",
+        "trnTime": "12:15:00",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 510.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X00634",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "050044"
+          }
+        }
+      }
+    }
+  ],
+  "acctTrnRecPagos": []
+}

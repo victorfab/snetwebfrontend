@@ -1,0 +1,63 @@
+<div *ngIf="router.url==='/locked'" class="container-fluid result">
+    <div class="row " style="padding-top:40px;">
+        <div class="col-xs-12 text-center lock-img">
+            <p class="red-strong" *ngIf="blocker.operationCancellation">Tarjeta bloqueada definitivamente.</p>
+            <p class="red-strong" *ngIf="!blocker.operationCancellation">La tarjeta no se pudo bloquear.</p>
+            <p class="lock-text"style="padding-top:45px;padding-bottom:21px;" *ngIf="blocker.operationCancellation && blocker.operationReposition" >
+                La tarjeta con terminación <span class="bold"> {{ oldCard }}</span> ha sido <span class="bold">bloqueada definitivamente</span>
+                , por lo que hemos iniciado un proceso de reposición.
+            </p>
+            <p class="lock-text"style="padding-top:45px;padding-bottom:21px;" *ngIf="blocker.operationCancellation && !blocker.operationReposition" >
+                    La tarjeta con terminación <span class="bold"> {{ oldCard }}</span> ha sido <span class="bold">bloqueada definitivamente</span>
+                </p>
+            <p class="lock-text"style="padding-top:45px;padding-bottom:21px;" *ngIf="!blocker.operationCancellation">
+                La tarjeta con terminación {{ oldCard }}  <span class="bold">NO ha sido bloqueada definitivamente</span>.
+            </p>
+            <div class="card cardResultLock" *ngIf="blocker.operationReposition && !blocker.operationExpressReposition">
+                <div class="title">Nuevo número de tarjeta</div>
+                <div class="card-number">**** **** **** {{pan}}</div>
+            </div>
+            <div class="lock-text-strong" style="padding-top:23px;" *ngIf="blocker.operationReposition && !blocker.operationExpressReposition">
+                    Su nueva tarjeta será enviada
+                    al domicilio que ha registrado en el banco
+                    en un lapso máximo de 10 días hábiles.
+            </div>
+            <p class="lock-text" style="padding-top:45px;padding-bottom:21px;" *ngIf="!blocker.operationReposition && !blocker.operationExpressReposition">
+                Solicite la <strong>reposición de su tarjeta</strong> a través de<br/> <span style="font-weight: 700;">Super<span style="color:#ec0000">Línea</span></span><br/>
+                Desde CDMX y el Interior de la República<br/>
+                <span class="bold">55 5169 4300</span>
+            </p>
+        </div>
+        <div class="col-xs-12 reposition-type" *ngIf="!blocker.operationReposition && blocker.operationExpressReposition">
+            <p class="reposition-type-label" style="font-weight: 300">Seleccione el tipo de reposición que desea:</p>
+            <div class="row vertical-padded">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="input-group">
+                        <input
+                            type="radio"
+                            id="immediate"
+                            name="reposition-type"
+                            value="1"
+                            [(ngModel)]="repositionType"
+                            (ngModelChange)="toggleRepositionType()"/>
+                        <label for="immediate">Tramitar una <span class="bold">reposición inmediata </span> acudiendo a cualquier sucursal con una identificación oficial vigente.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row vertical-padded">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="input-group">
+                        <input
+                            type="radio"
+                            id="custom"
+                            name="reposition-type" 
+                            value="2"
+                            [(ngModel)]="repositionType"
+                            (ngModelChange)="toggleRepositionType()"/>
+                        <label for="custom">Generar <span class="bold">reposición personalizada,</span>  se entregará a su domicilio registrado en un lapso de 10 días hábiles.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>

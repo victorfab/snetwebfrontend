@@ -1,0 +1,24 @@
+<!-- Content Footer -->
+<div
+  [ngClass]="{'contentFooter': chanelType === 'default', 'contentFooterWallet': chanelType === 'wallet', 'contentFooter__default': showEditButton === 'true', 'p-lr-24': isWelcomePage}">
+
+  <div class="moves" [ngClass]="{'no-events': !selectedMoves}" *ngIf="chanelType=='default' && showCounter">
+    <em class="icon-stack" (click)="showMoves.emit()" [ngClass]="{'icon-stack--red': selectedMoves}"></em>
+    <span (click)="showMoves.emit()" class="moves-counter" [ngClass]="{'moves-counter--red': selectedMoves}">
+      Ver movimientos seleccionados: {{counter}}
+    </span>
+  </div>
+
+  <button class="g-btn flat mb-8" *ngIf="showEditButton === 'true'" (click)="edit()">Cambiar</button>
+  <button class="g-btn flat mb-8" *ngIf="router.url === '/summaryTDD' && showEditButton === 'false'"
+    (click)="edit()">Cambiar</button>
+
+  <ng-container *ngIf="router.url === '/welcomeTDD' ; else newBottonStyle">
+    <button (click)="continue()" class="g-btn rounded large" id="{{idElement}}" [ngClass]="{'inactive':!enable}"> {{buttonText}} </button>
+  </ng-container>
+  <ng-template #newBottonStyle>
+    <button (click)="continue()" id="{{idElement}}" class="g-btn rounded"
+      [ngClass]="{'inactive':!enable}"> {{buttonText}} </button>
+  </ng-template>
+</div>
+<!-- Termina Footer Conten-->

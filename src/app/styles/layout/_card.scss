@@ -1,0 +1,191 @@
+.dInline {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.lineSD {
+  width: 1px;
+  height: 15px;
+  margin: 0px 10px;
+  background-color: $grey;
+}
+
+.card {
+  padding: 18px 0px 16px;
+  width: 80%;
+  max-width: 320px;
+  min-height: 120px;
+  margin: 0 auto;
+  display: block;
+  border: solid 0.5px $light-main-color;
+  background-color: $white;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+  -moz-box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+  box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+  background-repeat: no-repeat;
+  background-position: 0px center;
+  background-size: 40px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='42px' height='55px' viewBox='0 0 42 55' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eicoTarjetaSilder%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3crect id='path-1' x='0' y='0' width='47' height='55.4074656'%3e%3c/rect%3e%3c/defs%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='tarjeta' transform='translate(0.000000, -32.000000)'%3e%3cg id='Page-1'%3e%3cg id='icoTarjetaSilder' transform='translate(0.000000, 31.000000)'%3e%3cmask id='mask-2' fill='white'%3e%3cuse xlink:href='%23path-1'%3e%3c/use%3e%3c/mask%3e%3cg id='Mask'%3e%3c/g%3e%3cg id='Fill-36-+-Fill-37-+-Fill-38' mask='url(%23mask-2)' fill='%23CCCCCC'%3e%3cg transform='translate(-20.000000, 1.000000)'%3e%3cpath d='M50.3491657,23 L6.91907367,23 L2.64874862,23 C1.18672281,23 0,24.1443309 0,25.5573832 L0,52.4416103 C0,53.8546627 1.18672281,55 2.64874862,55 L50.3491657,55 C51.8132772,55 53,53.8546627 53,52.4416103 L53,35.0612675 L53,25.5573832 C53,24.1443309 51.8132772,23 50.3491657,23 L50.3491657,23 Z M12.0392925,40.6299418 C12.0392925,41.336468 11.4469739,41.9091367 10.7149181,41.9091367 L5.47060444,41.9091367 C4.74167716,41.9091367 4.14727294,41.336468 4.14727294,40.6299418 L4.14727294,35.7456518 C4.14727294,35.0401321 4.74167716,34.4674634 5.47060444,34.4674634 L10.7149181,34.4674634 C11.4469739,34.4674634 12.0392925,35.0401321 12.0392925,35.7456518 L12.0392925,40.6299418 Z' id='Fill-36'%3e%3c/path%3e%3cpath d='M50,3.67690768 L48.7844782,1.41369585 C48.0755113,0.0937572334 46.4530676,-0.388074019 45.1651809,0.338428782 L12,19 L22.4331411,19 L50,3.67690768 Z' id='Fill-37'%3e%3c/path%3e%3cpath d='M61.6675321,25.6880165 L52.8578499,10 L37,18.4369835 L50.1501805,18.4369835 C53.1067825,18.4369835 55.5106696,20.7933884 55.5106696,23.6880165 L55.5106696,32 L60.6116781,29.2530992 C61.9069715,28.5547521 62.3816311,26.9597107 61.6675321,25.6880165' id='Fill-38'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+
+  .progress {
+    height: 4px;
+    margin-bottom: 7px;
+    width: 96%;
+
+    .progress-bar {
+      height: 4px;
+
+      &.highlight-blue {
+        height: 3px;
+        background-color: $highlight-blue;
+      }
+    }
+  }
+
+  .logo {
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: 36px;
+    height: 100%;
+    min-height: 86px;
+    display: inline-block;
+  }
+
+  .card-name {
+    font-size: 12px;
+    font-style: normal;
+    display: block;
+    width: 100%;
+    color: $grey;
+    text-align: left;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    font-weight: 300;
+  }
+
+  .title {
+    text-transform: capitalize;
+    font-size: 0.875em;
+    margin: 8px 0;
+    text-align: left;
+    font-weight: 200;
+    display: block;
+    color: $grey;
+    padding-right: 7px;
+  }
+
+  .balance-status {
+    font-size: 0.675em;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $grey;
+    margin-bottom: 2px;
+    padding-right: 7px;
+
+    .balance {
+      @extend .balance-base;
+    }
+  }
+
+  .main-balance {
+    font-size: 1.813em;
+    line-height: 1em;
+    color: $golden;
+    text-align: left;
+
+    i.coin {
+      line-height: 1em;
+      font-size: 0.415em;
+      display: inline-block;
+      font-style: normal;
+      margin-left: 5px;
+    }
+  }
+
+  .subamounts {
+    text-align: left;
+    color: $grey;
+    margin-top: 10px;
+    font-weight: 200;
+
+    span.balance {
+      @extend .balance-base;
+      display: inline;
+      font-size: 1.5em;
+      font-weight: normal !important;
+      vertical-align: bottom;
+      margin-bottom: 0px;
+
+      .cents {
+        font-size: 0.8em;
+        font-style: normal;
+      }
+    }
+
+    span.info-left {
+      color: $grey;
+      font-size: 11px;
+    }
+  }
+}
+
+.card-small {
+  @extend .card;
+  padding: 6px 0px 5px;
+  min-height: 78px;
+  margin: auto;
+  left: 14px;
+  position: relative;
+
+  .logo {
+    min-height: 66px;
+  }
+
+  .subamounts {
+    margin-top: 0;
+  }
+
+  .card-name {
+    text-align: right;
+    font-size: 0.625em;
+    color: $grey;
+    padding-bottom: 0;
+  }
+
+  .main-balance {
+    font-size: 29px;
+
+    i.coin {
+      font-size: 0.625em;
+    }
+  }
+}
+
+.card-holder {
+  display: block;
+  padding: 10px 0 10px 0;
+  background-color: #f0f0f0;
+}
+
+.card-detail {
+  padding: 10.76px 23px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  &__icon {
+    margin-right: 21.68px;
+  }
+  &__description {
+    color: #191919;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

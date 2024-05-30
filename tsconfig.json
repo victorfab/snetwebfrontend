@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "target": "ES2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "hammerjs",
+      "jasmine",
+      "node",
+      "source-map",
+      "uglify-js",
+      "webpack"
+    ],
+    "@angular/": ["../node_modules/@angular/"]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true // <- ADD
+  }
+}

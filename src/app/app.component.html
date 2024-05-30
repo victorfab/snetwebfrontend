@@ -1,0 +1,14 @@
+<app-fl-alert 
+    *ngIf="(alertService.alertConfig$ | async) as config"
+    [class]="alertService.cssClass"
+    [title]="config.title"
+    [paragraph]="config.text"
+    [alertType]="config.type"
+    [icon]="config.icon ? config.icon : 'warn-icon'"
+    class="global-alert">
+</app-fl-alert>
+<main>
+    <router-outlet></router-outlet>
+    <div id="footer-space" class="body-footer-spacer"></div>
+</main>
+<wr-footer></wr-footer>

@@ -1,0 +1,96 @@
+<!-- Content Alerts -->
+<div class="contentAlerts vAlign" *ngIf="visible">
+
+    <!-- Bloqueo de tarjeta -->
+    <div class="alertGeneral" style="display:none !important;">
+
+        <!-- Icon -->
+        <span class="i-icon"></span>
+
+        <!-- Title -->
+        <h1 class="black medium center pTBMedium">Bloqueo de tarjeta</h1>
+        <p class="black medium light center LHSmall pBMedium">
+            Para evitar que le sigan haciendo cargos y continuar con la aclaración es necesario llevar a cabo un <span class="bold">Bloqueo Total</span> de su tarjeta.<br /><br />
+            Una vez realizado este proceso le haremos llegar el nuevo plástico al domicilio que ha registrado en el banco.<br /><br />
+            <span class="bold">Esta acción NO puede revertirse.<br>Tendrá un costo establecido en su contrato.</span>
+        </p>
+
+        <!-- BTN OPTIONS -->
+        <ul>
+            <li class="dInlineB"><button class="mRed bold medium">Cancelar</button></li>
+            <li class="dInlineB"><button class="mRed bold medium">Continuar</button></li>
+        </ul>
+
+    </div>
+
+
+
+    <!-- Bloqueo de tarjeta -->
+    <div class="alertGeneral" id="overlay-alert-lock-card" *ngIf="value_step >= 0">
+
+        <!-- Icon -->
+        <span class="i-icon"></span>
+
+
+
+        <!-- Title -->
+        <h1 class="titleAlert medium center pTBMedium"  *ngIf=" value_step != 6 && value_step != 0" id="title-lock-card" [innerHTML]="title"></h1>
+
+        <h1 class="titleAlert medium center marginTitle" *ngIf=" value_step === 6 || value_step === 0" id="title-lock-card" >Debemos bloquear tu tarjeta</h1>
+
+        <p class="black medium light center LHSmall pBMedium" id="description-lock-card" *ngIf="value_step != 0 && value_step != 6" [innerHTML]="texto">
+        </p>
+
+        <p class="medium light center LHSmall alertContent" *ngIf="value_step === 0 || value_step === 6">
+            <span  id="description-lock-card" [style.margin-bottom.px]="0">
+              De esta forma evitaremos que se sigan presentando este tipo de cargos.
+                <!-- <span class="bold">Bloqueo Total</span> de su tarjeta.<br /><br /> -->
+            </span>
+        </p>
+
+        <!-- <p class="black medium light center LHSmall pBMedium" *ngIf="value_step === 6 ">
+          <span  id="description-lock-card">
+            De esta forma evitaremos que se sigan presentando este tipo de cargos.<br> -->
+              <!-- <span class="bold">Bloqueo Total</span> de su tarjeta.<br /><br /> -->
+          <!-- </span> -->
+
+          <!-- <span  id="action-not-return-lock-card" class="gray bold">
+            <br>Enviaremos la reposición, sin costo, al domicilio registrado en tu expediente.
+          </span>
+        </p> -->
+
+
+
+        <!-- BTN OPTIONS -->
+        <ul>
+            <li class="dInlineB unique" *ngIf="value_step != 0 && value_step != 1 && value_step != 5 && value_step != 6"><button class="mRed bold medium" id="continue" (click)="visible = false">Aceptar</button></li>
+            <li class="dInlineB" *ngIf="value_step === 0 || value_step === 6"><button class="Red bold medium" id="cancel" (click)="alertButton(2, true, -1)">Cancelar</button></li>
+            <li class="dInlineB" *ngIf="value_step === 0 || value_step === 6"><button class="Red bold medium" id="continue" (click)="alertButton(-2, true, -1)">{{textBotton}}</button></li>
+            <li class="dInlineB" *ngIf="value_step === 1 || value_step === 5"><button class="mRed bold medium" id="goToQuestionary" (click)="goToQuestions()">Ir a cuestionario</button></li>
+            <li class="dInlineB" *ngIf="value_step === 1 || value_step === 5"><button class="mRed bold medium" id="finish" (click)="accept()">Finalizar</button></li>
+        </ul>
+
+    </div>
+
+    <!-- Spinner -->
+    <div class="alertGeneral" *ngIf="value_step < 0">
+
+        <p class="black medium center LHSmall pBMedium upper">
+                Espere unos segundos,
+                favor de no salir de la aplicación estamos procesando
+                su información
+        </p>
+
+
+        <div class="spinnerCircle"></div>
+
+        <p class="black small light center LHSmall pBMedium ">
+                Esta pantalla se cerrará de forma
+                automática cuando el proceso termine.
+        </p>
+
+
+    </div>
+
+</div>
+<!-- Termina Content Alerts -->

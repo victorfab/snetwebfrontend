@@ -1,0 +1,198 @@
+.numeric-box {
+  @include circlesolid($icon-height, $white);
+  color: $white;
+  background-color: #9a9a9a;
+  padding: 5px;
+  margin: 0 auto;
+  width: $question-measure;
+  height: $question-measure;
+  line-height: 20px;
+  content: attr(data-before);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16.5904px;
+}
+
+.question {
+  // font-family: 'SantanderText-Regular', sans-serif;
+  font-weight: 200;
+  font-size: 1.1em;
+
+  & p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #191919;
+  }
+
+  .span {
+    font-weight: 600;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+
+  .form-group {
+    text-align: center;
+
+    .radio-inline {
+      margin-left: 40px;
+      line-height: $icon-height;
+      vertical-align: middle;
+
+      input {
+        width: $icon-height;
+        height: $icon-height;
+        margin: 0;
+      }
+
+      span {
+        display: inline-block;
+        padding-left: 35px;
+      }
+    }
+
+    .form-control {
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.answer {
+  .date-picker {
+    padding-left: 5px;
+    padding-right: 0;
+
+    .form-control {
+      padding: 6px 6px;
+    }
+  }
+}
+
+.default-value {
+  color: #979797;
+}
+
+.angle-down {
+  display: inline-block;
+  margin-top: 17px;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  background-image: url(#{$img-url}general/angle-down.png);
+  background-repeat: no-repeat;
+}
+
+.questionnaire {
+  input {
+    height: 40px;
+    font-size: 1em;
+    color: $black;
+    text-align: center;
+
+    &.last-six {
+      font-size: 20px;
+      // letter-spacing: 4px;
+    }
+  }
+
+  span {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: $title-grey;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+}
+
+.text-counter {
+  display: block;
+  font-size: 0.87em;
+  color: $light-grey;
+  text-align: right;
+  padding-bottom: 4px;
+}
+
+.paddingQuestionnaire{
+  padding: 0 0 19px 0!important;
+}
+
+input.amount {
+  width: 240px;
+  height: 26px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  // letter-spacing: normal;
+  color: #000000;
+  text-align: left;
+}
+
+select.custom {
+  text-transform: uppercase;
+  height: 40px;
+}
+
+.amount-input {
+  height: 38px;
+  padding: 6px 47px 10px 12px;
+  border-radius: 5px;
+  border: solid 1px #979797;
+}
+
+.amount {
+  align-items: center;
+}
+
+.warning-icon {
+  width: 153px;
+  height: 160px;
+  margin-left: 30%;
+  background-image: url("data:image/svg+xml,%3Csvg width='153px' height='161px' viewBox='0 0 153 161' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EFrame 76%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='comuniquese-' transform='translate(-109.000000, -145.000000)'%3E%3Cg id='Frame-76' transform='translate(109.000000, 145.000000)'%3E%3Cpath d='M81.953,159.767 C131.75,152.436 139.396,141.484 146.62,129.429 C160.606,106.085 148.487,64.1996 119.777,64.4318 C91.769,70.237 97.54,23.0619 43.7049,38.361 C9.9766,47.9463 -5.0836,75.151 2.4763,101.283 C10.0376,127.414 32.1578,167.098 81.953,159.767 Z' id='Path' fill='%23E5E5E5'%3E%3C/path%3E%3Cpath d='M66.172,0.343 C65.393,0.343 64.764,0.9665 64.764,1.7377 L64.764,10.1324 C64.764,10.9022 65.393,11.5271 66.172,11.5271 C66.95,11.5271 67.581,10.9022 67.581,10.1324 L67.581,1.7377 C67.581,0.9665 66.95,0.343 66.172,0.343 Z M56.8981,18.0028 L48.4408,18.0028 C47.6626,18.0028 47.0308,18.6262 47.0308,19.396 C47.0308,20.1672 47.6626,20.7907 48.4408,20.7907 L56.8981,20.7907 C57.6776,20.7907 58.3067,20.1672 58.3067,19.396 C58.3067,18.6262 57.6776,18.0028 56.8981,18.0028 Z M53.5728,5.2948 C53.0204,4.7502 52.1301,4.7488 51.582,5.2948 C51.0325,5.8395 51.0339,6.7233 51.5849,7.2679 L59.1277,14.5129 C59.6801,15.0575 60.5704,15.0575 61.1185,14.5129 C61.668,13.9682 61.6666,13.0844 61.1157,12.5384 L53.5728,5.2948 Z' id='Shape' fill='%23EC0000'%3E%3C/path%3E%3Cpolygon id='Path' fill='%236EE3FF' points='129.151 31.3968 127.639 32.897 125.564 30.8395 123.488 32.897 121.975 31.3968 124.051 29.3407 121.975 27.2846 123.488 25.7844 125.564 27.8405 127.639 25.783 129.153 27.2832 127.077 29.3407'%3E%3C/polygon%3E%3Cpath d='M25.7116,95.737 C22.9654,95.737 20.7417,93.532 20.7417,90.811 C20.7417,88.091 22.9654,85.886 25.7116,85.886 C28.4578,85.886 30.6814,88.091 30.6814,90.811 C30.6814,93.532 28.4578,95.737 25.7116,95.737 Z M25.7116,92.922 C26.8873,92.922 27.8415,91.978 27.8415,90.811 C27.8415,89.645 26.8873,88.7 25.7116,88.7 C24.5358,88.7 23.5816,89.645 23.5816,90.811 C23.5816,91.978 24.5358,92.922 25.7116,92.922 Z' id='Shape' fill='%230D4F80'%3E%3C/path%3E%3Cpolygon id='Path' fill='%23FFFFFF' points='129.151 98.949 127.639 100.447 125.564 98.391 123.488 100.449 121.975 98.949 124.051 96.891 121.975 94.835 123.488 93.335 125.564 95.392 127.639 93.335 129.153 94.835 127.077 96.892'%3E%3C/polygon%3E%3Cpath d='M96.392,126.415 C96.268,126.364 96.165,126.284 96.065,126.199 C96.043,126.181 96.016,126.174 95.997,126.154 C95.767,125.935 95.625,125.629 95.612,125.292 L88.923,125.292 C88.923,125.293 88.922,125.294 88.92,125.297 C88.907,125.633 88.768,125.936 88.538,126.154 C88.518,126.174 88.491,126.182 88.469,126.201 C88.369,126.285 88.266,126.364 88.142,126.415 C87.993,126.476 87.828,126.513 87.653,126.513 L30.6235,126.513 L30.6235,132.328 L120.365,132.328 L120.365,126.513 L96.882,126.513 C96.709,126.513 96.541,126.476 96.392,126.415 Z' id='Path' fill='%23FFFFFF'%3E%3C/path%3E%3Cpolygon id='Path' fill='%23EC0000' points='30.6221 136.645 120.364 136.645 120.364 132.328 30.6221 132.328'%3E%3C/polygon%3E%3Cpolygon id='Path' fill='%23EC0000' points='89.462 79.91 57.9016 79.91 54.8813 93.088 92.604 93.088'%3E%3C/polygon%3E%3Cpolygon id='Path' fill='%23EC0000' points='86.672 68.219 76.388 25.0933 70.459 25.0933 60.5786 68.219'%3E%3C/polygon%3E%3Cpath d='M95.612,125.291 C95.612,125.276 95.602,125.261 95.602,125.246 C95.602,124.547 96.174,123.979 96.881,123.979 L99.969,123.979 L95.391,104.776 L52.2047,104.776 L47.8042,123.979 L87.653,123.979 C88.36,123.979 88.931,124.547 88.931,125.246 C88.931,125.261 88.922,125.276 88.922,125.291 L95.612,125.291 Z' id='Path' fill='%23EC0000'%3E%3C/path%3E%3Cpolygon id='Path' fill='%23FFFFFF' points='99.459 102.215 97.369 93.088 95.848 86.449 94.35 79.91 91.673 68.219 81.796 25.0933 76.39 25.0933 86.674 68.219 60.5805 68.219 57.9025 79.91 89.463 79.91 92.605 93.088 54.8822 93.088 52.2056 104.776 95.392 104.776 99.97 123.979 104.445 123.979'%3E%3C/polygon%3E%3Cpath d='M120.364,132.328 L120.364,136.645 L30.6219,136.645 L30.6219,132.328 L30.6219,126.513 L87.652,126.513 C87.826,126.513 87.991,126.477 88.142,126.414 C88.264,126.363 88.369,126.286 88.467,126.2 C88.49,126.183 88.517,126.173 88.536,126.154 C88.762,125.936 88.906,125.632 88.918,125.297 C88.92,125.294 88.921,125.292 88.921,125.291 C88.921,125.276 88.93,125.262 88.93,125.246 C88.93,124.547 88.359,123.979 87.652,123.979 L47.8034,123.979 L52.2039,104.776 L54.8819,93.089 L57.9022,79.91 L60.5788,68.22 L70.459,25.0934 L76.389,25.0934 L81.794,25.0934 L91.672,68.22 L94.35,79.91 L95.846,86.449 L97.369,93.089 L99.457,102.215 L104.443,123.979 L99.97,123.979 L96.88,123.979 C96.174,123.979 95.602,124.547 95.602,125.246 C95.602,125.262 95.611,125.276 95.611,125.291 C95.623,125.629 95.768,125.934 95.996,126.154 C96.015,126.173 96.041,126.182 96.064,126.2 C96.162,126.285 96.268,126.363 96.39,126.414 C96.541,126.477 96.707,126.513 96.88,126.513 L120.364,126.513 L120.364,132.328 Z M107.064,123.979 L83.835,22.5588 L68.418,22.5588 L45.1836,123.979 L28.0659,123.979 L28.0659,139.179 L122.919,139.179 L122.919,123.979 L107.064,123.979 Z' id='Shape' fill='%230F2B4A'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.warning-text {
+  font-weight: bold;
+  color: $main-color;
+}
+
+.amount-error {
+  font-size: 12px;
+  color: $main-color;
+}
+
+.amount-error-input {
+  border: solid 1px $main-color;
+}
+
+.phone-icon {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  margin-left: 31%;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.6089 14.5156C16.0747 13.4051 17.3353 12.8599 18.4642 13.2803L20.5348 14.0502C21.4156 14.3768 22 15.2176 22 16.157V19.386C22 20.83 20.8293 22 19.385 22C9.7832 22 2 14.2165 2 4.615C2 3.17074 3.16998 2 4.614 2H7.843C8.78148 2 9.62147 2.58444 9.94958 3.46455L10.7207 5.53596C11.1399 6.66498 10.5948 7.924 9.48481 8.39091L7.29863 9.31017C8.79768 12.0451 11.9662 15.2166 14.6903 16.7023L15.6089 14.5156ZM14.7215 17.8428L14.6653 17.8152C11.5009 16.2675 7.69437 12.4477 6.15615 9.27726C6.03101 9.01933 6.14792 8.70921 6.41219 8.59809L9.09714 7.46911C9.71333 7.20993 10.016 6.51084 9.78342 5.88445L9.0125 3.81366C8.8302 3.32467 8.36357 3 7.843 3H4.614C3.72241 3 3 3.72288 3 4.615C3 13.6642 10.3355 21 19.385 21C20.2771 21 21 20.2776 21 19.386V16.157C21 15.6356 20.6757 15.1689 20.1868 14.9877L18.1155 14.2176C17.4889 13.9842 16.7893 14.2867 16.531 14.9027L15.403 17.5877C15.2915 17.8529 14.9798 17.9696 14.7215 17.8428Z' fill='%23EC0000'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#atm-questions-aswered-label {
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.questionnaireTitle {
+  font-family: 'Santander Text', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #191919;
+  padding: 16px 1rem 19px 1rem;
+}

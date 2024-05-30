@@ -1,0 +1,127 @@
+<div class="contentDashboard contentDashboard--pt-0">
+  <div class="searchModule">
+    <!-- Input Search -->
+    <ng-container *ngIf="!faceLift else fl">
+      <form>
+        <input
+          class="contentDashboard__filter"
+          #input
+          [(ngModel)]="textModel"
+          id="findMovement"
+          name="findMovement"
+          placeholder="Buscar movimiento..."
+        />
+      </form>
+      <!-- Filters Button -->
+      <div
+        class="filtersButton"
+        (click)="toggleId = 'filterMoves'; showToggle()"
+        *ngIf="!isCashback"
+      ></div>
+    </ng-container>
+
+    <ng-template #fl>
+      <form 
+      class="filter-form" >
+
+      <label for="findMovement" class="display_none">Buscar Movimientos</label>
+      <input 
+        type="text" 
+        [style.margin-right.px]="showIcon ? 16 : 0"
+        class="filter-form__search icon-search"
+        #input
+        [(ngModel)]="textModel"
+        id="findMovement"
+        name="findMovement"
+        placeholder="Buscar movimiento...">
+      <em class="icon-filter" (click)="toggleId = 'filterMoves'; showToggle()" *ngIf="showIcon"></em>
+    </form>
+    </ng-template>
+  </div>
+
+  <div class="row">
+    <div class="movFilters col-xs-12" [ngClass]="{ active: filterApply }">
+      Transacciones filtradas
+      <div
+        class="iconF"
+        [ngClass]="{ active: sfApply }"
+        (click)="showFilterApply()"
+      >
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div
+      class="filterApply"
+      [ngClass]="{ active: sfApply }"
+      (click)="filterApply = false; sfApply = false; deleteFilters()"
+    >
+      <ng-container *ngIf="filterText === ''">
+        <span [ngClass]="'labelSM'">Por mes: </span>
+        <span [ngClass]="'filterWallet'">{{ selectedMonth }}</span>
+      </ng-container>
+      <span [ngClass]="{ filterWallet: chanelType === 'wallet' }">
+        {{ filterText }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Content Filters -->
+<div id="filterMoves" class="contentFilters">
+  <!-- Header Filters-->
+  <div class="headerFilters">
+    <span>Filtrar movimientos</span>
+    <div id="movements-filter" class="tooltipButton"></div>
+  </div>
+
+  <!-- Down Filters -->
+  <div class="downFilters">
+    <!-- Content -->
+    <p class="light">
+      Elige el corte donde se encuentra el movimiento a aclarar.
+    </p>
+
+    <!-- Title -->
+    <h1 class="black normal">
+      <span class="dInlineB"></span>FILTRAR POR FECHA DE CORTE
+    </h1>
+
+    <!-- Filtros -->
+
+    <ul class="listaFiltros">
+      <li *ngFor="let item of month; let index = index">
+        <input
+          [checked]="filterNameApply === 'extract-' + index"
+          value="index"
+          type="radio"
+          id="extract-{{ index }}"
+          name="extract-group"
+        />
+        <label
+          id="extractLabel-{{ index }}"
+          id="extractLabel-{{ index }}"
+          (click)="
+            isFiltered = true;
+            filterNameApply = 'extract-' + index;
+            enable = true;
+            selectExtract(index)
+          "
+          [innerHtml]="getMonthName(index)"
+        ></label>
+        <label for="extract-{{ index }}"></label>
+      </li>
+    </ul>
+  </div>
+  <!-- Termina Down Filters -->
+
+  <!-- Content Footer -->
+  <div class="interna" id="page-welcome-tdd" [ngClass]="'contentFooter'">
+    <button (click)="hideToggle()" [ngClass]="{ inactive: !enable }">
+      Aceptar
+    </button>
+  </div>
+  <!-- Termina Footer Conten-->
+</div>
+<!-- Termina Content Filters -->

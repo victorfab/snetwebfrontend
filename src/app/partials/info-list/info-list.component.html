@@ -1,0 +1,14 @@
+
+<div class="bodyList">
+  <img class="border" src="assets/svg/ticketBorder.svg" alt="" />
+  <div class="response ng-star-inserted" *ngFor="let items of sections; let index = index">
+    <div class="paddingInfo" *ngFor="let tupla of items.items">
+      <div class="leftColumn">{{tupla.label}}</div>
+        <div class="rightColumn" [ngClass]="{'statusP': tupla.class }">{{tupla.value}}</div>
+    </div>
+    <div *ngIf="index === 2">
+      <img class="withoutMarginBorder" src="assets/svg/ticketBorder.svg" alt="" />
+    </div>
+  </div>
+  <img class="withoutMarginBorder" src="assets/svg/ticketBorder.svg" alt="" />
+</div>

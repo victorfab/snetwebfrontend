@@ -1,0 +1,17 @@
+{
+    "lastAccessedTime": 1521669965624,
+    "new": false,
+    "expired": false,
+    "maxInactiveIntervalInSeconds": 600,
+    "attributeNames": [
+        "segmento",
+        "org.springframework.session.FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME",
+        "canal",
+        "pan",
+        "menu"
+    ],
+    "creationTime": 1521669965624,
+    "codigoMensaje": "SSO_001",
+    "id": "f5f1d145-5851-438b-87d0-58f72fc33157",
+    "mensaje": "Sesión creada"
+}

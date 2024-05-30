@@ -1,0 +1,578 @@
+<ng-container *ngIf="prefolio; else normalFlow">
+  <app-header-ticketv2
+    [colorHeader]="color"
+    [addBorderToBottom]="false"
+    [toastMessage]="ticketTitle"
+    ticketTitle="Comprobante"
+  >
+  </app-header-ticketv2>
+  <h1 class="ticket__subtitle extraMargin">
+    Movimiento en proceso no reconocido
+  </h1>
+  <!-- DOCUMENTACION EXTRA -->
+  <app-fl-alert
+    *ngIf="responseModel.visaCard == 'false' && requirementList.length"
+    title="Completa tu aclaración"
+    [template]="requeriments"
+    alertType="warning-flat"
+    icon="warn-icon"
+  >
+  </app-fl-alert>
+  <app-fl-alert
+    *ngIf="blockAlert"
+    [title]="blockAlert.title"
+    [paragraph]="blockAlert.body"
+    alertType="success"
+    icon="icon-block-card"
+  >
+  </app-fl-alert>
+
+  <app-fl-alert
+    [title]="blockPrefolio.title"
+    [paragraph]="blockPrefolio.paragraph"
+    alertType="warning-flat"
+  >
+  </app-fl-alert>
+
+  <app-info-list [sections]="sections"></app-info-list>
+  <ng-container *ngIf="mail; else noEmail">
+    <span class="extraInfo"> Te enviaremos una carta acuse a: {{ mail }} </span>
+  </ng-container>
+  <ng-template #noEmail>
+    <span class="extraInfo">
+      Te enviaremos una carta acuse al correo registrado en Super Movil
+    </span>
+  </ng-template>
+</ng-container>
+
+<ng-template #normalFlow>
+  <app-header-ticketv2
+    [colorHeader]="color"
+    [toastMessage]="ticketTitle"
+    ticketTitle="Comprobante"
+    (close)="finishApp()"
+  >
+    <app-ticket-user-data
+      *ngIf="!prefolio"
+      [clientName]="responseModel?.name"
+      [date]="responseModel?.currentDate"
+    >
+    </app-ticket-user-data>
+  </app-header-ticketv2>
+
+  <div class="container-fluid result">
+    <!--   -->
+    <div class="row" *ngIf="statusCode == 301">
+      <div
+        class="col-xs-12 text-center p1-5"
+        [ngClass]="{ 'flex-column': !showOldTicket }"
+      >
+        <!-- <div class="success"></div>
+        <div class="highlight green"><br/>{{ labelsService.getSuccess() }}</div>
+        <div class="highlight-tiny green"><br/>{{ responseModel.currentDate }}</div>
+        <div class="congrats">{{ labelsService.getCongrats(responseModel.name) }}</div> -->
+
+        <!-- TICKET INFO WHEN THE FLOW IS NOT SERVICE -->
+        <ng-container *ngIf="showOldTicket && questions; else services">
+          <div
+            *ngIf="
+              questions.motive.key == 'IC-201' ||
+              questions.motive.key == 'IC-202' ||
+              questions.motive.key == 'IC-203' ||
+              questions.motive.key == 'IC-204' ||
+              questions.motive.key == 'IC-205' ||
+              questions.motive.key == 'IC-206' ||
+              questions.motive.key == 'IC-207' ||
+              questions.whatHappens.getKey() == 'S-01' ||
+              questions.whatHappens.getKey() == 'S-03' ||
+              (questions.hasCard == '1' && questions.haveContact == '2') ||
+              (responseModel.oldCard && responseModel.newCard)
+            "
+          >
+            <!-- <div class="description" *ngIf=" responseModel.payment == 'true'"
+              [innerHTML]="labelsService.getDescription(1)">
+            </div> -->
+
+            <!-- <div class="description" *ngIf=" responseModel.payment == 'false'"
+              [innerHTML]="labelsService.getDescription(0)">
+            </div> -->
+          </div>
+
+          <!-- <div class="description" *ngIf="questions.whatHappens.getKey() == 'S-02'"
+            [innerHTML]="labelsService.getDescription(2)">
+
+          </div> -->
+
+          <!-- <div class="spacer"></div> -->
+          <div
+            class="restrictions"
+            [style.margin-top.px]="showOldTicket ? 16 : 0"
+            *ngIf="
+              responseModel.payment == 'true' &&
+              questions.whatHappens.getKey() != 'S-01' &&
+              questions.whatHappens.getKey() != 'S-02' &&
+              questions.whatHappens.getKey() != 'S-03'
+            "
+          >
+            Mientras llevamos a cabo una investigación, y para no afectar su
+            línea de crédito, hicimos un abono temporal.
+          </div>
+          <div
+            class="restrictions"
+            [style.margin-top.px]="showOldTicket ? 16 : 0"
+            *ngIf="
+              (questions.motive.key == 'IC-201' && visaCarta == 'false') ||
+              (questions.hasCard === '1' &&
+                questions.haveContact === '2' &&
+                responseModel.payment == 'false')
+            "
+          >
+            Llevaremos a cabo una investigación para darle una pronta respuesta.
+          </div>
+
+          <div
+            [style.margin-top.px]="showOldTicket ? 16 : 0"
+            class="restrictions"
+            *ngIf="
+              questions.motive.key == 'IC-202' ||
+              questions.motive.key == 'IC-203' ||
+              questions.motive.key == 'IC-204' ||
+              questions.motive.key == 'IC-205' ||
+              questions.motive.key == 'IC-206' ||
+              questions.motive.key == 'IC-207' ||
+              questions.whatHappens.getKey() == 'S-01' ||
+              questions.whatHappens.getKey() == 'S-02' ||
+              questions.whatHappens.getKey() == 'S-03'
+            "
+          >
+            <!-- Para continuar con el proceso envíe al correo<br/><a href="mailto:aclaracionescomprastc@santander.com.mx"><b>aclaracionescomprastc@santander.com.mx</b></a><br/>la siguiente información: -->
+            Para continuar con el proceso envíe al correo<br /><strong
+              >aclaracionescomprastc@santander.com.mx</strong
+            ><br />la siguiente información:
+          </div>
+          <div *ngIf="responseModel.visaCard == 'false'">
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-202'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(1)"></p>
+              </div>
+            </div>
+
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-203'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(2)"></p>
+              </div>
+            </div>
+
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-204'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(0)"></p>
+                <div class="spacer"></div>
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(8)"></p>
+              </div>
+            </div>
+
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-205'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(4)"></p>
+              </div>
+            </div>
+
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-206'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(3)"></p>
+              </div>
+            </div>
+
+            <div class="restrictions" *ngIf="questions.motive.key == 'IC-207'">
+              <div class="info-box">
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(9)"></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="
+              responseModel.visaCard == 'true' &&
+              (questions.motive.key == 'IC-202' ||
+                questions.motive.key == 'IC-203' ||
+                questions.motive.key == 'IC-204' ||
+                questions.motive.key == 'IC-205' ||
+                questions.motive.key == 'IC-206' ||
+                questions.motive.key == 'IC-207')
+            "
+          >
+            <div class="restrictions">
+              <div class="info-box">
+                <div>
+                  <em></em>
+                  <p [innerHTML]="labelsService.getRestrictions(0)"></p>
+                </div>
+                <div>
+                  <em></em>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-202'"
+                    [innerHTML]="labelsService.getRestrictions(1)"
+                  ></p>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-203'"
+                    [innerHTML]="labelsService.getRestrictions(2)"
+                  ></p>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-204'"
+                    [innerHTML]="labelsService.getRestrictions(8)"
+                  ></p>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-205'"
+                    [innerHTML]="labelsService.getRestrictions(4)"
+                  ></p>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-206'"
+                    [innerHTML]="labelsService.getRestrictions(3)"
+                  ></p>
+                  <p
+                    *ngIf="questions.motive.key == 'IC-207'"
+                    [innerHTML]="labelsService.getRestrictions(9)"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="restrictions"
+            *ngIf="
+              questions.whatHappens.getKey() == 'S-01' ||
+              questions.whatHappens.getKey() == 'S-03'
+            "
+          >
+            <div class="info-box">
+              <em></em>
+              <p [innerHTML]="labelsService.getRestrictions(7)"></p>
+            </div>
+          </div>
+          <div
+            class="restrictions"
+            *ngIf="questions.whatHappens.getKey() == 'S-02'"
+          >
+            <div class="info-box">
+              <div>
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(0)"></p>
+              </div>
+              <div>
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(5)"></p>
+              </div>
+              <div>
+                <em></em>
+                <p [innerHTML]="labelsService.getRestrictions(6)"></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="restrictions"
+            *ngIf="
+              questions.motive.key == 'IC-202' ||
+              questions.motive.key == 'IC-203' ||
+              questions.motive.key == 'IC-204' ||
+              questions.motive.key == 'IC-205' ||
+              questions.motive.key == 'IC-206' ||
+              questions.motive.key == 'IC-207' ||
+              questions.whatHappens.getKey() == 'S-01' ||
+              questions.whatHappens.getKey() == 'S-02' ||
+              questions.whatHappens.getKey() == 'S-03'
+            "
+          >
+            <div class="warning" [innerHTML]="labelsService.getWarning()"></div>
+          </div>
+          <div
+            class="card cardResult"
+            *ngIf="
+              (responseModel.newCard &&
+                questions.blocker.operationReposition == true &&
+                questions.whatHappens.getKey() != 'S-02') ||
+              (cardRepositionResponse && repositionType === '2')
+            "
+          >
+            <div
+              class="title"
+              [textContent]="labelsService.getNewCardTitle()"
+            ></div>
+            <div class="card-number" *ngIf="responseModel.newCard">
+              **** **** **** {{ responseModel.newCard }}
+            </div>
+            <div class="card-number" *ngIf="cardRepositionResponse">
+              **** **** ****
+              {{ cardRepositionResponse.panReposition | slice : -4 }}
+            </div>
+          </div>
+          <div
+            class="card cardResult"
+            *ngIf="
+              responseModel.payment == 'true' &&
+              questions.whatHappens.getKey() != 'S-02'
+            "
+          >
+            <div
+              class="title"
+              [textContent]="labelsService.getAmountPaid()"
+            ></div>
+            <div
+              class="amount"
+              [innerHTML]="responseModel.amount | customCurrency : true : true"
+            ></div>
+          </div>
+          <div
+            class="card cardResult"
+            *ngIf="
+              responseModel.payment == 'false' &&
+              questions.whatHappens.getKey() != 'S-02'
+            "
+          >
+            <div
+              class="title"
+              [textContent]="labelsService.getAmountAclaration()"
+            ></div>
+            <div
+              class="amount"
+              [innerHTML]="
+                responseModel.totalAmount | customCurrency : true : true
+              "
+            ></div>
+          </div>
+        </ng-container>
+
+        <ng-template #services>
+          <p
+            class="result__message"
+            *ngIf="ticketContent.text1"
+            [ngStyle]="ticketContent.text1Style"
+          >
+            {{ ticketContent.text1 }}
+          </p>
+          <ng-container *ngIf="!ticketContent.linex">
+            <app-move-item
+              *ngFor="let move of dataProxyService.getDataSelected()"
+              [selectable]="false"
+              [type]="arrowType"
+              [description]="move.txrComercio"
+              [amount]="move.amount"
+            >
+            </app-move-item>
+          </ng-container>
+
+          <span
+            [style.padding-bottom.px]="
+              ticketOption === ticketOptions.PROMOTION_CORRECTION ||
+              ticketOption === ticketOptions.CANCEL_LINEX
+                ? 0
+                : 16
+            "
+            class="result__message"
+            [ngStyle]="ticketContent.text2Style"
+            *ngIf="ticketContent.text2"
+          >
+            {{ ticketContent.text2 }}
+          </span>
+
+          <span
+            class="result__bolder"
+            [style.padding-top.px]="
+              ticketOption === ticketOptions.PROMOTION_CORRECTION ? 5 : 0
+            "
+            *ngIf="ticketContent.bolder"
+          >
+            {{ ticketContent.bolder }}
+          </span>
+          <!-- bold -->
+          <span class="result__msi" *ngIf="ticketContent.text3">
+            {{ ticketContent.text3 }}
+          </span>
+
+          <span class="result__total" *ngIf="ticketContent.text4">
+            {{ ticketContent.text4 }}
+          </span>
+
+          <span
+            class="result__message p-37 mb-21"
+            *ngIf="ticketContent.linex"
+            [innerHTML]="ticketContent.linex"
+          >
+          </span>
+
+          <app-fl-alert
+            class="alert-config"
+            *ngIf="showAlert"
+            [title]="ticketContent.alert.title"
+            [paragraph]="ticketContent.alert.text"
+            [alertType]="'warning'"
+          >
+          </app-fl-alert>
+
+          <hr class="line all" />
+        </ng-template>
+
+        <div class="SMS">
+          Enviamos la carta de acuse a tu correo registrado en
+          <span>{{ nameChanel }}</span
+          >.
+        </div>
+
+        <div
+          class="folios"
+          *ngIf="
+            responseModel.nationalFolio.length > 0 &&
+            responseModel.internationalFolio.length > 0
+          "
+        >
+          <h3 *ngIf="responseModel.nationalFolio.length === 1">
+            FOLIO NACIONAL
+          </h3>
+          <h3 *ngIf="responseModel.nationalFolio.length >= 2">
+            FOLIOS NACIONALES
+          </h3>
+          <div *ngFor="let f of responseModel.nationalFolio">
+            <h3>{{ f }}</h3>
+          </div>
+        </div>
+        <div
+          class="folios"
+          *ngIf="
+            responseModel.nationalFolio.length > 0 &&
+            responseModel.internationalFolio.length > 0
+          "
+        >
+          <h3 *ngIf="responseModel.internationalFolio.length === 1">
+            FOLIO INTERNACIONAL
+          </h3>
+          <h3 *ngIf="responseModel.internationalFolio.length >= 2">
+            FOLIOS INTERNACIONALES
+          </h3>
+          <div *ngFor="let f of responseModel.internationalFolio">
+            <h3>{{ f }}</h3>
+          </div>
+        </div>
+        <div
+          class="folios"
+          *ngIf="
+            responseModel.nationalFolio.length == 0 &&
+            responseModel.internationalFolio.length > 0
+          "
+        >
+          <h3
+            *ngIf="
+              responseModel.nationalFolio.length === 1 ||
+              responseModel.internationalFolio.length === 1
+            "
+          >
+            NÚMERO DE FOLIO
+          </h3>
+          <h3
+            *ngIf="
+              responseModel.nationalFolio.length >= 2 ||
+              responseModel.internationalFolio.length >= 2
+            "
+          >
+            NÚMEROS DE FOLIOS
+          </h3>
+          <div *ngFor="let f of responseModel.internationalFolio">
+            <h3>{{ f }}</h3>
+          </div>
+        </div>
+        <div
+          class="folios"
+          *ngIf="
+            responseModel.nationalFolio.length > 0 &&
+            responseModel.internationalFolio.length == 0
+          "
+        >
+          <h3
+            *ngIf="
+              responseModel.nationalFolio.length === 1 ||
+              responseModel.nationalFolio.length === 1
+            "
+          >
+            NÚMERO DE FOLIO
+          </h3>
+          <h3
+            *ngIf="
+              responseModel.nationalFolio.length >= 2 ||
+              responseModel.nationalFolio.length >= 2
+            "
+          >
+            NÚMEROS DE FOLIOS
+          </h3>
+          <div *ngFor="let f of responseModel.nationalFolio">
+            <h3>{{ f }}</h3>
+          </div>
+        </div>
+
+        <div
+          class="SMS"
+          *ngIf="
+            responseModel.getGreaterDate() != null &&
+            responseModel.getGreaterDate() != 'Invalid date'
+          "
+        >
+          La fecha compromiso para el dictamen final de esta solicitud, es:
+          <div class="spacer"></div>
+        </div>
+        <div
+          class="description"
+          *ngIf="
+            responseModel.getGreaterDate() != null &&
+            responseModel.getGreaterDate() != 'Invalid date'
+          "
+        >
+          {{ responseModel.getGreaterDate() }}
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row"
+      *ngIf="
+        responseModel.payment == 'true' &&
+        questions.whatHappens.getKey() != 'S-02' &&
+        !isService
+      "
+    >
+      <div class="col-xs-12 special-note">
+        Nota: Es importante señalar que si la aclaración es improcedente se
+        realizará el cargo nuevamente a su tarjeta.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 a-center">
+        <button
+          type="button"
+          class="btn"
+          [ngClass]="{
+            'g-btn rounded': dataProxyService.getChannel() == 'default',
+            endbuttonWallet: dataProxyService.getChannel() == 'wallet'
+          }"
+          (click)="finishApp($event)"
+        >
+          Terminar
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- ALERTA DE DOCUMENACION REQUERIDA -->
+<ng-template #requeriments>
+  <app-requirement-list
+    [folios]="[pfolio]"
+    [requirements]="requirementList"
+  >
+  </app-requirement-list>
+</ng-template>

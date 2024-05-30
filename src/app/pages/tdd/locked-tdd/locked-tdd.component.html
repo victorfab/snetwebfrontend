@@ -1,0 +1,155 @@
+<ng-container *ngIf="!isLoading">
+  <ng-container *ngIf="operationReposition && resultBlock; else default">
+    <app-header-ticketv2
+      (close)="executeContinue()"
+      toastMessage="Tarjeta con bloqueo total"
+      [ticketTitle]="'Comprobante'"
+    >
+      <div class="block-header">
+        <em class="block-header__icon"></em>
+        <p class="block-header__message">
+          La tarjeta con terminación <strong>{{ oldCard }}</strong> fue
+          <strong>bloqueada definitivamente</strong> y comenzamos el proceso de
+          reposición exitosamente.
+        </p>
+      </div>
+    </app-header-ticketv2>
+    <div class="block__new-card">
+      <em class="block-card-icon"></em>
+      <p class="block__new-card__title">NUEVO NÚMERO DE TARJETA</p>
+      <p class="block__new-card__value">**** **** **** {{ newCard }}</p>
+    </div>
+  
+    <p class="block__to-send">
+      Tu nueva tarjeta llegará a tu sucursal titular en los próximos 3 a 5 días
+      hábiles. Recíbela con tu identificación oficial.
+    </p>
+  
+    <button class="g-btn rounded" (click)="executeContinue()">Continuar</button>
+  </ng-container>
+  <ng-template #default>
+    <!-- Content Result -->
+    <div class="contentLocked">
+      <!-- Warning -->
+      <p class="mRed sBold xBig pTBSmall center LHBig" id="blocked-card-title">
+        Tarjeta bloqueada definitivamente
+      </p>
+  
+      <!-- Instructions Text -->
+      <p
+        class="Ndark light center pTBMedium medium LHMedium brdBSmall"
+        id="blocked-card-old-init"
+      >
+        La tarjeta con terminación <span class="bold">{{ oldCard }}</span> ha sido
+        <span class="bold">bloqueada definitivamente</span>, por lo que hemos
+        iniciado un proceso de reposición
+      </p>
+  
+      <div
+        class="card center cardResultLock"
+        *ngIf="operationReposition && resultBlock"
+      >
+        <div class="title" id="tile-card-reposition">Nuevo número de tarjeta</div>
+        <br />
+        <div class="card-number" id="description-card-resposition">
+          **** **** **** {{ newCard }}
+        </div>
+      </div>
+  
+      <div
+        class="infoResult"
+        *ngIf="operationReposition && !operationExpressReposition && resultBlock"
+      >
+        <p class="Ndark light medium pTBMedium center LHMedium">
+          <span class="sBold" id="tilte-card-send">
+            Su nueva tarjeta será envíada en un lapso de 10 días hábiles a su
+            sucursal titular.</span
+          >
+        </p>
+      </div>
+  
+      <!-- Content Info Result -->
+      <div class="infoResult" *ngIf="resultBlock">
+        <!-- Black Warning -->
+        <p
+          class="Ndark light medium pTBMedium center LHMedium"
+          *ngIf="!operationReposition && !operationExpressReposition"
+        >
+          <span id="card-request"
+            >Solicite la reposición de su tarjeta a través de <br />
+            <span class="sBold">Super<span class="mRed sBold">Línea</span></span>
+            <br />
+  
+            Desde CDMX y el interior de la República<br />
+            <span class="sBold">55 5169 4300</span><br /><br />
+          </span>
+        </p>
+  
+        <!-- Button Finalizar -->
+        <!--button > Continuar </button--->
+  
+        <div
+          class="col-xs-12"
+          *ngIf="!operationReposition && operationExpressReposition"
+        >
+          <p
+            class="Ndark reposition-type-label center font-300"
+            id="title-type-reposition"
+          >
+            Seleccione el tipo de reposición que desea:
+          </p>
+          <div class="row vertical-padded">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="Ndark input-group" id="description-express">
+                <input
+                  type="radio"
+                  id="immediate"
+                  name="reposition-type"
+                  value="1"
+                  [(ngModel)]="repositionType"
+                  (ngModelChange)="toggleRepositionType()"
+                />
+                <label for="immediate"
+                  >Tramitar una
+                  <span class="bold">reposición inmediata </span> acudiendo a
+                  cualquier sucursal con una identificación oficial
+                  vigente.</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row vertical-padded">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="Ndark input-group" id="description-perzonalized">
+                <input
+                  type="radio"
+                  id="custom"
+                  name="reposition-type"
+                  value="2"
+                  [(ngModel)]="repositionType"
+                  (ngModelChange)="toggleRepositionType()"
+                />
+                <label for="custom"
+                  >Tu nueva tarjeta llegará a tu sucursal titular en los próximos
+                  3 a 5 días hábiles. Recíbela con tu identificación
+                  oficial.</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Termina Conten Info  Result -->
+    </div>
+    <!-- Termina Content Result -->
+    <app-footer-tdd
+      [idElement]="'page-locked-tdd'"
+      [enable]="repositionType != ''"
+      [buttonText]="'Continuar'"
+      (continueClarification)="executeContinue()"
+    >
+    </app-footer-tdd>
+  </ng-template>
+  
+</ng-container>

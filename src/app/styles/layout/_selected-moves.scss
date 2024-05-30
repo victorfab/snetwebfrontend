@@ -1,0 +1,15 @@
+.selected-moves {
+  &__close-btn {
+    height: 45px;
+    background-color: $red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    span {
+      margin-right: 1rem;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+<ng-container *ngIf="item">
+  <ul [style.pointer-events]="pointerEvents">
+    <li [style.padding]="!date ? '0px' : ''">
+      <ng-container *ngIf="!!date">
+        <div class="leftMov dInlineB">
+          <!-- Icon -->
+          <div class="iconMov">
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div
+          class="rightMov dInlineB l-10"
+          [innerHtml]="date | formatSmDate"
+          *ngIf="chanelType === 'default'"
+        ></div>
+        <div
+          class="rightMov dInlineB"
+          [innerHtml]="date | formatSwDate"
+          *ngIf="chanelType === 'wallet'"
+        ></div>
+      </ng-container>
+
+      <!-- Left -->
+    </li>
+
+    <li
+      *ngFor="let item of item.value; let index = index; trackBy: trackBy"
+      id="listMoves{{ item.id }}"
+      [ngClass]="{
+        active: !!selectedMoves[item.id] && !outSelection
+      }"
+    >
+      <!-- Separador -->
+      <hr />
+      <!-- Left -->
+      <ng-container ngif="cashbackFlow === 'true'; else noCashb">
+        <div
+          class="leftMov dInlineB"
+          id="move-{{ item.id }}"
+          (click)="select(item)"
+        >
+          <!-- Icon -->
+          <div
+            [ngClass]="{
+              'icon-add': type === arrowType.UP,
+              iconMov: type === arrowType.DOWN,
+              'icon-clear': type === arrowType.CLEAR
+            }"
+          >
+            <span></span>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-template #noCashb>
+        <div
+          class="leftMov dInlineB"
+          id="move-{{ item.id }}"
+          (click)="select(item)"
+        >
+          <!-- Icon -->
+          <div
+            [ngClass]="{
+              'icon-add': type === arrowType.UP,
+              iconMov: type === arrowType.DOWN,
+              'icon-clear': type === arrowType.CLEAR
+            }"
+          >
+            <span></span>
+          </div>
+        </div>
+      </ng-template>
+
+      <!-- Right -->
+      <div
+        class="rightMov dInlineB"
+        *ngIf="cashbackFlow === 'true'; else noCashback"
+      >
+        <!-- Mov Description -->
+        <div
+          class="movDescription dInlineB"
+          id="title-move-{{ item.id }}"
+          appHighlight
+          [word]="item.txrComercio"
+          [query]="searchFilter"
+        ></div>
+        <!-- Mov Amount -->
+        <div class="movAmount dInlineB">
+          <span class="amount" id="description-move-{{ item.id }}">
+            <span [innerHtml]="item.amount | customCurrency : true"></span
+          ></span>
+        </div>
+      </div>
+
+      <ng-template #noCashback>
+        <div class="rightMov dInlineB" (click)="select(item)">
+          <!-- Mov Description -->
+          <div
+            class="movDescription dInlineB"
+            id="title-move-{{ item.id }}"
+            appHighlight
+            [word]="item.txrComercio"
+            [query]="searchFilter"
+          ></div>
+          <!-- Mov Amount -->
+          <div class="movAmount dInlineB">
+            <span class="amount" id="description-move-{{ item.id }}"
+              ><span *ngIf="chanelType === 'default' && type !== arrowType.UP"
+                >-</span
+              >
+              <span [innerHtml]="item.amount | customCurrency"></span
+            ></span>
+          </div>
+          <div
+            class="movStatus dInlineB"
+            *ngIf="item.statusReverso === 'REV02'"
+          >
+            <span class="clock"></span>
+            <span class="status" id="description-status-{{ item.id }}">
+              EN PROCESO</span
+            >
+          </div>
+        </div>
+      </ng-template>
+      <!-- Bottom -->
+      <div class="bottomMov" id="selection-mark-move-{{ item.id }}">
+        Movimiento a aclarar
+      </div>
+    </li>
+  </ul>
+</ng-container>

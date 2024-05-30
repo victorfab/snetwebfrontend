@@ -1,0 +1,203 @@
+<div
+  class="message"
+  [ngClass]="{ 'message--padding-2': messageType === messageTypes.TDD_MESSAGE }"
+>
+  <div class="row">
+    <ng-container [ngSwitch]="messageType">
+      <ng-container *ngSwitchCase="messageTypes.TDD_MESSAGE">
+        <div class="col-12 text-center">
+          <span class="message__icon"></span>
+        </div>
+
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question global-title"> ¿Busca su Cashback? </strong>
+
+          <p class="message__paragraph pb-0">
+            <span>
+              Recuerde que las bonificaciones de Cashback se realizan los días
+              15 de cada mes en su cuenta de débito Santander.
+            </span>
+
+            <span>
+              Podrá identificarlas como: “Tu Cashback por LikeU” o “Tu Cashback
+              por Nómina”.
+            </span>
+
+            <span class="mb-0">
+              Para recibir este beneficio, utilice su tarjeta de nómina
+              Santander o LikeU en establecimientos de categorías participantes.
+            </span>
+          </p>
+          <div class="spacer px-24"></div>
+          <button class="button button-red" (click)="returnClick()">
+            Regresar
+          </button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.TDC_LIKEU">
+        <div class="col-12 text-center">
+          <span class="message__icon"></span>
+        </div>
+
+        <div class="col-12 text-center">
+          <strong class="message__question global-title"> ¿Busca su Cashback? </strong>
+          <p class="message__paragraph">
+            <span>
+              Encuentre el Cashback que generó con su LikeU
+              <strong>en su cuenta de débito.</strong>
+            </span>
+
+            <span>
+              Búsquelo el día <strong>15 de cada mes</strong> como:
+              <strong>“Tu Cashback por LikeU”</strong>.
+            </span>
+
+            Si aún no tiene cuenta de débito con nosotros, le invitamos a abrir
+            una para recibir este beneficio.
+          </p>
+
+          <div class="spacer px-24"></div>
+          <button class="button button-red mb-36" (click)="returnClick()">
+            Regresar
+          </button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.TDC_OTHER">
+        <div class="col-12 text-center align col-center">
+          <div class="spacer message"></div>
+          <strong class="message__question global-title">
+            Solicite su LikeU y reciba mucho...
+          </strong>
+
+          <em class="icon-cashback-baby"></em>
+        </div>
+
+        <div class="col-12 text-center">
+          <div class="message__paragraph">
+            <div class="message__percentages">
+              <div class="message__percentages__item">
+                <span>4%</span>
+                Gasolineras
+              </div>
+              <div class="message__percentages__item">
+                <span>5%</span>
+                Restaurantes y entretenimiento
+              </div>
+              <div class="message__percentages__item">
+                <span>6%</span>
+                Farmacias
+              </div>
+            </div>
+
+            <span>
+              Su tarjeta de crédito no participa en la promoción. Necesita la
+              Tarjeta LikeU y una cuenta de débito para participar.
+            </span>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.CONTRATACION_ERROR">
+        <div class="col-12 text-center">
+          <img class="topInfo" src="./assets/svg/empty12.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question message__headline">
+            ¿Quieres cancelar este crédito?
+          </strong>
+
+          <p class="message__paragraphBottomSheet message__text">
+            <span>
+              Debes traspasar a tu tarjeta de crédito el<br />monto total que
+              depositamos en tu cuenta<br />de débito.
+            </span>
+            <strong class="message__monto"
+              >${{ additional.amount | customCurrencyPlain }}</strong
+            >
+          </p>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.LIQUIDAR_CORRECCION">
+        <div class="col-12 text-center">
+          <img class="topInfo" src="./assets/svg/empty12.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question message__headline">
+            ¿Quieres liquidar esta compra a meses?
+          </strong>
+
+          <p class="message__paragraph">
+            <span>
+              <strong class="message__labelMonto">Monto a pagar:</strong>
+            </span>
+            <strong class="message__monto">$00,000.00</strong>
+            <!-- <strong class="message__monto">${{additional.amount | customCurrencyPlain}}</strong> -->
+          </p>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.LIQUIDAR">
+        <div class="col-12 text-center">
+          <img class="topInfo" src="./assets/svg/empty12.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question message__headline">
+            Elegiste pagar
+          </strong>
+
+          <p class="message__paragraphBottomSheet message__text">
+            <!-- <strong class="message__monto">${{additional.amount | customCurrencyPlain}}</strong>   -->
+            <strong class="message__monto">$00,000.00</strong>
+            <span class="info"
+              >Si aún no has realizado el pago, hazlo hoy<br />mismo para
+              concluir tu solicitud.</span
+            >
+          </p>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.OTRO_MONTO">
+        <div class="col-12 text-center">
+          <img class="topInfo" src="./assets/svg/empty12.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question message__headline">
+            ¡Importante!
+          </strong>
+
+          <p class="message__paragraphBottomSheet message__text">
+            <span>
+              Calcularemos el saldo pendiente de tu<br />crédito y ajustaremos
+              tus siguientes<br />mensualidades.<br />
+            </span>
+            <span class="secondParagraph">
+              Consulta más detalles en la carta<br />respuesta que recibirás en
+              tu correo.
+            </span>
+          </p>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="messageTypes.PREFOLIO">
+        <div class="col-12 text-center">
+          <img class="prefoliosInfo" src="./assets/svg/timeClock.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <strong class="message__question message__headline prefolios">
+            Espera un momento
+          </strong>
+
+          <p class="message__paragraphBottomSheet message__text">
+            <span class="mt-16">
+              Este movimiento está en proceso de<br/>autorización por el comercio y <strong class="message__boldFont">puede<br/>desaparecer en 5 días</strong> hábiles.<br/>
+              Si no lo reconoces puedes levantar una<br/>aclaración.
+            </span>
+          </p>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

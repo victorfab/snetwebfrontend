@@ -1,0 +1,641 @@
+<!-- Add Spinner -->
+<app-spinner-tdd *ngIf="spinner"></app-spinner-tdd>
+<!-- Add Steper -->
+<app-steper-tdd [_tab]="tabCashback" *ngIf="chanelType === 'wallet'">
+
+</app-steper-tdd>
+<!-- Add Alerts -->
+<app-alerts-tdd></app-alerts-tdd>
+<!-- Pleca Superior -->
+
+
+<!-- Content Dashboard -->
+<div
+[style.padding-top.px]="chanelType === 'wallet' ? 55 : 0"
+  class="contentDashboard"
+  [ngClass]="{ wallet: chanelType != 'default' }">
+  <!-- Card Component -->
+  <app-card-detail
+    [detail]="storage.getFromLocal('userdata')"
+    *ngIf="chanelType === 'default'">
+  </app-card-detail>
+
+  <!-- DYNAMIC MESSAGE -->
+  <p class="welcome-message-tdd" *ngIf="chanelType === 'default'">
+    Seleccione un movimiento para comenzar:
+  </p>
+
+    <!-- Search SUPER WALLET -->
+    <div class="searchModule wallet searchModule--border" *ngIf="chanelType === 'wallet'">
+      <!-- Input Search -->
+      <form>
+        <input
+          [(ngModel)]="findMovement"
+          name="findMovement"
+          id="findMovement"
+          placeholder="Buscar movimiento..."
+          class="wallet searchModule__input"
+          (input)="inteligentFilter($event.target.value)"
+          (click)="tagginService('20', '')"
+        />
+      </form>
+      <!-- Filters Button -->
+      <div
+        class="filtersButton wallet"
+        (click)="toggleId = 'filtersComp'; showToggle(); tagginService('23', '')"
+      ></div>
+      <!-- Selected Moves -->
+      <div
+        class="selectedMoves"
+        (click)="
+          toggleId = 'selectedMovComp';
+          showToggle();
+          generateSelectedView();
+          tagginService('21', '')
+        "
+      >
+        <span [innerHtml]="smSelectedMoves.length"></span>
+      </div>
+    </div>
+
+  <div class="card-holder" *ngIf="chanelType === 'wallet'">
+    <div class="card">
+      <div class="row">
+        <div class="col-xs-2 logo"></div>
+        <div class="col-xs-10 p-0">
+          <div class="card-name">{{ storage.getFromLocal('userdata')?.cardName }}</div>
+          <div class="main-balance" [innerHTML]="storage.getFromLocal('userdata').saldo | customCurrency"></div>
+          <div class="row subamounts">
+            <div class="col-xs-12">
+              <span class="info-left dInline">Saldo actual</span>
+              <hr class="lineSD dInline"/>
+              <span [innerHTML]="storage.getFromLocal('userdata').cardNumber | maskingPan" class="info-left dInline"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Search SUPER MOVIL -->
+  <div class="searchModule" *ngIf="chanelType === 'default'">
+    <!-- Input Search -->
+    <form class="filter-form" [ngClass]="{'gap-0': chanelType ==='wallet'}">
+      <input
+        class="filter-form__search icon-search"
+        [(ngModel)]="findMovement"
+        id="findMovement"
+        name="findMovement"
+        placeholder="Buscar movimiento"
+        (input)="inteligentFilter($event.target.value)"
+        (click)="tagginService('20', '')"
+      />
+      <em
+        class="icon-filter"
+        *ngIf="chanelType ==='default'"
+        (click)="toggleId = 'filtersComp'; showToggle(); tagginService('23', '')">
+    </em>
+    </form>
+    <!-- Filters Button -->
+    <div
+      *ngIf="chanelType ==='wallet'"
+      class="filtersButton"
+      (click)="toggleId = 'filtersComp'; showToggle(); tagginService('23', '')"
+    ></div>
+  </div>
+
+  <app-tabs
+    [selected]="selectedTab"
+    (optionChanged)="changeMoves($event)"
+  ></app-tabs>
+
+  <!-- Notice -->
+  <div class="row">
+    <!-- Movimientos Filñtrados -->
+    <div
+      class="movFilters col-xs-12"
+      [ngClass]="{ active: filterApply, filSM: chanelType === 'default' }"
+    >
+      Transacciones filtradas
+      <div
+        class="iconF"
+        [ngClass]="{ active: sfApply }"
+        (click)="showFilterApply()"
+      >
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div
+      class="filterApply"
+      [ngClass]="{ active: sfApply }"
+      (click)="
+        filterApply = false;
+        sfApply = false;
+        generateMovesArray(false);
+        deleteFilters();
+        filterNameApply = '';
+        enable = false;
+        filterName = ''
+      "
+    >
+      <span
+        [ngClass]="{ labelSM: chanelType === 'default' }"
+        *ngIf="findMovement === ''"
+        >Por mes:
+      </span>
+      <span [ngClass]="{ filterWallet: chanelType === 'wallet' }">{{
+        filterName
+      }}</span>
+    </div>
+
+    <div class="notice col-xs-12" id="info-movements" *ngIf="isConsumerTab">
+      <p>
+        Le informamos que los movimientos que por ahora se pueden aclarar sólo
+        son consumos en comercios (compras).
+      </p>
+    </div>
+  </div>
+
+  <!-- Content Movements -->
+  <div class="centered-text" *ngIf="isLoadingMoves && !isCashbackTab">
+    Cargando movimientos...
+  </div>
+  <div
+    class="centered-text"
+    *ngIf="
+      !isLoadingMoves &&
+      ((isConsumerTab && viewMoves.length === 0) ||
+        (isAtmTab && viewMovesATM.length === 0)) &&
+      filterName === ''
+    "
+  >
+    No tiene movimientos para aclarar.
+  </div>
+  <div
+    class="centered-text"
+    *ngIf="isConsumerTab && viewMoves.length === 0 && filterName != ''"
+  >
+    No tiene movimientos que coincidan con su búsqueda.
+  </div>
+  <div
+    class="centered-text"
+    *ngIf="isAtmTab && viewMovesATM.length === 0 && filterName != ''"
+  >
+    No tiene movimientos que coincidan con su búsqueda.
+  </div>
+  <div
+  id="movementList"
+    [ngClass]="{
+      movements: chanelType === 'default',
+      movementsWallet: chanelType === 'wallet'
+    }"
+  >
+    <div *ngIf="isConsumerTab">
+      <ul *ngFor="let item of viewMoves">
+        <li>
+          <!-- Left -->
+          <div class="leftMov dInlineB">
+            <!-- Icon -->
+            <div class="iconMov">
+              <span></span>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div
+            class="rightMov dInlineB title-l"
+            [innerHtml]="item.key | formatSmDate"
+            *ngIf="chanelType === 'default'"
+          ></div>
+          <div
+            class="rightMov dInlineB"
+            [innerHtml]="item.key | formatSwDate"
+            *ngIf="chanelType === 'wallet'"
+          ></div>
+        </li>
+
+        <li
+          *ngFor="let items of item.value; let index = index"
+          id="listMoves{{ items.id }}"
+          [ngClass]="{ active: checkSelectedElements(items.id) }"
+        >
+          <!-- Separador -->
+          <hr />
+          <!-- Left -->
+          <div
+            class="leftMov dInlineB"
+            id="move-{{ items.id }}"
+            (click)="selectedMoves(items); tagginService('', 'icon')"
+          >
+            <!-- Icon -->
+            <div class="iconMov">
+              <span></span>
+            </div>
+          </div>
+          <!-- Right -->
+          <div
+            class="rightMov dInlineB" [ngClass]="{'movements__box': chanelType === 'default'}"
+            (click)="selectedMoves(items); tagginService('', 'description')"
+          >
+            <!-- Mov Description -->
+            <div
+              class="movDescription dInlineB"
+              id="title-move-{{ items.id }}"
+              [innerHtml]="highlightFilter(items.txrComercio, findMovement)"
+            ></div>
+            <!-- Mov Amount -->
+            <div class="movAmount dInlineB">
+              <span class="amount" id="description-move-{{ items.id }}"
+                ><span *ngIf="chanelType === 'default'">-</span>
+                <span
+                  [innerHtml]="removeSign(items.amount) | customCurrency"
+                ></span
+              ></span>
+            </div>
+          </div>
+
+          <!-- Bottom -->
+          <div class="bottomMov" id="selection-mark-move-{{ items.id }}">
+            Movimiento a aclarar
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="isAtmTab">
+      <ul *ngFor="let item of viewMovesATM">
+        <li>
+          <!-- Left -->
+          <div class="leftMov dInlineB">
+            <!-- Icon -->
+            <div class="iconMov">
+              <span></span>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div
+            class="rightMov dInlineB"
+            [innerHtml]="item.key | formatSmDate"
+            *ngIf="chanelType === 'default'"
+          ></div>
+          <div
+            class="rightMov dInlineB"
+            [innerHtml]="item.key | formatSwDate"
+            *ngIf="chanelType === 'wallet'"
+          ></div>
+        </li>
+
+        <li
+          *ngFor="let items of item.value; let index = index"
+          id="listMoves{{ items.id }}"
+          [ngClass]="{
+            active: checkSelectedElements(items.id),
+            disabled: validateMoveReversoselected(items.id)
+          }"
+        >
+          <!-- Separador -->
+          <hr />
+          <!-- Left -->
+          <div
+            class="leftMov dInlineB"
+            id="move-{{ items.id }}"
+            (click)="selectedMoves(items); tagginService('', 'icon')"
+          >
+            <!-- Icon -->
+            <div class="iconMov">
+              <span></span>
+            </div>
+          </div>
+          <!-- Right -->
+          <div
+            class="rightMov dInlineB"
+            (click)="selectedMoves(items); tagginService('', 'description')"
+          >
+            <!-- Mov Description -->
+            <div
+              class="movDescription dInlineB"
+              id="title-move-{{ items.id }}"
+              [innerHtml]="highlightFilter(items.txrComercio, findMovement)"
+            ></div>
+            <!-- Mov Amount -->
+            <div class="movAmount dInlineB">
+              <span class="amount" id="description-move-{{ items.id }}"
+                ><span *ngIf="chanelType === 'default'">-</span>
+                <span
+                  [innerHtml]="removeSign(items.amount) | customCurrency"
+                ></span
+              ></span>
+            </div>
+            <div
+              class="movStatus dInlineB"
+              *ngIf="items.statusReverso === 'REV02' && chanelType === 'default'"
+            >
+              <span class="clock"></span>
+              <span class="status" id="description-status-{{ items.id }}">
+                EN PROCESO</span
+              >
+            </div>
+            <ng-container
+              [ngTemplateOutlet]="clockWallet" 
+              [ngTemplateOutletContext]="{show: items.statusReverso=== 'REV02' && chanelType === 'wallet'}">
+            </ng-container>
+          </div>
+
+          <!-- Bottom -->
+          <div class="bottomMov" id="selection-mark-move-{{ items.id }}">
+            Movimiento a aclarar
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="isCashbackTab">
+      <app-movement
+        *ngFor="let item of cashbackMoves"
+        (selectedMove)="selectedMoves($event)"
+        [globalSelected]="cashbackIdList"
+        [data]="item"
+        [date]="item.key"
+        [type]="arrowType.UP"
+        [saveClaconOnSelection]="wasFiltered ? false : true"
+        [searchFilter]="findMovement"
+        [preselect]="selectedCashback"
+      >
+      </app-movement>
+
+      <div
+        class="centered-text"
+        *ngIf="isCashbackTab && cashbackMoves.length === 0 && filterName !== '' && thereMoves"
+      >
+        No tiene movimientos que coincidan con su búsqueda.
+      </div>
+
+      <div class="centered-text" *ngIf="isCashbackLoading">
+        Cargando movimientos...
+      </div>
+
+      <app-messages
+        (return)="changeMoves(tabOptions.CONSUMER)"
+        *ngIf="cashbackMoves.length === 0 && !isCashbackLoading && !thereMoves"
+      >
+      </app-messages>
+    </div>
+  </div>
+</div>
+<!-- Termina Content Dashboard -->
+
+<!-- Add Footer -->
+<app-footer-tdd
+  *ngIf="isCashbackTab ? cashbackMoves.length > 0 : true"
+  [idElement]="'page-welcome-tdd'"
+  [enable]="smSelectedMoves.length > 0"
+  [buttonText]="'Continuar'"
+  (continueClarification)="executeContinue()"
+  [counter]="smSelectedMoves.length"
+  (showMoves)="toggleId = 'selectedMovComp' ; showToggle() ; generateSelectedView(); tagginService('21','')"
+></app-footer-tdd>
+
+<!-- Selected Moves -->
+<div #modal id="selectedMovComp" class="contentSelectedMov selected-moves">
+  <div class="selected-moves__close-btn">
+    <span (click)="closeMovements()">Cerrar X</span>
+  </div>
+  <!-- Header Filters-->
+  <div class="headerSelectedMov">
+    <span>Movimientos seleccionados</span>
+    <div class="tooltipButton" (click)="showTooltip($event, 1)"></div>
+  </div>
+
+  <div
+    [ngClass]="{
+      movements: chanelType === 'default',
+      movementsWallet: chanelType === 'wallet'
+    }"
+  >
+    <!-- Content -->
+    <p class="light" *ngIf="smSelectedMoves.length === 0">
+      No hay movimientos seleccionados.
+    </p>
+    <p class="light" *ngIf="smSelectedMoves.length > 0">
+      Este es el resumen de los cargos que ha elegido para enviar a aclaración:
+    </p>
+
+    <ul *ngFor="let item of viewSelectedMoves">
+      <li>
+        <!-- Left -->
+        <div class="leftMov dInlineB">
+          <!-- Icon -->
+          <div class="iconMov">
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div
+          class="rightMov dInlineB"
+          [innerHtml]="item.key | formatSmDate"
+          *ngIf="chanelType === 'default'"
+        ></div>
+        <div
+          class="rightMov dInlineB"
+          [innerHtml]="item.key | formatSwDate"
+          *ngIf="chanelType === 'wallet'"
+        ></div>
+      </li>
+      <li class="activeSelected" *ngFor="let items of item.value">
+        <!-- Separador -->
+        <hr />
+        <!-- Left -->
+        <div
+          class="leftMov dInlineB"
+          id="move-{{ items.id }}"
+          (click)="
+            selectedMoves(items);
+            generateSelectedView();
+            tagginService('24', '')
+          "
+        >
+          <!-- Icon -->
+          <div class="iconMov">
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div
+          class="rightMov dInlineB"
+          (click)="
+            selectedMoves(items);
+            generateSelectedView();
+            tagginService('24', '')
+          "
+        >
+          <!-- Mov Description -->
+          <div class="movDescription dInlineB" id="title-move-{{ items.id }}">
+            {{ items.txrComercio }}
+          </div>
+          <!-- Mov Amount -->
+          <div class="movAmount dInlineB">
+            <span
+              class="amount cents-weight"
+              id="description-move-{{ items.id }} "
+              [innerHtml]="items.amount | customCurrency"
+            ></span>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="bottomMov">Quitar</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Content Footer -->
+  <div
+    class="interna contentFooterWallet cerrar"
+    *ngIf="chanelType === 'wallet'"
+  >
+    <button (click)="hideToggle()">Cerrar</button>
+  </div>
+  <!-- Termina Footer Conten-->
+</div>
+<!-- Termina Selected Moves -->
+
+<!-- Inicia Aviso Reverso  -->
+<div id="reversoNotification" class="contentSelectedMov">
+  <!-- Header Filters-->
+
+  <div class="image-center">
+    <img class="mb-5" src="./assets/svg/empty12.svg" alt="" />
+  </div>
+
+  <div>
+    <div *ngFor="let item of smSelectedMoves">
+      <div class="statusContender">
+        <span
+          class="dateMovementStatus"
+          [innerHtml]="item.key | formatSmDate"
+        ></span>
+
+        <!-- Right -->
+        <div class="row descriptionStatus">
+          <!-- Mov Description -->
+          <div class="col-4 descriptionText" id="title-move-{{ item.id }}">
+            {{ item.txrComercio }}
+          </div>
+          <!-- Mov Amount -->
+          <div class="col-4">
+            <span
+              class="amount descriptionText"
+              id="description-move-{{ item.id }} "
+              [innerHtml]="item.amount | customCurrency"
+            ></span>
+          </div>
+          <div class="col-4 statusContent">
+            <span class="clock"></span>
+            <span class="status" id="description-status-{{ item.id }}">
+              EN PROCESO</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+
+    <div class="contentStatusMessage">
+      <p>
+        Este movimiento está en proceso y podrá verse reflejado en los próximos
+        minutos, si no sucede así podrás levantar la aclaración más adelante
+      </p>
+    </div>
+  </div>
+
+  <!-- Content Footer -->
+  <div class="interna contentFooterWallet cerrar">
+    <button (click)="hideToggle()">Entendido</button>
+  </div>
+  <!-- Termina Footer Conten-->
+</div>
+
+<!-- Content Filters -->
+<div id="filtersComp" class="contentFilters dNone">
+  <!-- Header Filters-->
+  <div class="headerFilters">
+    <span>Filtrar movimientos</span>
+    <div
+      id="movements-filter"
+      class="tooltipButton"
+      (click)="showTooltip($event, 2)"
+    ></div>
+  </div>
+
+  <!-- Down Filters -->
+  <div class="downFilters">
+    <!-- Content -->
+    <p class="light">
+      Elija el corte donde se encuentra el movimiento a aclarar.
+    </p>
+
+    <!-- Title -->
+    <h1 class="black normal">
+      <span class="dInlineB"></span>FILTRAR POR FECHA DE CORTE
+    </h1>
+
+    <!-- Filtros -->
+    <ul class="listaFiltros">
+      <li *ngFor="let item of globalMoves; let index = index">
+        <input
+          [checked]="filterNameApply === 'extract-' + index"
+          value="index"
+          type="radio"
+          id="extract-{{ index }}"
+          name="extract-group"
+        />
+        <label
+          id="extractLabel-{{ index }}"
+          id="extractLabel-{{ index }}"
+          (click)="
+            isFiltered = true;
+            filterNameApply = 'extract-' + index;
+            enable = true;
+            generateFilterMoves(globalMoves[index], index);
+            generateFilterMovesAtm(globalMovesATM[index], index);
+            generateFilterMovesCashback(globalCashbackMoves[index], index);
+            filterName = getMonthName(index)
+          "
+          [innerHtml]="getMonthName(index)"
+        ></label>
+        <label for="extract-{{ index }}"></label>
+      </li>
+    </ul>
+  </div>
+  <!-- Termina Down Filters -->
+
+  <!-- Content Footer -->
+  <div
+    class="interna"
+    id="page-welcome-tdd"
+    [ngClass]="{
+      contentFooter: chanelType === 'default',
+      contentFooterWallet: chanelType === 'wallet'
+    }"
+  >
+    <button
+      class="g-btn large"
+      (click)="hideToggle()" [ngClass]="{ inactive: !enable }">
+      Aceptar
+    </button>
+  </div>
+  <!-- Termina Footer Conten-->
+</div>
+<!-- Termina Content Filters -->
+<ng-template #clockWallet let-show="show">
+  <div class="clock-content" *ngIf="show">
+    <span class="clock"></span>
+    <span class="status"> EN PROCESO</span>
+  </div>
+</ng-template>

@@ -1,0 +1,675 @@
+/*RESET*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+ins {
+  text-decoration: none
+}
+
+del {
+  text-decoration: line-through
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+a {
+  text-decoration: none
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+ins {
+  text-decoration: none
+}
+
+del {
+  text-decoration: line-through
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+a {
+  text-decoration: none
+}
+
+body {
+  // overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+
+html {
+  font-family: $main-font;
+  // overflow-x: hidden;
+  height: 100% !important;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+// ELEMENTOS GENERALES
+
+// Display
+.dNone {
+  display: none;
+}
+
+.dInlineB {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dBlock {
+  display: block;
+}
+
+// Vertical Align
+.vAlign {
+  -ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// HEADERS
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+span,
+p {
+  font-weight: 400;
+
+  //Weights
+  &.light {
+    font-weight: 300;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.semiBold {
+    font-weight: 600;
+  }
+
+  &.sBold {
+    font-weight: 700;
+  }
+
+  &.bold {
+    font-weight: 800;
+  }
+
+  //Aligns
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  //Sizes
+  &.small {
+    font-size: 12px;
+  }
+
+  &.normal {
+    font-size: 14px;
+  }
+
+  &.medium {
+    font-size: 16px;
+  }
+
+  &.custom {
+    font-size: 17px;
+  }
+
+  &.big {
+    font-size: 18px;
+  }
+
+  &.xBig {
+    font-size: 23px;
+  }
+
+  //Colors
+  &.black {
+    color: $Black;
+  }
+
+  &.white {
+    color: $White;
+  }
+
+  &.dark {
+    color: $Dark;
+  }
+
+  &.mRed {
+    color: $mainRed;
+  }
+
+  &.Red {
+    color: #ec0000;
+  }
+
+  &.redAlert {
+    color: #e80004;
+  }
+
+  &.green {
+    color: $Green;
+  }
+
+  &.yellow {
+    color: $Yellow;
+  }
+
+  &.dGray {
+    color: $darkGray;
+  }
+
+  //Paddings
+  &.pSmall {
+    padding: 15px;
+  }
+
+  &.pTSmall {
+    padding-top: 15px;
+  }
+
+  &.pRLSmall {
+    padding: 0px 15px 0px 15px;
+  }
+
+  &.pTBSmall {
+    padding: 15px 0px 15px 0px;
+  }
+
+  &.pMedium {
+    padding: 30px;
+  }
+
+  &.pTMedium {
+    padding-top: 30px;
+  }
+
+  &.pBMedium {
+    padding-bottom: 30px;
+  }
+
+  &.pRLMedium {
+    padding: 0px 30px 0px 30px;
+  }
+
+  &.pTBMedium {
+    padding: 30px 0px 30px 0px;
+  }
+  &.marginTitle{
+    padding: 16px 0px 30px 0px;
+  }
+
+  //Specials
+  &.toUC {
+    text-transform: uppercase;
+  }
+
+  //Line Height
+  &.LHBig {
+    line-height: 30px;
+  }
+
+  &.LHMedium {
+    line-height: 25px;
+  }
+
+  &.LHSmall {
+    line-height: 20px;
+  }
+
+  //TRANSFORM
+  &.upper {
+    text-transform: uppercase;
+  }
+
+  &.borderTop {
+    border-top: 1px solid #cccccc;
+  }
+
+  //BORDER
+  &.brdBSmall {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  &.brdRSmall {
+    border-right: 1px solid #cccccc;
+  }
+
+
+}
+
+//Tooltips
+.tooltipButton {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22px' height='22px' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eShape%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-Alta-de-aclaraciones-Copy' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='12_AclaracionesWebView_Cuestionario_CargoDuplicado' transform='translate(-161.000000, -472.000000)' fill='%23878787' fill-rule='nonzero'%3e%3cpath d='M171.999534,472 C165.925206,472 161,476.925206 161,482.999534 C161,489.073862 165.925206,494 171.999534,494 C178.073862,494 183,489.073862 183,482.999534 C183,476.925206 178.073862,472 171.999534,472 Z M174.289397,489.047788 C173.723217,489.27128 173.272508,489.440762 172.934476,489.558095 C172.597376,489.675429 172.205333,489.734095 171.75928,489.734095 C171.073905,489.734095 170.540317,489.566476 170.160381,489.232169 C169.780444,488.897862 169.591407,488.474159 169.591407,487.959196 C169.591407,487.758984 169.605376,487.554116 169.633312,487.345524 C169.66218,487.136931 169.70781,486.902265 169.770201,486.63873 L170.478857,484.135619 C170.541249,483.895365 170.595259,483.667217 170.638095,483.454899 C170.680931,483.24072 170.701418,483.044233 170.701418,482.865439 C170.701418,482.546963 170.635302,482.323471 170.504,482.197757 C170.370836,482.072042 170.120339,482.010582 169.746921,482.010582 C169.564402,482.010582 169.376296,482.037587 169.183534,482.094392 C168.992635,482.153058 168.826878,482.206138 168.690921,482.258286 L168.878095,481.487238 C169.341841,481.298201 169.786032,481.136169 170.209735,481.002074 C170.633439,480.866116 171.033862,480.799069 171.411005,480.799069 C172.091725,480.799069 172.616931,480.964825 172.986624,481.292614 C173.354455,481.621333 173.539767,482.048762 173.539767,482.573968 C173.539767,482.682921 173.52673,482.874751 173.501587,483.148529 C173.476444,483.423238 173.428952,483.673735 173.360042,483.903746 L172.655111,486.399407 C172.597376,486.599619 172.546159,486.828698 172.499598,487.084783 C172.453968,487.340868 172.431619,487.536423 172.431619,487.667725 C172.431619,487.999238 172.505185,488.225524 172.65418,488.345651 C172.801312,488.465778 173.059259,488.526307 173.424296,488.526307 C173.596571,488.526307 173.789333,488.495577 174.007238,488.435979 C174.22328,488.376381 174.379725,488.323302 174.478434,488.277672 L174.289397,489.047788 Z M174.164614,478.918011 C173.835894,479.22345 173.440127,479.376169 172.977312,479.376169 C172.515429,479.376169 172.116868,479.22345 171.785354,478.918011 C171.455704,478.612571 171.289016,478.241016 171.289016,477.807069 C171.289016,477.374053 171.456635,477.001566 171.785354,476.693333 C172.116868,476.384169 172.515429,476.230519 172.977312,476.230519 C173.440127,476.230519 173.836825,476.384169 174.164614,476.693333 C174.493333,477.001566 174.658159,477.374053 174.658159,477.807069 C174.658159,478.241947 174.493333,478.612571 174.164614,478.918011 Z' id='Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  vertical-align: middle;
+
+  &.inactive {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22px' height='22px' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eShape Copy%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-Alta-de-aclaraciones-Copy' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='11_AclaracionesWebView_Cuestionario' transform='translate(-161.000000, -490.000000)' fill='%23DDDDDE' fill-rule='nonzero'%3e%3cpath d='M171.999534,490 C165.925206,490 161,494.925206 161,500.999534 C161,507.073862 165.925206,512 171.999534,512 C178.073862,512 183,507.073862 183,500.999534 C183,494.925206 178.073862,490 171.999534,490 Z M174.289397,507.047788 C173.723217,507.27128 173.272508,507.440762 172.934476,507.558095 C172.597376,507.675429 172.205333,507.734095 171.75928,507.734095 C171.073905,507.734095 170.540317,507.566476 170.160381,507.232169 C169.780444,506.897862 169.591407,506.474159 169.591407,505.959196 C169.591407,505.758984 169.605376,505.554116 169.633312,505.345524 C169.66218,505.136931 169.70781,504.902265 169.770201,504.63873 L170.478857,502.135619 C170.541249,501.895365 170.595259,501.667217 170.638095,501.454899 C170.680931,501.24072 170.701418,501.044233 170.701418,500.865439 C170.701418,500.546963 170.635302,500.323471 170.504,500.197757 C170.370836,500.072042 170.120339,500.010582 169.746921,500.010582 C169.564402,500.010582 169.376296,500.037587 169.183534,500.094392 C168.992635,500.153058 168.826878,500.206138 168.690921,500.258286 L168.878095,499.487238 C169.341841,499.298201 169.786032,499.136169 170.209735,499.002074 C170.633439,498.866116 171.033862,498.799069 171.411005,498.799069 C172.091725,498.799069 172.616931,498.964825 172.986624,499.292614 C173.354455,499.621333 173.539767,500.048762 173.539767,500.573968 C173.539767,500.682921 173.52673,500.874751 173.501587,501.148529 C173.476444,501.423238 173.428952,501.673735 173.360042,501.903746 L172.655111,504.399407 C172.597376,504.599619 172.546159,504.828698 172.499598,505.084783 C172.453968,505.340868 172.431619,505.536423 172.431619,505.667725 C172.431619,505.999238 172.505185,506.225524 172.65418,506.345651 C172.801312,506.465778 173.059259,506.526307 173.424296,506.526307 C173.596571,506.526307 173.789333,506.495577 174.007238,506.435979 C174.22328,506.376381 174.379725,506.323302 174.478434,506.277672 L174.289397,507.047788 Z M174.164614,496.918011 C173.835894,497.22345 173.440127,497.376169 172.977312,497.376169 C172.515429,497.376169 172.116868,497.22345 171.785354,496.918011 C171.455704,496.612571 171.289016,496.241016 171.289016,495.807069 C171.289016,495.374053 171.456635,495.001566 171.785354,494.693333 C172.116868,494.384169 172.515429,494.230519 172.977312,494.230519 C173.440127,494.230519 173.836825,494.384169 174.164614,494.693333 C174.493333,495.001566 174.658159,495.374053 174.658159,495.807069 C174.658159,496.241947 174.493333,496.612571 174.164614,496.918011 Z' id='Shape-Copy'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    pointer-events: none;
+  }
+}
+
+.contentLocked,
+.contentQuestions,
+.summaryContent,
+.plecaSuperior,
+.contentDashboard,
+.movements,
+.contentFilters,
+.contentSelectedMov,
+.listaFiltros,
+.contentSteper,
+.cardBlock,
+.contentFooter,
+.contentResult {
+
+  //GRID
+  //Renglon
+  .row {
+    // font-family: 'SantanderText-Regular', sans-serif;
+    margin: 0 !important;
+  }
+
+  .row::after {
+    // font-family: 'SantanderText-Regular', sans-serif;
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  //Columnas
+  [class*="col-"] {
+    float: left;
+    padding: 13px 5px 13px 5px;
+  }
+
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+
+//NO Padding
+.noPaddingSides {
+  padding: 13px 0;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.cancel {
+  // font-family: 'SantanderText-Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ec0000;
+  position: fixed;
+  padding-top: 15px;
+}
+
+.optionsList {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 0px 16px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #D9D9D9;
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.optionsBottons {
+  // font-family: 'SantanderText-Regular', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  // letter-spacing: 0px;
+  display: inline-grid;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  li {
+    padding-top: 16px;
+  }
+
+  .secondButton {
+    // font-family: 'SantanderText-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #EC0000;
+    border: none;
+    padding: 12px 24px;
+    background: transparent;
+
+    &.quit {
+      background: none !important;
+      padding: 12px 24px 4px 24px !important;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      text-align: center;
+      color: #999999;
+    }
+  }
+
+  .mainButton {
+    width: auto;
+    min-width: 96px;
+    max-width: 245px;
+    height: 48px;
+    background: #EC0000;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    justify-content: center;
+    padding: 12px 24px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: #999999;
+      opacity: 0.7;
+      text-align: center;
+    }
+  }
+
+}
+
+
+.bottom-sheet-rectangle {
+  background-color: #999999;
+  border-radius: 0.25rem;
+  width: 1.75rem;
+  height: 0.25rem;
+  display: flex;
+  margin: auto;
+}
+
+.checkSheet {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  margin-left: auto;
+  margin-right: 18px;
+}
+
+.bottom-sheet__alert {
+  position: absolute;
+}
+
+.bottom-sheet-message {
+  color: #767676;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 21px */
+  margin-top: 1rem;
+  padding:  0 1rem;
+}

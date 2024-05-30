@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+
+
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+  <%= htmlWebpackPlugin.files.webpackManifest %>
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !==true) { %>
+
+
+      <script src="/webpack-dev-server.js"></script>
+      <% } %>
+        <script type="text/javascript">
+          // Tealium/GA data layers
+          // var data = {section: '',subsection1: '',subsection2: '',subsection3: '',pagename: '',userID: '',movement_id: '',
+          // got_card: '',commerce_interactions: '',clarification_reason: '',current_location: '',federal_entity: '',
+          // card_incident: '',loss_date: '',amount: '',funnel: '',process: '',card_number: '',search_movements: '',
+          // filter_movements: '',selected_movements: '',delete_selected_movements: '',select_movement_icon: '',select_movement_description: ''};
+          // data['filter_movements-cut_date'] = '';
+          // window.dataLayer = data;
+          // window.utag_data = data;
+          window.webkit = window.webkit || {};
+          window.Connect = window.Connect || {};
+
+
+
+          // Google Analytics
+
+          /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          
+          ga('create', '<%= htmlWebpackPlugin.options.gaid %>', 'auto');
+          ga('send', 'pageview');*/
+
+          //Tealium
+          /*(function(a,b,c,d){
+           a='//tags.tiqcdn.com/utag/santander/mx-aclaraciones/dev/utag.js';
+           b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+           a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+           })();*/
+
+          function hideTooltip() {
+            var tooltip = document.getElementById('tooltip-box');
+            var backdrop = document.getElementById('backdrop');
+            backdrop.classList.add("tooltip-hide");
+            tooltip.classList.add("tooltip-hide");
+            backdrop.classList.add("tooltip-hide");
+          }
+
+          //Tooltips
+          window.onscroll = function () {
+            hideTooltip();
+          } 
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+              w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                  new Date().getTime(), event: 'gtm.js'
+              }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                  'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TMXZDJX');
+        </script>
+        <!-- End Google Tag Manager -->
+
+
+</head>
+
+<body id="body">
+  <app-root>
+    <!-- Spinner while is loading claims -->
+    <div class="spinner-container">
+      <img src="assets/img/general/loader.gif"
+        style="width: 160px;height: 160px;position: absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0px;"
+        alt="Cargando ..." />
+    </div>
+  </app-root>
+  <div onmousedown="hideTooltip()" onclick="hideTooltip()" id="backdrop" class="tooltip-backdrop tooltip-hide"></div>
+
+  <div id="tooltip-box" class="tooltip-box tooltip-hide">
+    <p id="tooltip-text"></p>
+    <span id="flag-border" class="flag-border"></span>
+    <span id="flag-color" class="flag-color"></span>
+  </div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe title="gtm" src="https://www.googletagmanager.com/ns.html?id=GTM-TMXZDJX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe title="gtm2" src="https://www.googletagmanager.com/ns.html?id=GTM-TMXZDJX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>

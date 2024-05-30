@@ -1,0 +1,109 @@
+<!-- Content Result -->
+<div class="contentResult">
+  <!-- Icon -->
+  <span class="icon"></span>
+  <h1 class="green highlight semiBold center " >Su solicitud fue recibida</h1>
+  <h2 class="green medium light center pSmall"  id="dateTimeRegisterTitle" [innerHtml] = "config.dateTime"></h2>
+
+  <!-- Content Info Result -->
+  <div class="infoResult">
+   
+    <!-- Thanks Text -->
+    <p class=" congrats xBig light center pTBMedium LHBig">&iexcl;Gracias por la espera,
+      <span class="light toUC" id="userFullName" [innerHtml] = "config.userFullName"></span>!
+    </p>
+    
+    <!-- Movenment Text -->
+    <p class=" description semiBold center xBig LHMedium" id='claim-type' [innerHtml] = "config.clarificationLabel" ></p>
+
+
+    <!-- Instructions Text -->
+    <!--p  id='requirements-instructions' class="description light center pTBMedium medium LHSmall" *ngIf = "config.requirementsResult && config.requirementsResult.length > 0">
+      Para continuar con el proceso, envíe al correo<br />
+      <span class="small bold " >aclaracionescomprastc@santander.com.mx</span><br/>
+      la siguiente información:
+    </p-->
+
+    <!-- Instructions Text -->
+    <p class="description  light center pTBMedium medium LHSmall" id="situation-investigation" >
+        Llevaremos a cabo una investigación para<br />
+        darle una pronta respuesta.
+    </p>
+
+    <!-- Requirements -->
+    <!--div class="description requirementsResult" id="required-docs-principal" *ngIf = "config.requirementsResult">
+      <ul>
+        <li *ngFor = "let item of config.requirementsResult; let index=index" id="docs-required-{{ index }}">
+          {{item.value}}
+        </li>
+      </ul>
+    </div-->
+
+    <!-- Warning -->
+    <!--p class="Red medium pTBMedium center LHSmall" id="warning" *ngIf = "config.warning">
+      Esta información deberá enviarla en máximo 5 días naturales,
+      colocando en el asunto del correo el número de folio que le proporcionamos a continuación.
+    </p--->
+
+
+    <!-- Card Result -->
+    <!--div class="cardResult wLine lastCR" id='repositionNumber' *ngIf = "block.operationReposition">
+      <h3 class="description medium light center toUC" id="tile-card-reposition">NUEVO NÚMERO DE TARJETA</h3>
+      <h3 class="description big center toUC pTMedium" id="description-card-resposition">**** **** **** {{block.panReposition |slice:-4}}</h3>
+    </div-->
+
+    <p class="description light center pTBMedium medium LHSmall" id="card-reposition-send"*ngIf = "block.operationReposition">Su nueva tarjeta será envíada en un lapso de  <span class="regular">10 días hábiles</span> a su sucursal titular.</p>
+
+
+    <!-- Card Result -->
+    <div id="transactionAmountTitle" class="cardResult wLine lastCR" *ngIf = "config.amount">
+      <h3 class="ammount medium light center toUC" id="amoun-label" [innerHtml]="config.amount.label"></h3>
+      <h3 class="ammount xBig semiBold center toUC pTSmall" id="amount-value" [innerHtml]="config.amount.value | smallCents"></h3>
+    </div>
+
+    <!-- Instructions Text -->
+    <p class="receive light center pTBMedium medium LHSmall" id="receive-letter" *ngIf = "config.sentEmailLetter">
+        Le enviamos la carta acuse a la cuenta de correo que tiene registrada en <span class="regular" [innerHtml]="config.channel"></span>.
+    </p>
+
+    <!-- Card Result -->
+    <div class="cardResult"  *ngIf = "config.folios.national">
+      <h3 class="ammount medium light center toUC" id= "national-folio-label" [innerHtml]="config.folios.national.label"></h3>
+      <h3 class="ammount big semiBold center toUC pTSmall foliosLabel" id="national-folio-value" *ngFor="let item of config.folios.national.values">{{item}}</h3>
+    </div>
+
+    <!-- Card Result -->
+    <div class="cardResult" *ngIf = "config.folios.international">
+      <h3 class="ammount medium light center toUC" id = "international-folio-label" [innerHtml]="config.folios.international.label"></h3>
+      <h3 class="ammount big semiBold center toUC pTMedium foliosLabel" id="international-folio-value" *ngFor="let item of config.folios.international.values">{{item}}</h3>
+    </div>
+
+    <!-- Instructions Text -->
+    <p class="description light center pTBMedium medium LHSmall"  *ngIf = "config.opinionDate">
+      <span id="commitment-date-title"> La fecha compromiso para el dictamen final de su solicitud será a más tardar el: </span><br /><br /><br />
+      <span class="big semiBold center" id="commitment-date-value" >{{config.opinionDate}}</span>
+    </p>
+    
+    <!-- Black Warning -->
+    <p class="dark bold medium pTBMedium center LHSmall" id="special-note" *ngIf = "config.importantNote">
+      Nota: Es importante señalar que si la aclaración
+      es improcedente se realizará el cargo nuevamente a su tarjeta.
+    </p>
+    
+    
+  </div>
+  <!-- Termina Conten Info  Result -->
+</div>
+<!-- Termina Content Result -->
+
+
+  <!-- Content Footer -->
+  <div class="interna finalizar contentFooterWallet" id="btn.end-button" (click) = "finishApp($event)" *ngIf="channel === 'wallet'">
+      <button> Finalizar </button>
+  </div>
+
+
+  <div class="interna finalizar contentFooter" id="btn.end-button"(click) = "finishApp($event)" *ngIf="channel === 'default'">
+    <button> Finalizar </button>  
+  </div>
+  <!-- Termina Footer Conten-->

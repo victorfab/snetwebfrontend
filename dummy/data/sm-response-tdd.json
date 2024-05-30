@@ -1,0 +1,89 @@
+{
+    "Messages": [
+        [
+            "Registro de wvrinbox añadido.",
+            "Internacional: undefined",
+            "Nacional: I23-1964489",
+            "El registro que se está añadiendo contiene una clave duplicada (se.view.engine,eval.expressions)",
+            "file:(ACTSVCMGTM1) key:(number=I23-1964489,negdatestamp=11/05/2146 05:24:22,thenumber=PI17157774) (se.view.engine,eval.expressions)",
+            "El registro que se está actualizando ha sido modificado desde el momento en que fue leído. (se.view.engine,eval.expressions)",
+            "file:(number) key:(name=pistaauditoria) (se.view.engine,eval.expressions)",
+            "validaciones: 01 OK | 02 OK | 03 OK | 04 NOOK | 05 OK | 06 OK | 07 OK | 08 OK | 09 OK | 10 OK | 11 NOOK"
+        ]
+    ],
+    "ReturnCode": "0",
+    "wvrinboxrn": {
+        "monto": "+245.5",
+        "ApellidosNomEmp": "SAAGRARIO BALDOMERO",
+        "FaperturaContrato": "2017-04-05T05:00:00+00:00",
+        "Apto": "true",
+        "AptoDefinitivo": "false",
+        "BUC": "31378475",
+        "Categoria": "TARJETA DE DEBITO",
+        "Cuenta": "056715367719",
+        "Descripcion": [
+            "dev no app"
+        ],
+        "EntidadFed": "33",
+        "ID": "WVRI00009297",
+        "Marca": "MasterCard",
+        "Nombre": "SAAGRARIO BALDOMERO",
+        "PAN": "5579100264252956",
+        "Producto": "MC DEBITO NOMINA",
+        "Razon": "Sin problemas",
+        "Segmento": "051",
+        "Subcategoria": "DEVOLUCION NO APLICADA",
+        "SucursalAltair": "3597",
+        "VisaCarta": "false",
+        "cuestionario": [
+            {
+                "Preguntas": "¿Reporto usted su tarjeta de crédito o débito como robada o extraviada a Banco Santander?",
+                "Respuestas": "NO"
+            }
+        ],
+        "folioInternacional": [
+            {
+                "TxrabonoD": "false",
+                "TxrabonoT": "false",
+                "Txrestatus": " ",
+                "TxrfechaAlta": "17/12/-1 18:00:00",
+                "TxrfechaC": "17/12/-1 18:00:00",
+                "Txrfolio": " ",
+                "Txrmonto": " "
+            }
+        ],
+        "folioNacional": [
+            {
+                "TxrabonoD": "false",
+                "TxrabonoT": "false",
+                "Txrestatus": "ANALISIS PARA ABONO",
+                "TxrfechaAlta": "22/09/2023 13:35:49",
+                "TxrfechaC": "10/10/2023 13:35:37",
+                "Txrfolio": "I23-1964489",
+                "Txrmonto": "245.5"
+            }
+        ],
+        "multifolio": [
+            {
+                "TxrCodigoCom": "269957000200070",
+                "TxrComercio": "Didi Food",
+                "TxrDivisa": "MXN",
+                "TxrFecha": "2023-06-04T06:00:00+00:00",
+                "TxrHrTxr": "00:00:00",
+                "TxrMonto": "245.5",
+                "TxrMovExtracto": "3302",
+                "TxrNumExtracto": "0",
+                "TxrReferencia": "090909",
+                "TxrSucursalAp": "3753",
+                "TxrTipoFactura": "3956"
+            }
+        ],
+        "multifolioNac": [
+            {
+                "TxrAbonoN": "true",
+                "TxrFechaN": "2023-06-04T06:00:00+00:00",
+                "TxrMontoN": "245.5"
+            }
+        ]
+    }
+}

@@ -1,0 +1,125 @@
+.btn-group {
+  width: 99%;
+  text-align: center;
+
+  @include respond-to("small") {
+    width: 70%;
+  }
+}
+
+// .btn-primary,
+// .btn-primary:hover,
+// .btn-primary:active,
+// .btn-primary:visited,
+// .btn-primary:focus {
+//     background-color: $main-color !important;
+//     border-color: $darkest-main-color !important;
+// }
+
+// .btn-secondary,
+// .btn-secondary:hover,
+// .btn-secondary:active,
+// .btn-secondary:visited,
+// .btn-secondary:focus {
+//   background-color: $white !important;
+//   border-color: $disabled-color !important;
+//   height: 40px;
+//   line-height: 40px !important;
+//   padding: 0 15px !important;
+//   vertical-align: middle !important;
+//   display: block;
+//   margin: 0 auto;
+//   width: 90% !important;
+//   max-width: 400px !important;
+//   font-size: 1em !important;
+//   font-weight: 400 !important;
+//   text-align: left !important;
+
+//   span {
+//     float: right !important;
+//     padding-top: 17px !important;
+//   }
+// }
+
+// .btn-secondary {
+//   &.full-width {
+//     width: 100% !important;
+//   }
+// }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0 34px 0;
+}
+
+.g-btn {
+  padding: 12px 24px 12px 24px !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  height: 48px !important;
+  border-radius: 60px !important;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-weight: 700;
+  min-width: 140px;
+  justify-content: center;
+  margin: auto;
+  a {
+
+  }
+
+  &.rounded {
+    background: #ec0000;
+    color: #ffffff;
+    a {
+      color: #999999;
+    }
+  }
+
+  &.flat {
+    color: #ec0000;
+    background: transparent;
+
+    &:disabled {
+      color: #999999;
+      background-color: transparent;
+    }
+  }
+
+  &.large {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    pointer-events: none;
+  }
+}
+
+
+.wallet-button {
+  width: 100%;
+  line-height: 32px;
+  font-size: 16.8px;
+  text-align: center;
+  border: none;
+  height: 54px;
+  border-radius: 4px !important;
+  background-color: #f00700;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+
+  &:disabled,
+  .inactive {
+    background-color: #cccccc;
+    pointer-events: none;
+    color: black;
+  }
+}

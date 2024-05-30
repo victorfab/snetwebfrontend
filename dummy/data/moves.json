@@ -1,0 +1,514 @@
+{
+    "acctTrnRec": [
+        {
+            "acctTrnId": "17",
+            "acctTrnInfo": {
+                "stmtDt": "171221",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASEGURADORA ACE",
+                    "trnTypeCode": "1012"
+                },
+                "totalCurAmt": {
+                    "amt": "1500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518995100599273938994",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "16",
+            "acctTrnInfo": {
+                "stmtDt": "171221",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASEGURADORA ACE",
+                    "trnTypeCode": "1012"
+                },
+                "totalCurAmt": {
+                    "amt": "1500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518995100599273938994",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "15",
+            "acctTrnInfo": {
+                "stmtDt": "171221",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASEGURADORA ACE",
+                    "trnTypeCode": "1012"
+                },
+                "totalCurAmt": {
+                    "amt": "1500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518995100599273938994",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "14",
+            "acctTrnInfo": {
+                "stmtDt": "171221",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASEGURADORA ACE",
+                    "trnTypeCode": "1012"
+                },
+                "totalCurAmt": {
+                    "amt": "1500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518995100599273938994",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "13",
+            "acctTrnInfo": {
+                "stmtDt": "171121",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASISMED",
+                    "trnTypeCode": "1014"
+                },
+                "totalCurAmt": {
+                    "amt": "900.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518994199450073938997",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "12",
+            "acctTrnInfo": {
+                "stmtDt": "171121",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASISMED",
+                    "trnTypeCode": "1014"
+                },
+                "totalCurAmt": {
+                    "amt": "900.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518994199450073938997",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "11",
+            "acctTrnInfo": {
+                "stmtDt": "171121",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASISMED",
+                    "trnTypeCode": "1014"
+                },
+                "totalCurAmt": {
+                    "amt": "900.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518994199450073938997",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "10",
+            "acctTrnInfo": {
+                "stmtDt": "171121",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "ASISMED",
+                    "trnTypeCode": "1014"
+                },
+                "totalCurAmt": {
+                    "amt": "900.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "007393899",
+                    "merchName": "NETFLIX",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "74518994199450073938997",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "9",
+            "acctTrnInfo": {
+                "stmtDt": "171119",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "TELMEX",
+                    "trnTypeCode": "1011"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412916178991207343580",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "8",
+            "acctTrnInfo": {
+                "stmtDt": "171119",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "TELMEX",
+                    "trnTypeCode": "1011"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412916178991207343580",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "7",
+            "acctTrnInfo": {
+                "stmtDt": "171119",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "TELMEX",
+                    "trnTypeCode": "1011"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412916178991207343580",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "6",
+            "acctTrnInfo": {
+                "stmtDt": "171019",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL",
+                    "trnTypeCode": "1001"
+                },
+                "totalCurAmt": {
+                    "amt": "500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412914053991207344625",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "5",
+            "acctTrnInfo": {
+                "stmtDt": "171019",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL",
+                    "trnTypeCode": "1001"
+                },
+                "totalCurAmt": {
+                    "amt": "500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412914053991207344625",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "4",
+            "acctTrnInfo": {
+                "stmtDt": "171019",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL",
+                    "trnTypeCode": "1001"
+                },
+                "totalCurAmt": {
+                    "amt": "500.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "009120734",
+                    "merchName": "TELEFONICA MOVISTAR CR",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "75412914053991207344625",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "3",
+            "acctTrnInfo": {
+                "stmtDt": "171016",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO INTERNACIONAL AMEX",
+                    "trnTypeCode": "1019"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "067008226994",
+                    "merchName": "KMART 03491",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "85486795222531423161988",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "2",
+            "acctTrnInfo": {
+                "stmtDt": "171016",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO INTERNACIONAL AMEX",
+                    "trnTypeCode": "1019"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "067008226994",
+                    "merchName": "KMART 03491",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "85486795222531423161988",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "1",
+            "acctTrnInfo": {
+                "stmtDt": "171016",
+                "trnTime": "",
+                "trnType": {
+                    "desc": "CONSUMO INTERNACIONAL AMEX",
+                    "trnTypeCode": "1019"
+                },
+                "totalCurAmt": {
+                    "amt": "800.0"
+                },
+                "networkTrnData": {
+                    "merchNum": "067008226994",
+                    "merchName": "KMART 03491",
+                    "posEntryCapability": ""
+                },
+                "salesSlipRefNum": "85486795222531423161988",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4931358000209245"
+                    }
+                }
+            }
+        }
+    ]
+}

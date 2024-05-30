@@ -1,0 +1,36 @@
+<div class="message">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img class="marginLogo" src="./assets/svg/logo.svg" alt="" />
+        </div>
+        <div class="col-12 text-center">
+            <img src="./assets/svg/empty12.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            <strong class="message__question message__headline"> Por favor llama a SuperLínea </strong>
+
+            <p class="message__waningContent">
+                <span>
+                    Este pago es un adelanto o liquidación a tu Crédito Línea Express.
+                    <br>
+                    <br>
+                    Si tu no lo hiciste o el monto no es el acordado comunícate a SuperLínea e<br>indica que no reconoces
+                    la amortización o<br>que necesitas más detalles.
+                    <br>
+                    <br>
+                    Ten a la mano los detalles del<br>movimiento.
+                </span>
+            </p>
+        </div>
+        <ul class="optionsBottons">
+            <li>
+                <button class="g-btn flat" [disabled]="false" (click)="exit()"> Salir </button>
+            </li>
+            <li>
+                <button class="g-btn rounded" (click)="call()">
+                    <a href="tel:5551694300">Llamar</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>

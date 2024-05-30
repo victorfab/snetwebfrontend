@@ -1,0 +1,927 @@
+{
+  "acctTrnRecComercios": [
+    {
+      "acctTrnId": "26",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2023-10-08",
+        "trnTime": "00:00:00",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 524.7,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007494165",
+          "merchName": "ALITAS CONDESA"
+        },
+        "salesSlipRefNum": "75177132342000688854477",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "000000"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "25",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-04",
+        "trnTime": "12:24:14",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 304.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004229973",
+          "merchName": "CASA DETONO DIAZ MIRON"
+        },
+        "salesSlipRefNum": "75412912339942299732128",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "041406"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "24",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-12-01",
+        "trnTime": "16:44:08",
+        "trnType": {
+          "desc": "CONSUMO INTNAL. MC",
+          "trnTypeCode": "1004",
+          "trnSubTypeCode": "1004",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 111.51,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "A0000000000C27Z",
+          "merchName": "ONLYFANS.COM"
+        },
+        "salesSlipRefNum": "75125962336000000216307",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "040892"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "22",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-29",
+        "trnTime": "22:44:59",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 1298.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "008646577",
+          "merchName": "COVACHA 127"
+        },
+        "salesSlipRefNum": "75399792333000286465779",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "045988"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "21",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-29",
+        "trnTime": "18:29:22",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 421.8,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007348127",
+          "merchName": "POINTMP*JOKRMX"
+        },
+        "salesSlipRefNum": "75445502333278873481279",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "092299"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "20",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-28",
+        "trnTime": "20:02:58",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 393.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007836684",
+          "merchName": "CARLS JR HOMERO"
+        },
+        "salesSlipRefNum": "75177132332011078366842",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "025812"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "19",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-27",
+        "trnTime": "13:32:06",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 377.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004191986",
+          "merchName": "CASA TONO CUAJIMALPA"
+        },
+        "salesSlipRefNum": "75412912332941919868137",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "020660"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "18",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-26",
+        "trnTime": "21:22:16",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 400.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007045855",
+          "merchName": "SERV CUAJIMALPA"
+        },
+        "salesSlipRefNum": "75445502330032770458556",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "021635"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "17",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-25",
+        "trnTime": "13:51:38",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 652.04,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007979128",
+          "merchName": "AMAZON MX MARKETPLACE"
+        },
+        "salesSlipRefNum": "75445502329751079791283",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "022508"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "16",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-24",
+        "trnTime": "21:36:32",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 499.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007979128",
+          "merchName": "AMAZON MX MARKETPLACE"
+        },
+        "salesSlipRefNum": "75445502328860579791288",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "081198"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "15",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-23",
+        "trnTime": "21:46:00",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 356.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004189459",
+          "merchName": "LA CASA DE TONO PLAZA"
+        },
+        "salesSlipRefNum": "75412912328941894598275",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "060014"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "14",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-23",
+        "trnTime": "08:49:35",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 59.93,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "MWU4ZT35UJMA53X",
+          "merchName": "UBER* TRIP"
+        },
+        "salesSlipRefNum": "82308962327000000508121",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "093542"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "13",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-21",
+        "trnTime": "16:17:58",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 972.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "000926717",
+          "merchName": "LIVERPOOL"
+        },
+        "salesSlipRefNum": "75412912327909267179776",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "075843"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "11",
+      "acctTrnInfo": {
+        "type": "SEGURO",
+        "stmtDt": "2022-11-22",
+        "trnTime": "05:33:32",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 1889.22,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007853102",
+          "merchName": "ZURICH SANTANDER SEGUR"
+        },
+        "salesSlipRefNum": "75445502326410378531022",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "033270"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "10",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-19",
+        "trnTime": "19:08:13",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 897.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007927517",
+          "merchName": "CLIP MX*NAYELI MENDOZA"
+        },
+        "salesSlipRefNum": "75445502323090779275172",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "081320"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "9",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-18",
+        "trnTime": "22:19:41",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 754.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "008627095",
+          "merchName": "BTK BUENA VISTA REST"
+        },
+        "salesSlipRefNum": "75122802322013386270951",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "094167"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "8",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-16",
+        "trnTime": "13:10:59",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 1048.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007452690",
+          "merchName": "ZTL*BREWBREW"
+        },
+        "salesSlipRefNum": "75545552321123212400879",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "005996"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "6",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-12",
+        "trnTime": "18:42:04",
+        "trnType": {
+          "desc": "CONSUMO INTNAL. MC",
+          "trnTypeCode": "1004",
+          "trnSubTypeCode": "1004",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 126.93,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "A0000000000C27Z",
+          "merchName": "ONLYFANS.COM"
+        },
+        "salesSlipRefNum": "75125962316000000209785",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "USD"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "020492"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "5",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-12",
+        "trnTime": "17:39:43",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 675.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "004335923",
+          "merchName": "CHEDRAUI CUAJIMALPA 14"
+        },
+        "salesSlipRefNum": "75412912317943359234050",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "094392"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "4",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-12",
+        "trnTime": "15:39:07",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 150.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007357545",
+          "merchName": "GASOL GPO TAMBRE MOLIN"
+        },
+        "salesSlipRefNum": "75177132316043073575457",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "090716"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "3",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-12",
+        "trnTime": "13:39:40",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 317.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "007927517",
+          "merchName": "CLIP MX*TOCO CAFE"
+        },
+        "salesSlipRefNum": "75445502316401379275174",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "094002"
+          }
+        }
+      }
+    },
+    {
+      "acctTrnId": "2",
+      "acctTrnInfo": {
+        "type": "COMPRA",
+        "stmtDt": "2022-11-12",
+        "trnTime": "15:27:10",
+        "trnType": {
+          "desc": "CONSUMO LOCAL AJENO",
+          "trnTypeCode": "1002",
+          "trnSubTypeCode": "1002",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 200.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "008132282",
+          "merchName": "GASOL SUPER SERV C"
+        },
+        "salesSlipRefNum": "75177132316000626050081",
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5532530007072574    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "071083"
+          }
+        }
+      }
+    }
+  ],
+  "acctTrnRecCajeros": [
+    {
+      "acctTrnId": "12",
+      "acctTrnInfo": {
+        "statusReverso": "REV02",
+        "type": "ATM",
+        "stmtDt": "2023-08-08",
+        "trnTime": "12:05:59",
+        "trnType": {
+          "desc": "DISPOSICION ATM SANTANDER TDC",
+          "trnTypeCode": "2017",
+          "trnSubTypeCode": "2017",
+          "cancelledInd": "false"
+        },
+        "totalCurAmt": {
+          "amt": 60.0,
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "networkTrnData": {
+          "merchNum": "X20038",
+          "merchName": "BANCO SANTANDER"
+        },
+        "origCurAmt": {
+          "curCode": {
+            "curCodeValue": "MXN"
+          }
+        },
+        "cardRef": {
+          "cardInfo": {
+            "cardNum": "5471468281392694    "
+          }
+        },
+        "athRef": {
+          "athKeys": {
+            "athId": "060077"
+          }
+        }
+      }
+    }
+  ],
+  "acctTrnRecPagos": []
+}

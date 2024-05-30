@@ -1,0 +1,143 @@
+.ticket {
+  text-align: center;
+
+  &--success {
+    background: linear-gradient(180deg, #63b468, transparent);
+  }
+
+  &--warning {
+    background: linear-gradient(180deg, #FFCC33 50%, transparent);
+  }
+
+  &--bordered {
+    border-bottom: 0.6px solid #CCCCCC;
+  }
+
+  &-toast {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM14.4107 5.77438L7.72727 12.4579L5.13471 9.86529L3.9562 11.0438L7.72727 14.8149L15.5893 6.95289L14.4107 5.77438Z' fill='white'/%3E%3C/svg%3E ");
+    }
+  }
+
+  &__content {
+    padding: 38px 24px 1rem 24px;
+    border-radius: 16px 16px 0px 0px;
+    background-color: #FFF;
+    position: relative;
+    z-index: 15;
+    -webkit-transform: translate3d(0, 0, 0);
+    // border-bottom: 1px solid #cccccc;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 14px;
+
+    &__title {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      color: #191919;
+      line-height: 125%;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Santander Text', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #4C4C4C;
+    margin-top: 31px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  &__counter {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: #4C4C4C;
+    text-align: start;
+  }
+}
+
+.extraMargin{
+  margin-top: 15px;
+  margin-bottom: 16px;
+}
+
+.icon-margin {
+  margin: 12px 0px;
+}
+
+.success-icon {
+  width: 59px;
+  height: 59px;
+  background-image: url("data:image/svg+xml,%3Csvg width='59' height='59' viewBox='0 0 59 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29.5' cy='29.5' r='27.5' stroke='%2363B468' stroke-width='3'/%3E%3Cpath d='M24.3277 34.0845L19.5997 29.6517L17 32.0891L23.2392 37.9388L23.2464 37.9321L24.3854 39L42 22.4848L39.3499 20L24.3277 34.0845Z' fill='%2363B468'/%3E%3C/svg%3E ");
+}
+
+.desc-padding {
+  padding-bottom: 20px;
+}
+
+.p-lr {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.move-tdd {
+  position: unset !important;
+}
+
+.santander-close {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.8514 4C19.1559 4 19.4478 4.12165 19.6622 4.33791C20.105 4.78349 20.105 5.5031 19.6622 5.94867L13.616 11.9977L19.6622 18.0465C19.8784 18.261 20 18.553 20 18.8576C20 19.1622 19.8784 19.4542 19.6622 19.6687C19.4467 19.8825 19.155 20.0017 18.8514 20C18.5479 20.0017 18.2562 19.8825 18.0407 19.6687L11.9943 13.6194L5.95929 19.6572C5.74567 19.8753 5.4537 19.9987 5.14853 20C4.84501 20.0017 4.55328 19.8825 4.33778 19.6687C4.1216 19.4542 4 19.1622 4 18.8576C4 18.553 4.1216 18.261 4.33778 18.0465L10.3771 12.0034L4.33778 5.9601C3.89001 5.51214 3.89001 4.78587 4.33778 4.33791C4.78554 3.88996 5.51152 3.88996 5.95929 4.33791L12 10.3806L18.0407 4.33791C18.2551 4.12165 18.547 4 18.8514 4Z' fill='%23EC0000'/%3E%3C/svg%3E%0A");
+}
+
+.user-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  margin-bottom: 18px;
+}
+
+.client-name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 29px;
+  text-align: center;
+  color: #63b468;
+  margin: 0 29px 12px 29px;
+}
+
+.client-date {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  color: #63B468;
+}

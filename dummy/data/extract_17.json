@@ -1,0 +1,42 @@
+{
+  "id": 17,
+  "period": "Septiembre 2017",
+  "moves": [
+    {
+      "id": "00000000084",
+      "desc": "Chilli's Acoxpa",
+      "amount": "855.20",
+      "date": "22-09-2017"
+    },
+    {
+      "id": "00000000083",
+      "desc": "BFF",
+      "amount": "429.20",
+      "date": "21-09-2017"
+    },
+    {
+      "id": "00000000082",
+      "desc": "Wings Stop Acoxpa",
+      "amount": "4,855.20",
+      "date": "21-09-2017"
+    },
+    {
+      "id": "00000000081",
+      "desc": "Wings Stop Acoxpa",
+      "amount": "4,855.20",
+      "date": "21-09-2017"
+    },
+    {
+      "id": "00000000080",
+      "desc": "Wings Stop Acoxpa",
+      "amount": "4,855.20",
+      "date": "20-09-2017"
+    },
+    {
+      "id": "00000000079",
+      "desc": "Wings Stop Acoxpa",
+      "amount": "4,855.20",
+      "date": "05-09-2017"
+    }
+  ]
+}

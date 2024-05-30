@@ -1,0 +1,21 @@
+<div class="tabs text-center h-100 p-5 d-flex justify-content-center align-items-center">
+  <ul>
+    <li [ngClass]="{ active: isConsumerTab, inactive: !isConsumerTab, 'no-events': toDisable && toDisable[tabOptions.CONSUMER] }"
+      (click)="selectTab(tabOptions.CONSUMER)">
+      <div class="fl-icon-charge" [ngClass]="{ active: isConsumerTab }"></div>
+      <span>Cargos</span>
+    </li>
+    <li [ngClass]="{ active: isAtmTab, inactive: !isAtmTab, 'no-events': toDisable && toDisable[tabOptions.ATM] }"
+      (click)="selectTab(tabOptions.ATM)">
+      <div class="fl-icon-atm" [ngClass]="{ active: isAtmTab}"></div>
+      <span>Retiros ATM</span>
+    </li>
+
+    <!-- CASH BACK TAB -->
+    <li [ngClass]="{ active: isCashbackTab, 'no-events': toDisable && toDisable[tabOptions.CASHBACK]}" (click)="selectTab(tabOptions.CASHBACK)">
+      <div class="fl-icon-cashback" [ngClass]="{ active: isCashbackTab}">
+      </div>
+      <span>Cashback</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,306 @@
+// Steper
+.contentSteper {
+  width: 100%;
+  height: auto;
+  padding: 10px 10px 0px 10px;
+  border-bottom: 1px solid $Gray;
+  position: fixed;
+  z-index: 2;
+  background-color: $White;
+
+  & .infoSteper,
+  & .steperBar {
+    width: 100%;
+  }
+
+  & .infoSteper {
+    padding-bottom: 10px;
+
+    & .numberStep {
+      width: 28px;
+      height: 28px;
+      font-weight: 300;
+      border: 2px solid $mainRed;
+      border-radius: 100px;
+      text-align: center;
+      line-height: 24px;
+      display: inline-block;
+      color: $Dark;
+      font-size: 14px;
+    }
+
+    & .typeStep {
+      width: calc(100% - 50px);
+      text-align: center;
+      font-size: 12px;
+      color: $darkGray;
+    }
+    & .counterStep {
+      width: 55px;
+      height: auto;
+      text-align: right;
+      font-weight: 300;
+      font-size: 12px;
+    }
+  }
+
+  & .steperBar {
+    height: 4px;
+    background-color: #d8d8d8;
+    position: relative;
+
+    & .progressSteper {
+      height: 100%;
+      background-color: $mainRed;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+
+      &.step1 {
+        width: 33.3333333%;
+      }
+
+      &.step2 {
+        width: 66.6666666%;
+      }
+
+      &.step3 {
+        width: 100%;
+      }
+    }
+
+    & .progressSteperCashback {
+      height: 100%;
+      background-color: $mainRed;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+
+      &.step1 {
+        width: 25%;
+      }
+
+      &.step2 {
+        width: 50%;
+      }
+
+      &.step3 {
+        width: 75%;
+      }
+
+      &.step4 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Card Block
+.cardBlock {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: $lightGray;
+
+  .card {
+    width: 80%;
+    max-width: 320px;
+    max-height: 120px;
+    padding: 10px 10px 15px 50px;
+    margin: 0 auto;
+    display: block;
+    border: solid 0.5px $Gray;
+    background-color: $White;
+    overflow: hidden;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+    -moz-box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+    box-shadow: 0px 4px 14px -2px rgba(181, 175, 181, 1);
+    background-repeat: no-repeat;
+    background-position: 0px center;
+    background-size: 40px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='42px' height='55px' viewBox='0 0 42 55' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eicoTarjetaSilder%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3crect id='path-1' x='0' y='0' width='47' height='55.4074656'%3e%3c/rect%3e%3c/defs%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='tarjeta' transform='translate(0.000000, -32.000000)'%3e%3cg id='Page-1'%3e%3cg id='icoTarjetaSilder' transform='translate(0.000000, 31.000000)'%3e%3cmask id='mask-2' fill='white'%3e%3cuse xlink:href='%23path-1'%3e%3c/use%3e%3c/mask%3e%3cg id='Mask'%3e%3c/g%3e%3cg id='Fill-36-+-Fill-37-+-Fill-38' mask='url(%23mask-2)' fill='%23CCCCCC'%3e%3cg transform='translate(-20.000000, 1.000000)'%3e%3cpath d='M50.3491657,23 L6.91907367,23 L2.64874862,23 C1.18672281,23 0,24.1443309 0,25.5573832 L0,52.4416103 C0,53.8546627 1.18672281,55 2.64874862,55 L50.3491657,55 C51.8132772,55 53,53.8546627 53,52.4416103 L53,35.0612675 L53,25.5573832 C53,24.1443309 51.8132772,23 50.3491657,23 L50.3491657,23 Z M12.0392925,40.6299418 C12.0392925,41.336468 11.4469739,41.9091367 10.7149181,41.9091367 L5.47060444,41.9091367 C4.74167716,41.9091367 4.14727294,41.336468 4.14727294,40.6299418 L4.14727294,35.7456518 C4.14727294,35.0401321 4.74167716,34.4674634 5.47060444,34.4674634 L10.7149181,34.4674634 C11.4469739,34.4674634 12.0392925,35.0401321 12.0392925,35.7456518 L12.0392925,40.6299418 Z' id='Fill-36'%3e%3c/path%3e%3cpath d='M50,3.67690768 L48.7844782,1.41369585 C48.0755113,0.0937572334 46.4530676,-0.388074019 45.1651809,0.338428782 L12,19 L22.4331411,19 L50,3.67690768 Z' id='Fill-37'%3e%3c/path%3e%3cpath d='M61.6675321,25.6880165 L52.8578499,10 L37,18.4369835 L50.1501805,18.4369835 C53.1067825,18.4369835 55.5106696,20.7933884 55.5106696,23.6880165 L55.5106696,32 L60.6116781,29.2530992 C61.9069715,28.5547521 62.3816311,26.9597107 61.6675321,25.6880165' id='Fill-38'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+
+    & .cardType {
+      font-size: 12px;
+      font-weight: 300;
+      color: $MediumGray;
+      padding-top: 7px;
+      padding-bottom: 10px;
+    }
+
+    & .amouth {
+      font-size: 29px;
+      line-height: 1em;
+      color: $Green;
+      text-align: left;
+      font-weight: 400;
+
+      & .cents {
+        font-weight: 400;
+      }
+
+      & .coin {
+        line-height: 1em;
+        font-size: 12px;
+        display: inline-block;
+        font-style: normal;
+        margin-left: 5px;
+        font-weight: 300;
+      }
+    }
+
+    & .footerCard {
+      color: $Dark;
+      font-size: 11px;
+      font-weight: 300;
+      padding-top: 15px;
+
+      & hr {
+        width: 1px;
+        height: 15px;
+        margin: 0px 10px;
+        background-color: $Dark;
+        border: none;
+      }
+
+      & span {
+        color: $MediumGray;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+// Footer
+.contentFooter {
+  width: 100%;
+  padding: 10px;
+  background-color: $White;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  text-align: center;
+  &__cashback {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 24px;
+  }
+  &__default {
+    flex-direction: row;
+    button {
+      min-width: 144px;
+    }
+  }
+  &__default {
+    flex-direction: row;
+    button {
+      min-width: 144px;
+    }
+  }
+  .editar {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16.8px;
+    color: #e80004;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $White;
+    border-color: #e80004;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 35px;
+
+  }
+  .continuar {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16.8px;
+    color: $White;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #e80004;
+    border-radius: 35px;
+  }
+  & button {
+    padding: 12px 24px 12px 24px;
+    height: 48px;
+    background: #ec0000;
+    border-radius: 60px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    line-height: 24px;
+
+    &.inactive {
+      background-color: $Gray;
+      pointer-events: none;
+      color: #999999;
+    }
+    &.active {
+      background-color: #e80004;
+    }
+
+  }
+
+  &.interna {
+    position: absolute;
+  }
+}
+
+// Footer Wallet
+.contentFooterWallet {
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafa;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+
+  & button {
+    width: 100%;
+    line-height: 32px;
+    font-size: 16.8px;
+    text-align: center;
+    color: $White;
+    border: none;
+    height: 54px;
+    border-radius: 4px;
+    background-color: $mainRed;
+
+    &.inactive {
+      background-color: $Gray;
+      pointer-events: none;
+    }
+  }
+
+  &.interna {
+    position: absolute;
+  }
+
+  &.cerrar {
+    position: fixed !important;
+    & button {
+      width: 100%;
+      line-height: 32px;
+      font-size: 16.8px;
+      text-align: center;
+      color: $mainRed;
+      border: 1px solid $mainRed;
+      height: 54px;
+      border-radius: 4px;
+      background-color: transparent;
+      font-weight: 700;
+    }
+  }
+}
+
+.interna {
+  &.finalizar {
+    position: fixed !important;
+  }
+}

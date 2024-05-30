@@ -1,0 +1,281 @@
+<nav class="navbar navbar-fixed-top" style="max-width:100%;">
+  <!-- Sticky Header -->
+  <div class="stickyHeader" *ngIf="dataProxyService.getChannel() === 'wallet'">
+    <!-- Header Steps -->
+    <div class="row headerSteps">
+      <div class="step-bar">
+        <div class="col-xs-2 noPadding" style="padding:0px;">
+          <div class="step pull-left">2</div>
+        </div>
+        <div class="col-xs-8 noPadding" style="padding:0px;">
+          <div class="title">Responda el cuestionario</div>
+        </div>
+        <div class="col-xs-2 noPadding" style="padding:0px;">
+          <div class="step-number pull-right">2 de 3</div>
+        </div>
+        <div class="col-xs-12 noPadding" style="padding:0px;">
+          <div class="progress">
+            <div class="progress-bar highlight-blue" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+              aria-valuemax="100" style="width:67%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<app-card-detail *ngIf="dataProxyService.getChannel()=='default'" [detail]="dataProxyService.creditCardFullData">
+</app-card-detail>
+<div class="container-fluid" *ngIf="router.url==='/questionnaire'">
+  <div class="row question" [style.padding-top.px]="dataProxyService.getChannel()=='wallet' ? 61 : 0">
+    <div class="spacer"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box" (click)="test()">1</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿Tiene la <strong>tarjeta en su poder</strong>?</p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="input-group">
+            <input type="radio" id="haveContact" name="haveContact" value="1" [(ngModel)]="questions.hasCard"
+              (ngModelChange)="toggleCardStatus($event)">
+            <label for="haveContact">SÍ</label>
+            <div class="divider"></div>
+            <input type="radio" id="haveContactNo" name="haveContact" value="2" [(ngModel)]="questions.hasCard"
+              (ngModelChange)="toggleCardStatus($event)">
+            <label for="haveContactNo">NO</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- User have physically the card PATH -->
+  <div class="row vertical-padded" *ngIf="questions.hasCard == 1">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box">2</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿<strong>Interactuó con el comercio</strong> durante la compra?</p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="input-group">
+            <input type="radio" name="contactDuringShopping" value="1" id="contactMade"
+              [(ngModel)]="questions.haveContact" (ngModelChange)="applyHaveContact($event)" />
+            <label for="contactMade">SÍ</label>
+            <div class="divider"></div>
+            <input type="radio" name="contactDuringShopping" value="2" id="contactMadeNo"
+              [(ngModel)]="questions.haveContact" (ngModelChange)="applyHaveContact($event)" />
+            <label for="contactMadeNo">NO</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User does have contact with establishment -->
+  <div class="row vertical-padded" *ngIf="questions.haveContact === '1'">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box">3</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿Cuál es el <strong>motivo de la aclaración</strong>? <span id="tooltipMotive"
+              class="tooltipButton inactive" (click)="tooltipOpener($event)"></span></p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="btn-group" dropdown [dropup]="true">
+            <label for="questions-motive" class="display_none">HOLA MUNDO</label>
+            <select 
+              [compareWith]="setSelection"
+              #holamundo 
+              [(ngModel)]="questions.motive"
+              (ngModelChange)="scrollBottom(); tooltipShow(holamundo.value)" class=" form-control custom"
+              id="questions-motive" name="questions-motive">
+              <option 
+                [selected]="!isEdition"
+                disabled 
+                [ngValue]="questions.defaultMotive">Seleccione un motivo</option>
+              <option 
+                *ngFor="let item of motives; let i = index" 
+                [ngValue]="item" 
+                [innerHTML]="item.title"
+                value="{{ i + 1 }}"></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row vertical-padded" *ngIf="questions.motive != questions.defaultMotive">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box">4</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p [innerHtml]="questions.motive.description"></p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="text-counter">{{ questions.additionalComments.length }} de 240 caracteres</div>
+          <div class="form-group">
+            <label for="questions-additionalcomments" class="display_none">Comentario</label>
+            <textarea 
+              (keypress)="validateMaxLength($event?.target?.value)"
+              name="questions-additionalcomments" (focus)="isHideNav=true;"
+              (blur)="scrollBottom();isHideNav=false;" class="form-control"
+              placeholder="{{ questions.motive.placeholder }}" rows="6" maxlength="240"
+              [(ngModel)]="questions.additionalComments" (ngModelChange)="resetTextArea()"
+              (input)="inputValidator($event)" id="questions-additionalcomments"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User doesn't have physically the card PATH -->
+  <div class="row vertical-padded" *ngIf="questions.hasCard == 2">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box">2</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿Qué sucedió con su <strong>tarjeta</strong>?</p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="input-group">
+            <input type="radio" id="reasonA" name="whatHappens" [value]="questions.situations[0]"
+              [(ngModel)]="questions.whatHappens" (ngModelChange)="evaluateSituation($event)" />
+            <label for="reasonA">{{ questions.situations[0].getTitle() }}</label>
+            <!-- <div class="small-spacer"></div>
+            <input type="radio" id="reasonB" name="whatHappens" [value]="questions.situations[1]"
+              [(ngModel)]="questions.whatHappens" (ngModelChange)="evaluateSituation($event)"/>
+            <label for="reasonB">{{ questions.situations[1].getTitle() }}</label> -->
+            <div class="small-spacer"></div>
+            <input type="radio" id="reasonC" name="whatHappens" [value]="questions.situations[2]"
+              [(ngModel)]="questions.whatHappens" (ngModelChange)="evaluateSituation($event)" />
+            <label for="reasonC">{{ questions.situations[2].getTitle() }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row vertical-padded" *ngIf="questions.whatHappens === questions.situations[0]">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box">3</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿Cuándo <strong>le robaron o extravió su tarjeta</strong>?</p>
+        </div>
+      </div>
+      <div class="row vertical-padded answer">
+        <div class="date-picker col-xs-3 col-xs-offset-2 col-sm-2 col-md-1">
+          <div class="small-spacer"></div>
+          <label for="questions-missingdd" class="display_none">Day</label>
+          <select class="form-control custom" [(ngModel)]="questions.missingDD" (ngModelChange)="evaluateLostDate()"
+            id="questions-missingdd" name="questions-missingdd">
+            <option [ngValue]="null">Día</option>
+            <option *ngFor="let item of questions.optionsDD" [value]="item">{{ item }}</option>
+          </select>
+        </div>
+        <div class="date-picker col-xs-3 col-sm-3 col-md-2">
+          <div class="small-spacer"></div>
+          <label for="questions-missingmm" class="display_none">Month</label>
+          <select class="form-control custom" [(ngModel)]="questions.missingMM" (ngModelChange)="evaluateLostDate()"
+            id="questions-missingmm" name="questions-missingmm">
+            <option [ngValue]="null">Mes</option>
+            <option *ngFor="let item of questions.optionsMM" [value]="item.value">{{ item.label }}</option>
+          </select>
+        </div>
+        <div class="date-picker col-xs-3 col-sm-2 col-md-1">
+          <div class="small-spacer"></div>
+
+          <label for="questions-missingyy" class="display_none">Year</label>
+          <select class="form-control custom" [(ngModel)]="questions.missingYY" (ngModelChange)="evaluateLostDate()"
+            id="questions-missingyy" name="questions-missingyy">
+            <option [ngValue]="null">Año</option>
+            <option *ngFor="let item of questions.optionsYY" [value]="item">{{ item }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- State and city selector -->
+  <div class="row vertical-padded" *ngIf="validateStatesSelector()">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box" *ngIf="questions.additionalComments.length">5</div>
+          <div class="numeric-box" *ngIf="questions.lostDateValid && questions.whatHappens == questions.situations[0]">4
+          </div>
+          <div class="numeric-box" *ngIf="questions.whatHappens == questions.situations[1] ||
+                                          questions.whatHappens == questions.situations[2] ||
+                                          questions.haveContact == '2'">3</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>¿Dónde se encuentra usted <strong>en este momento</strong>?</p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="input-group">
+            <input type="radio" name="location" value="1" id="isInMexico" [(ngModel)]="questions.location" />
+            <label for="isInMexico" (click)="swapLocale()">En México</label>
+            <div class="divider"></div>
+            <input type="radio" name="location" value="2" id="isNotInMexico" [(ngModel)]="questions.location" />
+            <label for="isNotInMexico" (click)="swapForeignLocation()">En el extranjero</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row vertical-padded" *ngIf="questions.location == 1">
+    <div class="container-fluid">
+      <div class="row question">
+        <div class="col-xs-2 col-sm-1">
+          <div class="numeric-box" *ngIf="questions.additionalComments.length">6</div>
+          <div class="numeric-box" *ngIf="questions.whatHappens == questions.situations[1] ||
+                                          questions.whatHappens == questions.situations[2] ||
+                                          questions.haveContact == '2'">4</div>
+          <div class="numeric-box" *ngIf="questions.lostDateValid">5</div>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <p>Seleccione la <strong>entidad federativa</strong> donde se encuentra:</p>
+        </div>
+      </div>
+      <div class="row vertical-padded">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="btn-group">
+            <label for="questions-state" class="display_none">Entidad</label>
+            <select [(ngModel)]="questions.state" (ngModelChange)="tagState()" class=" form-control custom"
+              id="questions-state" name="questions-state">
+              <option selected disabled [ngValue]="'Elije una entidad'">Elige una entidad</option>
+              <option *ngFor=" let item of shownStates" [ngValue]="item.nombre" [innerHTML]="item.nombre"></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

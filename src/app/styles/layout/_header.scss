@@ -1,0 +1,45 @@
+.wr-head {
+  padding: 0px 20px;
+  color: $base-color;
+  position: relative;
+  background-color: $deep-red;
+
+  .glyphicon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    margin: 0  auto;
+    display: none;
+    background: url(#{$img-url}general/santander_logo_mobile.png) top center;
+
+    @include respond-to('medium'){
+      width: 340px;
+      height: 100px;
+      display: block;
+      background:  url("data:image/svg+xml;charset=UTF-8,%3csvg width='36px' height='32px' viewBox='0 0 36 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eimagotipo santander%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='-' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='AclaracionesWebView-Encuesta-CargoDuplicado' transform='translate(-168.000000, -33.000000)' fill='%23FFFFFF'%3e%3cg id='Group-7' transform='translate(158.000000, 21.000000)'%3e%3cg id='Group-5'%3e%3cpath d='M28.3664623,13.9844271 C28.3664623,17.7509627 34.8895315,21.932203 34.8895315,26.2318051 C34.8895315,26.2318051 34.8895315,26.6465098 34.7091536,27.0919009 C40.80896,28.3368917 45.1282051,31.2731411 45.1282051,34.7135242 C45.1282051,39.3392788 37.4264294,43.1347473 27.8833712,43.164557 L27.7021004,43.164557 C18.2492311,43.164557 10.5769231,39.4874503 10.5769231,34.8906285 C10.5769231,31.4511222 15.2578168,28.6630442 20.9066786,27.180453 C20.9066786,29.0786256 27.3395589,35.0984193 27.490469,37.5296584 C27.490469,37.5296584 27.5208296,37.7374491 27.5208296,37.9750495 C27.5208296,38.094288 27.5208296,38.2126498 27.490469,38.3310116 C28.8790211,37.6190873 28.8790211,35.3947622 28.8790211,35.3947622 C28.8790211,30.1167025 22.6274116,27.7740155 22.6274116,22.584508 C22.6274116,20.5679736 23.5935938,19.0853824 24.47048,18.669801 L24.47048,20.1217058 C24.47048,23.8891181 31.2355412,28.1001681 31.2355412,31.5396744 L31.2355412,32.6671802 C32.805364,32.0736176 32.805364,29.2566067 32.805364,29.2566067 C32.805364,24.5116135 26.5242868,21.8725837 26.5242868,16.4454759 C26.5242868,14.4289414 27.490469,12.9463503 28.3664623,12.5316456 L28.3664623,13.9844271 Z' id='imagotipo-santander'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") top center;
+    }
+  }
+
+  .title {
+    padding: 10px 5px;
+
+    .back-button {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 1em;
+      display: inline-block;
+    }
+
+    .right {
+      position: relative;
+      float: right;
+      text-align: right;
+
+    }
+  }
+}

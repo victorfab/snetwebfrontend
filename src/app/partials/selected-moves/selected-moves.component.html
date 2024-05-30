@@ -1,0 +1,53 @@
+<!-- Selected Moves -->
+<div #modal class="contentSelectedMov selected-moves">
+  <ng-container *ngIf="isOpen">
+    <div class="selected-moves__close-btn">
+        <span (click)="close()">Cerrar X</span>
+    </div>
+    <!-- Header Filters-->
+    <div class="headerSelectedMov">
+      <span>Movimientos seleccionados</span>
+      <div class="tooltipButton" (click)="showTooltip($event, 1)"></div>
+    </div>
+
+    <div
+      [ngClass]="{
+        movements: chanelType === 'default',
+        movementsWallet: chanelType === 'wallet'
+      }"
+    >
+      <ng-container *ngIf="moveService.selectedMoves$ | async as selectedMoves">
+        <!-- Content -->
+
+        <p class="light" *ngIf="selectedMoves.length === 0">
+          No hay movimientos seleccionados.
+        </p>
+        <p class="light" *ngIf="selectedMoves.length > 0">
+          Este es el resumen de los cargos que ha elegido para enviar a
+          aclaración:
+        </p>
+
+        <div class="movements">
+          <ul *ngFor="let item of selectedMoves">
+            <app-movement
+              (selectedMove)="moveService.deleteMove($event)"
+              [data]="item"
+              [type]="arrowType.CLEAR"
+              [date]="item.key"
+            >
+            </app-movement>
+          </ul>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Content Footer -->
+    <div
+      class="interna contentFooterWallet cerrar"
+      *ngIf="chanelType === 'wallet'"
+    >
+      <button>Cerrar</button>
+    </div>
+    <!-- Termina Footer Conten-->
+  </ng-container>
+</div>

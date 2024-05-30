@@ -1,0 +1,210 @@
+//PADDING TOP FOR THE FIXED STEPER
+.contentQuestions {
+  position: relative;
+  z-index: 1;
+  padding-top: 55px;
+  font-weight: lighter;
+  font-size: 18px;
+  padding-bottom: 130px;
+  line-height: 1.5;
+  padding-right: 1rem;
+  [class*="col-"] {
+    font-size: 16px;
+    color: #191919;
+  }
+
+  b,
+  strong {
+    font-weight: normal;
+  }
+
+  textarea,
+  select {
+    font-weight: lighter;
+    width: 100%;
+  }
+
+  label {
+    color: #191919;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  //RADIO BUTTON FOR THE QUESTIONARIE
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+
+  [type="radio"]:checked+label,
+  [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 34px;
+    line-height: 20px;
+    display: inline-block;
+    color: #191919;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+    span {
+      color: #595959;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      display: block;
+    }
+
+    margin-right: 40px;
+  }
+
+  [type="radio"]:checked+label:before,
+  [type="radio"]:not(:checked)+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border: 1px solid #d6d6d6;
+    border-radius: 100px;
+    -webkit-box-shadow: 0px 5px 9px -4px rgba(179, 179, 179, 1);
+    -moz-box-shadow: 0px 5px 9px -4px rgba(179, 179, 179, 1);
+    box-shadow: 0px 5px 9px -4px rgba(179, 179, 179, 1);
+  }
+
+  [type="radio"]:checked+label:after,
+  [type="radio"]:not(:checked)+label:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border: 1px solid red;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14px' height='12px' viewBox='0 0 14 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3epaloma_roja%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3cfilter x='-33.3%25' y='-50.0%25' width='166.7%25' height='233.3%25' filterUnits='objectBoundingBox' id='filter-1'%3e%3cfeOffset dx='0' dy='2' in='SourceAlpha' result='shadowOffsetOuter1'%3e%3c/feOffset%3e%3cfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0' type='matrix' in='shadowOffsetOuter1' result='shadowMatrixOuter1'%3e%3c/feColorMatrix%3e%3cfeMerge%3e%3cfeMergeNode in='shadowMatrixOuter1'%3e%3c/feMergeNode%3e%3cfeMergeNode in='SourceGraphic'%3e%3c/feMergeNode%3e%3c/feMerge%3e%3c/filter%3e%3c/defs%3e%3cg id='paloma_roja' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3e%3cg id='Group-4' filter='url(%23filter-1)' transform='translate(3.000000, 2.000000)' stroke='%23EC0000' stroke-width='2.16'%3e%3cpolyline id='Path-1557' points='0 2.96228574 3.02503792 6 9 0'%3e%3c/polyline%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  }
+
+  [type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  input {
+    border: 1px solid #979797;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px 12px;
+    width: 90%;
+  }
+
+  //CIRCLE THAT SHOWS THE COUNTER OF QUESTIONS
+  .numeric-box {
+    color: rgb(255, 255, 255);
+    background-color: rgb(154, 154, 154);
+    text-align: center;
+    display: flex;
+    width: 29px;
+    height: 29px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 5px;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //DIVIDER FOR ELEMENTS NEARBY INLINE
+  .divider {
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+  }
+
+  //DIVIDER BETWEEN ELEMENTS ON
+  .spacer {
+    width: 100%;
+    height: 10px;
+  }
+
+  //CUSTOMS SELECT BOX
+  select.custom {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTIgNiI+ICAgIDxwYXRoIGZpbGw9IiM5RDlEOUQiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTUuNDU1IDUuMzJMLjcyNSAxLjU1Yy0uMy0uMjQtLjMtLjYzIDAtLjg3LjMwMi0uMjM5Ljc5LS4yMzkgMS4wOSAwTDYgNC4wMTggMTAuMTg1LjY4Yy4zLS4yNC43ODktLjI0IDEuMDkgMCAuMy4yNC4zLjYyOSAwIC44NjlMNi41NDQgNS4zMkEuODc3Ljg3NyAwIDAgMSA2IDUuNWEuODc3Ljg3NyAwIDAgMS0uNTQ1LS4xOHoiLz48L3N2Zz4=);
+    background-position: right 10px center;
+    padding: 0 30px 0 12px;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 16px;
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+  }
+
+  select.custom::-ms-expand {
+    display: none;
+  }
+
+  //CUSTOM SELECT AREA
+  textarea {
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: solid 1px #979797;
+    padding: 12px;
+    color: #4C4C4C;
+    outline: none;
+    width: 100%;
+  }
+
+  //FOR THE COUNTER IN THE TEXT AREA
+  .text-counter {
+    display: block;
+    font-size: 0.87em;
+    color: #9a9a9a;
+    text-align: right;
+    padding-bottom: 4px;
+    width: 95%;
+  }
+
+  .input-amount {
+    color: #1d1d26;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+.questionnarie {
+  &__title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #191919;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 19px;
+  }
+}

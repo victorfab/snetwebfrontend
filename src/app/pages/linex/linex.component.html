@@ -1,0 +1,40 @@
+<div class="linex">
+    <app-card-detail [detail]="proxy.creditCardFullData"></app-card-detail>
+    <p class="linex__title">
+        Selecciona el pago que hiciste:
+    </p>
+    <app-filter 
+        (clear)="getFilter(null)"
+        (dateSelection)="getFilter($event)"
+        [faceLift]="true" 
+        (text)="text = $event" 
+        [filterApply]="text.length > 0"
+        [filterText]="text"></app-filter>
+
+    <div class="linex__main">
+        <app-move-list>
+            <div class="m-list__item" *ngFor="let item of movements | moveListFilter: text | keyvalue">
+                <span class="m-list__date">{{item.key | formatSmDate}}</span>
+                <app-move-item 
+                    *ngFor="let move of item.value" 
+                    (selectedMove)="updateSelected($event)"
+                    [searchWord]="text"
+                    [description]="move.description" 
+                    [fullMove]="move"
+                    [selected]="move.selected"
+                    [amount]="move.amount">
+                </app-move-item>
+            </div>
+        </app-move-list>
+    </div>
+    <footer>
+        <div class="buttons">
+            <button class="g-btn flat" (click)="back()">
+                Regresar
+            </button>
+            <button class="g-btn rounded" [disabled]="!selectedMove.length" (click)="next()">
+                Continuar
+            </button>
+        </div>
+    </footer>
+</div>

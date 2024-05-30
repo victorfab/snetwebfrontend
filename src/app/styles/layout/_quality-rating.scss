@@ -1,0 +1,177 @@
+.modal {
+    .quality-rating-modal {
+        margin: 0 auto;
+        width: 90%;
+
+        .quality-rating {
+            background-color: #ffffff;
+            border-radius: 12px;
+            text-align: center;
+
+            .floating-logo-wrapper {
+                background-color: #ffffff;
+                position: absolute;
+                top: -35px; /* half height of "X" image, just for nice placing*/
+                right: 0;
+                left: 0;
+                width: 70px;
+                height: 70px;
+                /* Centered */
+                margin: 0 auto;
+                /* Circle */
+                border-radius: 50%;
+
+                .logo {
+                    background-color: #ef2200;
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    left: 0;
+                    width: 60px;
+                    height: 60px;
+                    /* Centered */
+                    margin: 0 auto;
+                    /* Circle */
+                    border-radius: 50%;
+
+                    img {
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        left: 0;
+                        width: 37.7px;
+                        height: 33.4px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+
+            .row {
+                margin-top: 10px;
+
+                h3 {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.27;
+                    // letter-spacing: normal;
+                    text-align: center;
+                    color: #4a4a4a;
+                    font-weight: 300;
+
+                    strong {
+                        font-weight: 400;
+                        text-transform: capitalize;
+                    }
+                }
+                h4 {
+                    font-size: 17px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.29;
+                    // letter-spacing: 0.3px;
+                    text-align: center;
+                    color: #1d1d26;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #424242;
+                }
+                form {
+                    .br-bootstrap {
+                        width: 80%;
+                        max-width: 80%;
+                        margin: 0 auto;
+
+                        .br-unit:first-child {
+                            margin-left: 10%;
+                        }
+                        .br-unit {
+                            border-radius: 50%;
+                            opacity: 0.66;
+                            background-color: #eeeeee;
+                            width: 42.7px;
+                            height: 42px;
+                            padding-top: 9px;
+                            padding-left: 3px;
+                        }
+                        .br-unit:after {
+                            font-size: 25px;
+                            color: #878787;
+                        }
+                        .br-active:after {
+                            color: #ec0000;
+                        }
+                        .br-selected:after {
+                            color: #ec0000;
+                        }
+                    }
+                    .star-notice {
+                        clear: both;
+                        display: block;
+                        margin: 0 auto;
+                        width: 70%;
+                        margin-top: 15px;
+                        margin-bottom: 10px;
+
+                        small {
+                            font-size: 12px;
+                            font-weight: 300;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.66;
+                            // letter-spacing: 0.3px;
+                            text-align: center;
+                            color: #1d1d26;
+                        }
+                    }
+                    textarea {
+                        clear: both;
+                        display: block;
+                        width: 100%;
+                        height: 90px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        border-radius: 4px;
+                        background-color: #f1f1f1;
+                        border: solid 1px #eae9e9;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        // letter-spacing: normal;
+                        text-align: left;
+                    }
+                    textarea::-webkit-input-placeholder {
+                        color: #c2c2c2;
+                    }
+                    button:disabled,
+                    button[disabled] {
+                        background-color: grey;
+                    }
+                    button {
+                        background-color: #EC0000;
+                        width: 200px;
+                        height: 44.5px;
+                        margin: 0 auto;
+                        display: block;
+                        padding: 11px 0;
+                        border-radius: 54px;
+                        font-size: 15.1px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.5;
+                        // letter-spacing: normal;
+                        text-align: center;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

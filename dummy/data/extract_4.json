@@ -1,0 +1,229 @@
+{
+    "acctTrnRecComercios": [
+        {
+            "acctTrnId": "2",
+            "acctTrnInfo": {
+                "stmtDt": "2023-01-02",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "6",
+            "acctTrnInfo": {
+                "stmtDt": "2022-12-28",
+                "trnTime": "11:05:07",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO Corte Enero",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "200"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794735",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "5",
+            "acctTrnInfo": {
+                "stmtDt": "2022-12-26",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "4",
+            "acctTrnInfo": {
+                "stmtDt": "2022-12-25",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "3",
+            "acctTrnInfo": {
+                "stmtDt": "2022-12-24",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "2",
+            "acctTrnInfo": {
+                "stmtDt": "2022-12-17",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "1",
+            "acctTrnInfo": {
+                "stmtDt": "2023-01-01",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO LOCAL AJENO",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        }
+
+    ]
+}

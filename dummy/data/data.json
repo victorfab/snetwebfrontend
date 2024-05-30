@@ -1,0 +1,15 @@
+{
+  "userName": "Cosme Fulanito",
+  "cardNumber": "555599988884444",
+  "creditLimit": 84317.50,
+  "balance": 28318.78,
+  "minPayment" : 4860.48,
+  "cardName" : "Santander Light",
+  "cutoff" : "2017-10-22",
+  "extracts": [
+    { "id": "18" },
+    { "id": "17" },
+    { "id": "16" },
+    { "id": "15" }
+  ]
+}

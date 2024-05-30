@@ -1,0 +1,165 @@
+{
+    "acctTrnRecComercios": [
+        {
+            "acctTrnId": "11",
+            "acctTrnInfo": {
+                "stmtDt": "2023-03-01",
+                "trnTime": "11:05:07",
+                "trnType": {
+                    "desc": "Corte Marzo xd",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "200"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "Corte de Marzo",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794735",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "10",
+            "acctTrnInfo": {
+                "stmtDt": "2023-02-14",
+                "trnTime": "11:05:07",
+                "trnType": {
+                    "desc": "Corte Marzo",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "200"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "Corte de Marzo",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794735",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "9",
+            "acctTrnInfo": {
+                "stmtDt": "2023-02-04",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO corte de Marzo",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "8",
+            "acctTrnInfo": {
+                "stmtDt": "2023-02-04",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO corte de Marzo",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        },
+        {
+            "acctTrnId": "7",
+            "acctTrnInfo": {
+                "stmtDt": "2023-02-04",
+                "trnTime": "10:23:35",
+                "trnType": {
+                    "desc": "CONSUMO corte de Marzo",
+                    "trnTypeCode": "1002",
+                    "trnSubTypeCode": "1002",
+                    "cancelledInd": "false"
+                },
+                "totalCurAmt": {
+                    "amt": "400"
+                },
+                "networkTrnData": {
+                    "merchNum": "007660779",
+                    "merchName": "CASINOS SABIA",
+                    "posEntryCapability": "040501000000"
+                },
+                "salesSlipRefNum": "74555461089976607794719",
+                "origCurAmt": {
+                    "curCode": {
+                        "curCodeValue": "MXN"
+                    }
+                },
+                "cardRef": {
+                    "cardInfo": {
+                        "cardNum": "4915735010617592"
+                    }
+                }
+            }
+        }
+
+    ]
+}

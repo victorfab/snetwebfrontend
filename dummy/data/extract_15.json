@@ -1,0 +1,46 @@
+{
+  "acctTrnRecComercios": [
+      {
+          "acctTrnId": "2",
+          "acctTrnInfo": {
+              "type": "PREFOLIO",
+              "stmtDt": "2023-01-12",
+              "trnTime": "15:45:52",
+              "trnType": {
+                  "desc": "CONSUMO LOCAL AJENO",
+                  "trnTypeCode": "1002",
+                  "trnSubTypeCode": "1002",
+                  "cancelledInd": "false"
+              },
+              "totalCurAmt": {
+                  "amt": 905.05,
+                  "curCode": {
+                      "curCodeValue": "MXN"
+                  }
+              },
+              "networkTrnData": {
+                  "merchNum": "008167930",
+                  "merchName": "REST HOOTERS PL L R 1"
+              },
+              "salesSlipRefNum": "75177133012003881679300",
+              "origCurAmt": {
+                  "curCode": {
+                      "curCodeValue": "MXN"
+                  }
+              },
+              "cardRef": {
+                  "cardInfo": {
+                      "cardNum": "5532530007072574    "
+                  }
+              },
+              "athRef": {
+                  "athKeys": {
+                      "athId": "055257"
+                  }
+              }
+          }
+      }
+  ],
+  "acctTrnRecCajeros": [],
+  "acctTrnRecPagos": []
+}

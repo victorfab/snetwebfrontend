@@ -1,0 +1,42 @@
+{
+  "id": 16,
+  "period": "Agosto 2017",
+  "moves": [
+    {
+      "id": "00000000078",
+      "desc": "Chilli's Acoxpa",
+      "amount": "855.20",
+      "date": "22-08-2017"
+    },
+    {
+      "id": "00000000077",
+      "desc": "Sliders Santa fe",
+      "amount": "429.20",
+      "date": "22-08-2017"
+    },
+    {
+      "id": "00000000076",
+      "desc": "Sear's",
+      "amount": "4,855.20",
+      "date": "18-08-2017"
+    },
+    {
+      "id": "00000000075",
+      "desc": "Seven Eleven",
+      "amount": "75.20",
+      "date": "10-08-2017"
+    },
+    {
+      "id": "00000000074",
+      "desc": "Seven Eleven",
+      "amount": "85.20",
+      "date": "10-08-2017"
+    },
+    {
+      "id": "00000000073",
+      "desc": "OXXO",
+      "amount": "55.20",
+      "date": "05-08-2017"
+    }
+  ]
+}
